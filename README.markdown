@@ -26,9 +26,11 @@ Design principles
 Usage
 -----
 
-There are several files. Mix-and-match as you want. The [demo.html](demo.html)
-file includes just `base.css`, and [demo-fancy.html](demo-fancy.html) includes
-all files.
+There are several files. Mix-and-match as you want. The
+[**demo.html**](https://carpetsmoker.github.io/hello-css/demo.html) file
+includes just `base.css`, and
+[**demo-fancy.html**](https://carpetsmoker.github.io/hello-css/demo-fancy.html)
+includes all files.
 
 There are no classes; only element selectors are used. The files are brief and
 well annotated, and a number of styles have commented-out alternatives. I
