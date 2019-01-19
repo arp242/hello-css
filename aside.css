@@ -1,0 +1,49 @@
+/* ASIDE */
+/* Put content to the left or right of the page as an "aside". This is an
+ * alternative to footnotes.
+ */
+
+body {
+	position: relative;                  /* Need to be able to put asides relative to body. */
+}
+aside {
+	hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
+}
+
+aside {
+	position: absolute;
+	left: -15em;
+	width: 14em;
+	text-align: right;
+	font-size: .9em;
+}
+
+/* Alternative: place on the right.
+aside {
+	position: absolute;
+	right: -15em;
+	width: 14em;
+}
+*/
+
+/* Place inline if it won't fit on the screen. */
+@media (max-width: 83em) {
+	aside {
+		position: static;
+		width: auto;
+		text-align: left;
+		background-color: #f7f7f7;
+		padding: .4em 2em;
+		border: 1px solid #b7b7b7;
+		hyphens: none;
+	}
+}
+
+/* Optional: place the body further to the right, so that there's more space for
+ * the aside.
+ * Adjust the media query above to max-width: 63em
+body {
+	position: relative;
+	left: 10em;
+}
+*/

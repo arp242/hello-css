@@ -1,0 +1,221 @@
+/* FONTS */
+
+/* I like the Libre Baskerville typeface, which is a nice Serif font.
+ *
+ * https://github.com/impallari/Libre-Baskerville
+ * https://web.archive.org/web/20150918205958/http://www.impallari.com/projects/update/86
+ * https://fonts.google.com/specimen/Libre+Baskerville
+ *
+ * A copy is in the "fonts" dir.
+ */
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 400;
+	font-display: fallback;
+	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(./fonts/libre-baskerville.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	font-display: fallback;
+	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(./fonts/libre-baskerville-bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Libre Baskerville';
+	font-style: italic;
+	font-weight: 400;
+	font-display: fallback;
+	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(./fonts/libre-baskerville-italic.woff2) format('woff2');
+}
+
+html {
+	font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+	/* Possible sans-serif alternative:
+	 * font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
+	 */
+
+	        text-size-adjust: none; /* Disables text adjustment algorithm on some mobile browsers, this is */
+	-webkit-text-size-adjust: none; /* intended for sites that are not designed for mobile viewing. */
+}
+
+pre, code {
+	font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
+}
+
+pre {
+	font-size: 14px;                     /* Smaller text to fit more. */
+	line-height: 130%;                   /* Idem. */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	/* Enable ligatures, works well with Libre Baskerville, which adds
+	 * (old-fashioned but handsome) ligatures on "st", "ct", and "sp".
+	 *
+	 * You'll need to add "&subset=all" if you're using it from Google Fonts:
+	 *   https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=all
+	 */
+	font-variant-ligatures: common-ligatures discretionary-ligatures;
+	font-feature-settings: 'liga' on, 'dlig' on;
+}
+
+
+/* DEFAULTS */
+* {
+	box-sizing: border-box;              /* Element width/height includes the border. */
+}
+
+*:target {
+	background-color: #ff6;              /* Highlight elements in URL fragment, e.g. #some-header, or #footnote-1. */
+}
+
+html {
+	background-color: #eee;              /* Neutral background to contrast with the body/page. */
+	color: #252525;                      /* Slightly less "harsh" black; looks subtly better. */
+	     tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
+	-moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
+}
+
+body {
+	max-width: 54em;                     /* Don't make it too wide, as that makes it harder to read. */
+	margin: 1em auto;                    /* Add some extra space at top/bottom, and centre it. */
+	padding: 1em 4em;                    /* Small padding on top, larger on sides. */
+
+	background-color: #fff;              /* White background to override the html one */
+	                                     /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
+										  * Some suggestions: #fbfbf7, #fffff7 */
+	                                     /* Remove this and the box-shadow for an even background colour. */
+	box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
+}
+@media (max-width: 54em) {               /* 54em is the max-width of the body. */
+	body {
+		max-width: 100%;                 /* Full-width body. */
+		padding: 0 1em;                  /* Modest amount of padding to prevent wasting screen space. */
+	}
+}
+
+
+/* LINKS */
+a,
+a code {                                 /* Otherwise it would just stay black text; common enough to include here. */ 
+	color: #00f;                         /* Make sure colour is the same in all browsers. */
+	text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
+	transition: all .2s;                 /* Animate the change in colour effect on hover; subtle but noticeable. */
+}
+a:hover { 
+	text-decoration: underline;           /* Provide some feedback by underlining and changing colour. */
+	color: #6491ff;                       /* Light blue */
+}
+a:hover code  {
+	color: #6491ff;                       /* Also change colour of code on hover. */
+}
+
+
+/* HEADERS */
+
+/* The intention is that there is only one h1 on a page: at the top. If you use
+ * h1 different, then you may want to add a border like in the h2. */
+h1 {
+	text-align: center;
+	padding: .5em 0;                     /* More than default. */
+}
+
+h2 {
+	border-bottom: 1px solid #252525;    /* Underline to stand out more. */
+	padding-bottom: .2em;                /* Border not too close to the text. */
+}
+
+
+/* BLOCKQUOTE */
+blockquote {
+	font-style: italic;                  /* Quotations are usually typeset in italics. */
+}
+
+
+/* IMAGES */
+img {
+	max-width: 100%;                     /* Make sure it's never larger than the body. */
+}
+
+
+/* CODE */
+code, pre, kbd, samp {
+	background-color: #eee;              /* Make it stand out a bit more. */
+	color: #000;                         /* Override the softer black, as we're now using a grey background. */
+}
+
+pre {
+	overflow: auto;                      /* Add scrollbars if the content is too high or wide. */
+	max-height: 500px;                   /* Scroll content larger than this. */
+	padding: .5em 1em;                   /* Don't put the text right on the edge. */
+	border-radius: 2px;                  /* Looks better with subtly rounded corner. */
+}
+
+code, kbd, samp {
+	padding: 1px 2px;                    /* Make sure the text isn't right on the edge of the background. */
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+	background-color: transparent;       /* Don't include grey background in headers, looks ugly. */
+}
+
+
+/* TABLES */
+table {
+	border-collapse: collapse;           /* No space between borders. */
+	width: calc(100% + 6em);             /* Use the full page width, including margins. */
+	margin-left: -3em;                   /* Idem. */
+}
+@media (max-width: 54em) {               /* 54em is the max-width of the body. */
+	table {
+		width: 100%;                     /* Reset width as we remove the margin at this max-width. */
+		margin-left: 0;                  /* Idem. */
+	}
+}
+
+caption {
+	font-weight: bold;                   /* Make caption stand out more. */
+}
+
+tr {
+	border-bottom: 1px solid #ddd;       /* Divide rows with a border. */
+}
+table tr:last-child {
+	border-bottom: none;                 /* No border on header or the last row. */
+}
+
+td, th {
+	padding: .2em 0;                     /* Whitespace on top/bottom to make it less dense. */
+}
+
+
+/* HORIZONTAL RULER */
+
+/* Make the <hr> element look better by replacing it with some text (usually
+ * decorative characters such as fleurons or an asterism. */
+hr {
+	border: none;                        /* Remove default border. */
+	text-align: center;                  /* Centre the characters. */
+	font-size: 60px;                     /* Make it larger; what looks good depends a bit on which characte you choose. */
+	color: #252525;                      /* Standard text colour; it's grey by default. */
+	opacity: .9;                         /* But make it slightly less dark than regular text. */
+}
+
+hr:before {
+	content: "☙❧";                       /* Two fleurons. */
+	letter-spacing: -4px;                /* Make edges touch, looks nice in most fonts. */
+
+	/* Alternative: seperate with a space:
+	content: "☙ ❧";
+	*/
+
+	/* Or seperate with letter-spacing and padding:
+	letter-spacing: 1em;
+	padding-left: 1em;
+	*/
+
+	/* Or asterism:
+	content: "⁂";
+	*/
+}

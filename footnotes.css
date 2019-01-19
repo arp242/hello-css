@@ -1,0 +1,21 @@
+/* FOOTNOTES */
+
+.footnotes {
+	margin-top: 3em;                     /* Clear a bit from regular content. */
+	border-top: 1px solid #bbb;          /* Border to seperate. */
+	font-size: .9em;                     /* Slightly smaller text. */
+	position: relative;                  /* So we can place the header. */
+
+	margin-left: -4em;                   /* Put the div in the margin too, so the border is wider. */
+	width: calc(100% + 8em);
+	padding: 0 4em;                      /* Add page margin. */
+}
+
+.footnotes > strong {
+	font-style: normal;                  /* Override the italics. */
+	position: absolute;                  /* Move to the to align with the border. */
+	top: -1em;
+	left: 6em;
+	background-color: #fff;              /* Add background colour and padding to hide the border. */
+	padding: 0 .5em;
+}
