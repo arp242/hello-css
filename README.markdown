@@ -6,8 +6,7 @@ aesthetically pleasing defaults. I copy/pasted variants of this so often I
 figured I might as well put a cleaned up and annotated version somewhere.
 
 I encourage you to pick ’n choose what you need, rather than insert everything.
-[I also encourage you to put it in a `<style>` block rather than external
-files](https://arp242.net/weblog/web-documents.html).
+I also encourage you to put it in a `<style>` block rather than external files.
 
 Design principles
 -----------------
@@ -32,10 +31,11 @@ includes just `base.css`, and
 [**demo-fancy.html**](https://carpetsmoker.github.io/hello-css/demo-fancy.html)
 includes all files.
 
-There are no classes; only element selectors are used. The files are brief and
-well annotated, and a number of styles have commented-out alternatives. I
-encourage you to read and modify to your preference, rather than blindly
-copy/paste.
+There are only two classes; for the most part it only styles element selectors
+(e.g. `blockquote { .. }` instead of `.blockquote { .. }`).
+The files are brief and well annotated, and a number of styles have
+commented-out alternatives. I encourage you to read and modify to your
+preference, rather than blindly copy/paste.
 
 Not every last element is styled. For some things – such as &lt;abbr&gt; it's
 fine to rely on the browser defaults, small differences are okay.
@@ -52,7 +52,7 @@ Feel free to open an issue if you’re missing something in particular.
 | base.css       | Basic defaults.                               |
 | aside.css      | Content in margin.                            |
 | blockquote.css | Decorative quotation marks around blockquote. |
-| footnotes.css  | Footnotes at the end.                         |
+| postscript.css | P.S. content, such as footnotes.              |
 | permalink.css  | Permalink markers in headers.                 |
 
 License

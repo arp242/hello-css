@@ -13,21 +13,21 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: fallback;
-	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(./fonts/libre-baskerville.woff2) format('woff2');
+	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(/fonts/libre-baskerville.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Libre Baskerville';
 	font-style: normal;
 	font-weight: 700;
 	font-display: fallback;
-	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(./fonts/libre-baskerville-bold.woff2) format('woff2');
+	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(/fonts/libre-baskerville-bold.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Libre Baskerville';
 	font-style: italic;
 	font-weight: 400;
 	font-display: fallback;
-	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(./fonts/libre-baskerville-italic.woff2) format('woff2');
+	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(/fonts/libre-baskerville-italic.woff2) format('woff2');
 }
 
 html {
@@ -119,11 +119,21 @@ a:hover code  {
 h1 {
 	text-align: center;
 	padding: .5em 0;                     /* More than default. */
+	font-size: 1.6em;                    /* Default of 2em is pretty large. */
 }
 
 h2 {
 	border-bottom: 1px solid #252525;    /* Underline to stand out more. */
 	padding-bottom: .2em;                /* Border not too close to the text. */
+	font-size: 1.4em;                    /* Default of 1.8em is pretty large. */
+}
+
+h3 {
+	font-size: 1.2em;                    /* Default of 1.6em is pretty large. */
+	/*
+	padding: 0;
+	margin-bottom: 0;
+	*/
 }
 
 
@@ -217,5 +227,10 @@ hr:before {
 
 	/* Or asterism:
 	content: "⁂";
+	*/
+
+	/* Many possibilities
+	content: "* * *";
+	content: "· · ·";
 	*/
 }
