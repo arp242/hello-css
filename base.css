@@ -13,21 +13,27 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: fallback;
-	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(/fonts/libre-baskerville.woff2) format('woff2');
+	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
+		url(/fonts/libre-baskerville.woff2) format('woff2'),
+		url(./fonts/libre-baskerville.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Libre Baskerville';
 	font-style: normal;
 	font-weight: 700;
 	font-display: fallback;
-	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(/fonts/libre-baskerville-bold.woff2) format('woff2');
+	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
+		url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
+		url(./fonts/libre-baskerville-bold.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Libre Baskerville';
 	font-style: italic;
 	font-weight: 400;
 	font-display: fallback;
-	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(/fonts/libre-baskerville-italic.woff2) format('woff2');
+	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
+		url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
+		url(./fonts/libre-baskerville-italic.woff2) format('woff2');
 }
 
 html {
@@ -71,26 +77,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-	background-color: #eee;              /* Neutral background to contrast with the body/page. */
+	background-color: #eee;              /* Neutral background to contrast with the page. */
 	color: #252525;                      /* Slightly less "harsh" black; looks subtly better. */
 	     tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
 	-moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
 }
 
-body {
+.center, .page {
 	max-width: 54em;                     /* Don't make it too wide, as that makes it harder to read. */
-	margin: 1em auto;                    /* Add some extra space at top/bottom, and centre it. */
-	padding: 1em 4em;                    /* Small padding on top, larger on sides. */
+	margin: .5em auto;                   /* Add some extra space at top/bottom, and centre it. */
+}
 
+.page {
+	padding: 1em 4em;                    /* Small padding on top, larger on sides. */
 	background-color: #fff;              /* White background to override the html one */
 	                                     /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
 										  * Some suggestions: #fbfbf7, #fffff7 */
 	                                     /* Remove this and the box-shadow for an even background colour. */
 	box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
-@media (max-width: 54em) {               /* 54em is the max-width of the body. */
-	body {
-		max-width: 100%;                 /* Full-width body. */
+.page:last-child {
+	margin-bottom: 2em;
+}
+@media (max-width: 54em) {               /* 54em is the max-width of the page. */
+	.page, .center {
+		max-width: 100%;                 /* Full-width page. */
 		padding: 0 1em;                  /* Modest amount of padding to prevent wasting screen space. */
 	}
 }
@@ -145,13 +156,13 @@ blockquote {
 
 /* IMAGES */
 img {
-	max-width: 100%;                     /* Make sure it's never larger than the body. */
+	max-width: 100%;                     /* Make sure it's never larger than the page. */
 }
 
 
 /* CODE */
 code, pre, kbd, samp {
-	background-color: #eee;              /* Make it stand out a bit more. */
+	background-color: #f8f8f8;           /* Make it stand out a bit more. */
 	color: #000;                         /* Override the softer black, as we're now using a grey background. */
 }
 
@@ -160,10 +171,27 @@ pre {
 	max-height: 500px;                   /* Scroll content larger than this. */
 	padding: .5em 1em;                   /* Don't put the text right on the edge. */
 	border-radius: 2px;                  /* Looks better with subtly rounded corner. */
+	border-top: 1px solid #ddd;          /* Looks better. */
+	border-bottom: 1px solid #ddd;       /* Looks better. */
+}
+
+pre.full {
+	margin-left: -4.6em;
+	/* Browser support for calc() is ~90% as of Jan 2019:
+	 * https://caniuse.com/#feat=calc
+	 *
+	 * For other browsers it'll show as width: 100%, which is still okay.
+	 */
+	width: calc(100% + 9.2em);
 }
 
 code, kbd, samp {
 	padding: 1px 2px;                    /* Make sure the text isn't right on the edge of the background. */
+	box-shadow: 0 0 2px #aaa;            /* Stand out a bit more, as the background colour is quite light. */
+}
+pre > code {                             /* Reset the above styling on <pre><code> */
+	padding: none;
+	box-shadow: none;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
@@ -174,14 +202,24 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 /* TABLES */
 table {
 	border-collapse: collapse;           /* No space between borders. */
-	width: calc(100% + 6em);             /* Use the full page width, including margins. */
-	margin-left: -3em;                   /* Idem. */
+	width: 100%;
 }
-@media (max-width: 54em) {               /* 54em is the max-width of the body. */
+@media (max-width: 54em) {               /* 54em is the max-width of the page. */
 	table {
 		width: 100%;                     /* Reset width as we remove the margin at this max-width. */
 		margin-left: 0;                  /* Idem. */
 	}
+}
+
+/* Use the full page width, incuding the margins. */
+table.full {
+	margin-left: -3em;
+	/* Browser support for calc() is ~90% as of Jan 2019:
+	 * https://caniuse.com/#feat=calc
+	 *
+	 * For other browsers it'll show as width: 100%, which is still okay.
+	 */
+	width: calc(100% + 6em);
 }
 
 caption {
@@ -196,7 +234,8 @@ table tr:last-child {
 }
 
 td, th {
-	padding: .2em 0;                     /* Whitespace on top/bottom to make it less dense. */
+	padding: .2em .5em;                  /* Whitespace on top/bottom to make it less dense. */
+	                                     /* And to the side to prevent cells from touching. */
 }
 
 

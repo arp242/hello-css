@@ -3,8 +3,8 @@
  * alternative to footnotes.
  */
 
-body {
-	position: relative;                  /* Need to be able to put asides relative to body. */
+.page {
+	position: relative;                  /* Need to be able to put asides relative to page. */
 }
 aside {
 	hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
@@ -39,10 +39,10 @@ aside {
 	}
 }
 
-/* Optional: place the body further to the right, so that there's more space for
+/* Optional: place the page further to the right, so that there's more space for
  * the aside.
  * Adjust the media query above to max-width: 63em
-body {
+.page {
 	position: relative;
 	left: 10em;
 }

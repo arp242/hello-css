@@ -1,0 +1,52 @@
+#!/bin/sh
+
+set -euC
+
+head=$(cat <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hello, CSS!</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="canonical" href="https://arp242.net/hellocss/demo.html">
+	<link rel="stylesheet" href="base.css">
+EOF
+)
+
+nav=$(cat <<EOF
+</head>
+<body>
+	<div class="center">
+		<a href="demo.html">Basic demo</a> |
+		<a href="demo-fancy.html">Fancier demo</a> |
+		<a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
+	</div>
+
+	<div class="page">
+EOF
+)
+
+
+echo "$head" >| "demo.html"
+echo "$head" >| "demo-fancy.html"
+cat <<EOF >> "demo-fancy.html"
+	<link rel="stylesheet" href="aside.css">
+	<link rel="stylesheet" href="blockquote.css">
+	<link rel="stylesheet" href="permalink.css">
+	<link rel="stylesheet" href="postscript.css">
+EOF
+
+echo "$nav" >> "demo.html"
+echo "$nav" >> "demo-fancy.html"
+
+marked < README.markdown >> demo.html
+
+marked < README.markdown | sed \
+	's/<pre>/<pre class="full">/; s/<table>/<table class="full">/; s/<!--//; s/-->//' \
+	>> demo-fancy.html
+
+echo "</div></body></html>" >> demo.html
+echo "</div></body></html>" >> demo-fancy.html
+
