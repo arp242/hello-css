@@ -130,7 +130,7 @@ attribution clause with the text “without any restrictions”.
 	THIS SOFTWARE.
 
 <!--
-<div class="footnotes">
+<div class="postscript">
 	<strong>Footnotes</strong>
 	<ol>
 		<li id="fn-1"><p>In my view it’s often better to just copy/paste and modify things, especially when it’s not

@@ -3,7 +3,7 @@
 /* Style permalink markers in headers. h2-h6 headers. The HTML is assumed to
  * look like:
  *
- *     <h2 id="#hello">Hello, CSS! <a href="#hello">§</a></h1>
+ *     <h2 id="hello">Hello, CSS! <a href="#hello"></a></h1>
  *
  * Note the space between the </a> and text matters, otherwise it will look bad
  * in text browsers.

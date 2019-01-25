@@ -84,25 +84,22 @@ html {
 }
 
 .center, .page {
-	max-width: 54em;                     /* Don't make it too wide, as that makes it harder to read. */
-	margin: .5em auto;                   /* Add some extra space at top/bottom, and centre it. */
+	max-width: 54rem;                    /* Don't make it too wide, as that makes it harder to read. */
+	margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
 }
 
 .page {
-	padding: 1em 4em;                    /* Small padding on top, larger on sides. */
+	padding: 1rem 4rem;                  /* Small padding on top, larger on sides. */
 	background-color: #fff;              /* White background to override the html one */
 	                                     /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
 										  * Some suggestions: #fbfbf7, #fffff7 */
 	                                     /* Remove this and the box-shadow for an even background colour. */
 	box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
-.page:last-child {
-	margin-bottom: 2em;
-}
-@media (max-width: 54em) {               /* 54em is the max-width of the page. */
+@media (max-width: 54rem) {              /* 54em is the max-width of the page. */
 	.page, .center {
 		max-width: 100%;                 /* Full-width page. */
-		padding: 0 1em;                  /* Modest amount of padding to prevent wasting screen space. */
+		padding: 0 1rem;                 /* Modest amount of padding to prevent wasting screen space. */
 	}
 }
 
@@ -196,6 +193,8 @@ pre > code {                             /* Reset the above styling on <pre><cod
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 	background-color: transparent;       /* Don't include grey background in headers, looks ugly. */
+	box-shadow: none;
+	color: inherit;
 }
 
 
