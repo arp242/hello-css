@@ -19,7 +19,13 @@ Design principles
 1. Pleasant defaults that should work well for most websites.
 2. Text and good typography dominates.
 3. Simplicity matters; easy to extend or modify.
-4. Works on all browser, assistive technology, and screen sizes.
+4. Works on all browser, assistive technology, screen sizes, and printer.
+
+### Example pages.
+
+- My website, [arp242.net](https://arp242.net).
+- I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming).
+- [My CV](https://arp242.net/cv).
 
 Usage
 -----
@@ -45,7 +51,7 @@ not interactive ones (note: I might change my mind on this later).
 
 Feel free to open an issue if you’re missing something in particular.
 
-### Example
+### HTML example
 
 A typical HTML page might look something like:
 
@@ -80,12 +86,14 @@ A typical HTML page might look something like:
 
 ### Classes
 
-| Class         | File             | Purpose                                                                         |
-| ------------- | ---------------- | -------                                                                         |
-| `.center`     | `base.css`       | Center-align the main content.                                                  |
-| `.page`       | `base.css`       | Main page body.                                                                 |
-| `.full`       | `base.css`       | Put a pre or table element over the full width of a `.page`, including margins.
-| `.postscript` | `postscript.css` | Page content; for footnotes or feedback section.                                |
+| Class         | File             | Purpose                                                                                |
+| ------------- | ---------------- | -------                                                                                |
+| .center       | base.css         | Center-align the main content.                                                         |
+| .page         | base.css         | Main page body.                                                                        |
+| .page-a4      | base.css         | A4 page size; useful when producing pages where printing is high priority (e.g. a CV). |
+| .page-letter  | base.css         | U.S. letter page size.                                                                 |
+| .full         | base.css         | Put a pre or table element over the full width of a `.page`, including margins.        |
+| .postscript   | postscript.css   | Page content; for footnotes or feedback section.                                       |
 
 ### Included files
 

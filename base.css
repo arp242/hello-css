@@ -1,5 +1,8 @@
 /* FONTS */
 
+/* TODO: mark variables for easy search/replace. */
+/* TODO: comment-less version? */
+
 /* I like the Libre Baskerville typeface, which is a nice Serif font.
  *
  * https://github.com/impallari/Libre-Baskerville
@@ -104,6 +107,33 @@ html {
 }
 
 
+/* PRINTING */
+@page {
+	margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
+}
+@media print {                           /* Reset some stuff for printing. */
+	body {
+		background-color: #fff;
+	}
+	.page, .center {
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+		max-width: auto;
+	}
+}
+
+.page-a4, .page.page-a4 {                /* A4 paper used in most places */
+	width: 21cm;
+	height: 29.7cm;
+}
+
+.page-letter, .page.page-letter {        /* Standard U.S. letter */
+	width: 8.5in;
+	height: 11in;
+}
+
+
 /* LINKS */
 a,
 a code {                                 /* Otherwise it would just stay black text; common enough to include here. */ 
@@ -138,10 +168,6 @@ h2 {
 
 h3 {
 	font-size: 1.2em;                    /* Default of 1.6em is pretty large. */
-	/*
-	padding: 0;
-	margin-bottom: 0;
-	*/
 }
 
 

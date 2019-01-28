@@ -36,8 +36,14 @@ distract your reader and undermine your message.</p>
 <li>Pleasant defaults that should work well for most websites.</li>
 <li>Text and good typography dominates.</li>
 <li>Simplicity matters; easy to extend or modify.</li>
-<li>Works on all browser, assistive technology, and screen sizes.</li>
+<li>Works on all browser, assistive technology, screen sizes, and printer.</li>
 </ol>
+<h3 id="example-pages">Example pages.</h3>
+<ul>
+<li>My website, <a href="https://arp242.net">arp242.net</a>.</li>
+<li>I reformatted <a href="https://arp242.net/the-art-of-unix-programming">The Art of Unix programming</a>.</li>
+<li><a href="https://arp242.net/cv">My CV</a>.</li>
+</ul>
 <h2 id="usage">Usage</h2>
 <p>There are several files, mix-and-match as you want. The
 <a href="https://carpetsmoker.github.io/hello-css/demo.html"><strong>demo.html</strong></a> file
@@ -55,7 +61,7 @@ Other things – such as forms – tend to be quite application-specific and is 
 bit outside of the scope of this project, as the main goal is for text websites,
 not interactive ones (note: I might change my mind on this later).</p>
 <p>Feel free to open an issue if you’re missing something in particular.</p>
-<h3 id="example">Example</h3>
+<h3 id="html-example">HTML example</h3>
 <p>A typical HTML page might look something like:</p>
 <pre class="full"><code class="language-html">&lt;body&gt;
     &lt;div class=&quot;center&quot;&gt;
@@ -93,23 +99,33 @@ not interactive ones (note: I might change my mind on this later).</p>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>.center</code></td>
-<td><code>base.css</code></td>
+<td>.center</td>
+<td>base.css</td>
 <td>Center-align the main content.</td>
 </tr>
 <tr>
-<td><code>.page</code></td>
-<td><code>base.css</code></td>
+<td>.page</td>
+<td>base.css</td>
 <td>Main page body.</td>
 </tr>
 <tr>
-<td><code>.full</code></td>
-<td><code>base.css</code></td>
+<td>.page-a4</td>
+<td>base.css</td>
+<td>A4 page size; useful when producing pages where printing is high priority (e.g. a CV).</td>
+</tr>
+<tr>
+<td>.page-letter</td>
+<td>base.css</td>
+<td>U.S. letter page size.</td>
+</tr>
+<tr>
+<td>.full</td>
+<td>base.css</td>
 <td>Put a pre or table element over the full width of a <code>.page</code>, including margins.</td>
 </tr>
 <tr>
-<td><code>.postscript</code></td>
-<td><code>postscript.css</code></td>
+<td>.postscript</td>
+<td>postscript.css</td>
 <td>Page content; for footnotes or feedback section.</td>
 </tr>
 </tbody></table>
