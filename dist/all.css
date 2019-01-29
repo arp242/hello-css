@@ -1,3 +1,48 @@
+/* ASIDE */
+/* Put content to the left or right of the page as an "aside". This is an
+ * alternative to footnotes.
+ */
+
+aside {
+	hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
+}
+
+aside {
+	position: absolute;
+	left: /*padx*/-15em;
+	width: 14em;
+	text-align: right;
+	font-size: .9em;
+}
+
+/* Alternative: place on the right.
+aside {
+	position: absolute;
+	right: -15em;
+	width: 14em;
+}
+*/
+
+/* Place inline if it won't fit on the screen. */
+@media (max-width: 83em) {
+	aside {
+		position: static;
+		width: auto;
+		text-align: left;
+		background-color: #f7f7f7;
+		padding: .4em 2em;
+		border: 1px solid #b7b7b7;
+		hyphens: none;
+	}
+}
+
+/* Optional: place the page further to the right, so that there's more space for
+ * the aside.
+ * Adjust the media query above to max-width: 63em
+.page {
+	left: 10em;
+}
+*/
 /* FONTS */
 
 /* TODO: mark variables for easy search/replace. */
@@ -311,4 +356,108 @@ hr:before {
 	content: "* * *";
 	content: "· · ·";
 	*/
+}
+/* BLOCKQUOTE */
+
+/* Put decorational quotation marks around blockquote elements. */
+blockquote {
+	font-style: italic;                  /* Quotations are usually typeset in italics. */
+	position: relative;                  /* So that position: absolute is relative to this. */
+
+}
+
+blockquote:before /*, blockquote:after */ {
+	position: absolute;                  /* Don't interfere with regular layout. */
+	color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
+	font-size: 5em;
+}
+	
+blockquote:before {
+	content: "“";
+	left: -.6em;
+	top: .25em;
+}
+
+/* Optional: place a mark after the quote, too. I personally don't like it as
+ * often times the last line won't end at the line, and there just seems to be a
+ * "dangling" quotation mark there.
+ *
+ * Note: add blockquote:after to the first selector above too.
+ */
+/*
+blockquote:after {
+	content: "„";                        /* Use the German-style opening quote as it's easier to align, and it should look the same. *
+	right: -.6em;
+	bottom: .25em;
+}
+*/
+/* PERMALINK MARKERS */
+
+/* Style permalink markers in headers. h2-h6 headers. The HTML is assumed to
+ * look like:
+ *
+ *     <h2 id="hello">Hello, CSS! <a href="#hello"></a></h1>
+ *
+ * Note the space between the </a> and text matters, otherwise it will look bad
+ * in text browsers.
+ */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-size: .7em;                     /* Doesn't need to be so large. */
+	line-height: 0;                      /* Don't affect line-height of header. */
+	color: #999;                         /* Use subdued colour, don't need to stand out too much. */
+}
+
+h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
+	content: "¶";                       /* So it won't get copy/pasted. */
+	/* Alternative:
+	content: "🔗";
+	content: "§";
+	content: "[link]";
+	*/
+}
+
+/* Alternative: put it before the element, in the page margin. Not done for h1
+ * as that's centre-aligned by default, so it looks weird. */
+/*
+h2, h3, h4, h5, h6 {
+	position: relative;
+}
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	position: absolute;
+	left: -1em;
+	font-size: .8em;
+	line-height: 1.6em;
+}
+*/
+/* POSTSCRIPT */
+
+/* A "postscript" is useful for adding things after the main text, such as a
+ * footnotes section, feedback section, etc.
+ *
+ * It doesn't need to be at the end of the document, and also fits well at the
+ * end of a chapter.
+ */
+
+.postscript {
+	margin-top: 3em;                     /* Clear a bit from regular content. */
+	border-top: 1px solid #bbb;          /* Border to separate. */
+	font-size: .9em;                     /* Slightly smaller text. */
+	position: relative;                  /* So we can place the header. */
+
+	margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
+	width: calc(100% + /*padx*/8em);
+	padding: 0 /*padx*/4em;              /* Add page margin. */
+}
+
+.postscript > strong {
+	font-style: normal;                  /* Override the italics. */
+	position: absolute;                  /* Move to the to align with the border. */
+	top: -1em;
+	left: /*padx*/6em;
+	background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
+	padding: 0 .5em;
+}
+
+.postscript p {
+	margin: 1em 2em                      /* Make margin same as list. */
 }

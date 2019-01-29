@@ -1,0 +1,21 @@
+aside {
+	hyphens: auto;
+}
+aside {
+	position: absolute;
+	left:-15em;
+	width: 14em;
+	text-align: right;
+	font-size: .9em;
+}
+@media (max-width: 83em) {
+	aside {
+		position: static;
+		width: auto;
+		text-align: left;
+		background-color: #f7f7f7;
+		padding: .4em 2em;
+		border: 1px solid #b7b7b7;
+		hyphens: none;
+	}
+}

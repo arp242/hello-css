@@ -17,9 +17,9 @@ Design principles
 > —Matthew Butterick, [*Practical Typography*](https://practicaltypography.com/)
 
 1. Pleasant defaults that should work well for most websites.
-2. Text and good typography dominates.
-3. Simplicity matters; easy to extend or modify.
-4. Works on all browser, assistive technology, screen sizes, and printer.
+2. Main focus is text and good typography.
+3. Simplicity matters: easy to extend or modify.
+4. Works on all browser, screen sizes, assistive technology, and when printed.
 
 ### Example pages.
 
@@ -28,7 +28,7 @@ Design principles
 - [demo.html](https://carpetsmoker.github.io/hello-css/demo.html) (just base.css);
   [demo-fancy.html](https://carpetsmoker.github.io/hello-css/demo-fancy.html) (all files).
 - My website, [arp242.net](https://arp242.net).
-- I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming).
+- I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming) with this template.
 - [My CV](https://arp242.net/cv).
 
 Usage
@@ -104,6 +104,12 @@ A typical HTML page might look something like:
 | blockquote.css | Decorative quotation marks around blockquote. |
 | postscript.css | P.S. content, such as footnotes.              |
 | permalink.css  | Permalink markers in headers.                 |
+
+The `dist/` directory contains versions without extensive annotations, as well
+as an `all.css` which contains all of the above files.
+
+You can use the [singlepage](https://github.com/Carpetsmoker/singlepage) tool to
+inline CSS files in to a document with `<style>` tags.
 
 ### “Variables”
 

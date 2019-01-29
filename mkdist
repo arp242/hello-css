@@ -1,0 +1,16 @@
+#!/bin/sh
+
+: > 'dist/all.min.css'
+: > 'dist/all.css'
+
+for f in ./*.css; do
+	mf="./dist/$(basename "${f%.css}").min.css"
+	cp "$f" "$mf"
+	# Note: "Minification" beyond removing comments shaves off very little, and
+	# isn't really worth the effort for the vast majority of use cases.
+	vim -c ':%s!\s*/\*\(.\|\n\)\{-}\*/!!' -c ':g/^$/d' -c ':wq' "$mf"
+
+	printf '\n/* FILE: %s */\n' "$f" >> 'dist/all.min.css'
+	cat "$mf" >> 'dist/all.min.css'
+	cat "$f" >> 'dist/all.css'
+done
