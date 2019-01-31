@@ -8,7 +8,7 @@ blockquote {
 }
 
 blockquote:before /*, blockquote:after */ {
-	position: absolute;                  /* Don't interfere with regular layour. */
+	position: absolute;                  /* Don't interfere with regular layout. */
 	color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
 	font-size: 5em;
 }

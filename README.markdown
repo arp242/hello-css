@@ -23,6 +23,8 @@ Design principles
 
 ### Example pages.
 
+<!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
+
 - My website, [arp242.net](https://arp242.net).
 - I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming).
 - [My CV](https://arp242.net/cv).
@@ -41,9 +43,9 @@ selectors are used (e.g. `blockquote { .. }` instead of `.blockquote { .. }`).
 
 The files are brief and well annotated, and a number of styles have
 commented-out alternatives. I encourage you to read and modify to your
-preference, rather than blindly copy/paste. <!-- <sup><a href="#fn-1">[1]</a></sup> -->
+preference, rather than blindly copy/paste.<!--<sup><a href="#fn-1">[1]</a></sup> -->
 
-Not every last element is styled. For some things – such as &lt;abbr&gt; – it's
+Not every last element is styled. For some things – such as &lt;abbr&gt; – it’s
 fine to rely on the browser defaults, small differences are okay.
 Other things – such as forms – tend to be quite application-specific and is a
 bit outside of the scope of this project, as the main goal is for text websites,
@@ -92,8 +94,8 @@ A typical HTML page might look something like:
 | .page         | base.css         | Main page body.                                                                        |
 | .page-a4      | base.css         | A4 page size; useful when producing pages where printing is high priority (e.g. a CV). |
 | .page-letter  | base.css         | U.S. letter page size.                                                                 |
-| .full         | base.css         | Put a pre or table element over the full width of a `.page`, including margins.        |
-| .postscript   | postscript.css   | Page content; for footnotes or feedback section.                                       |
+| .full         | base.css         | Put a pre or table element over the full width of a .page, including margins.          |
+| .postscript   | postscript.css   | Page content; for e.g. footnotes or feedback section.                                  |
 
 ### Included files
 
@@ -109,7 +111,7 @@ License
 -------
 
 The [Libre Baskerville font](https://github.com/impallari/Libre-Baskerville) in
-the `fonts` directory is distributed under the SIL Open Font License 1.1. See
+the fonts directory is distributed under the SIL Open Font License 1.1. See
 [fonts/LICENSE](fonts/LICENSE).
 
 <!--

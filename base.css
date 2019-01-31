@@ -86,9 +86,14 @@ html {
 	-moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
 }
 
+html, body {
+	margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
+}
+
 .center, .page {
 	max-width: 54rem;                    /* Don't make it too wide, as that makes it harder to read. */
 	margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
+	position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
 }
 
 .page {
@@ -110,6 +115,7 @@ html {
 /* PRINTING */
 @page {
 	margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
+	                                     /* Also hides URL and such that most browsers add. */
 }
 @media print {                           /* Reset some stuff for printing. */
 	body {
@@ -117,9 +123,12 @@ html {
 	}
 	.page, .center {
 		box-shadow: none;
-		padding: 0;
+		padding: 0 1cm;
 		margin: 0;
 		max-width: auto;
+	}
+	.page:first-child, .center:first-child {
+		padding-top: 5mm;
 	}
 }
 
@@ -236,7 +245,7 @@ table {
 	}
 }
 
-/* Use the full page width, incuding the margins. */
+/* Use the full page width, including the margins. */
 table.full {
 	margin-left: -3em;
 	/* Browser support for calc() is ~90% as of Jan 2019:
@@ -261,6 +270,7 @@ table tr:last-child {
 td, th {
 	padding: .2em .5em;                  /* Whitespace on top/bottom to make it less dense. */
 	                                     /* And to the side to prevent cells from touching. */
+	hyphens: none;                       /* Disable hyphenation by default, as it tends to wreak havoc with cell width calculations. */
 }
 
 
