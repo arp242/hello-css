@@ -208,13 +208,13 @@ pre {
 }
 
 pre.full {
-	margin-left: /*padx*/-4.6rem;
+	margin-left: /*padx*/-4rem;
 	/* Browser support for calc() is ~90% as of Jan 2019:
 	 * https://caniuse.com/#feat=calc
 	 *
 	 * For other browsers it'll show as width: 100%, which is still okay.
 	 */
-	width: calc(100% + /*padx*/9.2em);
+	width: calc(100% + /*padx*/8rem);
 }
 
 code, kbd, samp {
@@ -247,13 +247,13 @@ table {
 
 /* Use the full page width, including the margins. */
 table.full {
-	margin-left: /*padx*/-3em;
+	margin-left: /*padx*/-3.5rem;
 	/* Browser support for calc() is ~90% as of Jan 2019:
 	 * https://caniuse.com/#feat=calc
 	 *
 	 * For other browsers it'll show as width: 100%, which is still okay.
 	 */
-	width: calc(100% + /*padx*/6em);
+	width: calc(100% + /*padx*/7rem);
 }
 
 caption {
