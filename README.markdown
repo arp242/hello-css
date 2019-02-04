@@ -25,6 +25,8 @@ Design principles
 
 <!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
 
+- [demo.html](https://carpetsmoker.github.io/hello-css/demo.html) (just base.css);
+  [demo-fancy.html](https://carpetsmoker.github.io/hello-css/demo-fancy.html) (all files).
 - My website, [arp242.net](https://arp242.net).
 - I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming).
 - [My CV](https://arp242.net/cv).
@@ -32,11 +34,7 @@ Design principles
 Usage
 -----
 
-There are several files, mix-and-match as you want. The
-[**demo.html**](https://carpetsmoker.github.io/hello-css/demo.html) file
-includes just `base.css`, and
-[**demo-fancy.html**](https://carpetsmoker.github.io/hello-css/demo-fancy.html)
-includes all files.
+There are several files, mix-and-match as you want.
 
 There are only a few classes (see the table below); for the most part element
 selectors are used (e.g. `blockquote { .. }` instead of `.blockquote { .. }`).
@@ -88,14 +86,14 @@ A typical HTML page might look something like:
 
 ### Classes
 
-| Class         | File             | Purpose                                                                                |
-| ------------- | ---------------- | -------                                                                                |
-| .center       | base.css         | Center-align the main content.                                                         |
-| .page         | base.css         | Main page body.                                                                        |
-| .page-a4      | base.css         | A4 page size; useful when producing pages where printing is high priority (e.g. a CV). |
-| .page-letter  | base.css         | U.S. letter page size.                                                                 |
-| .full         | base.css         | Put a pre or table element over the full width of a .page, including margins.          |
-| .postscript   | postscript.css   | Page content; for e.g. footnotes or feedback section.                                  |
+| Class        | File           | Purpose                                                                                |
+| ------------ | -------------- | -------                                                                                |
+| .center      | base.css       | Center-align the main content.                                                         |
+| .page        | base.css       | Main page body.                                                                        |
+| .page-a4     | base.css       | A4 page size; useful when producing pages where printing is high priority (e.g. a CV). |
+| .page-letter | base.css       | U.S. letter page size.                                                                 |
+| .full        | base.css       | Put a pre or table element over the full width of a .page, including margins.          |
+| .postscript  | postscript.css | Page content; for e.g. footnotes or feedback section.                                  |
 
 ### Included files
 
