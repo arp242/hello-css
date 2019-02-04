@@ -160,6 +160,48 @@ not interactive ones (note: I might change my mind on this later).</p>
 <td>Permalink markers in headers.</td>
 </tr>
 </tbody></table>
+<h3 id="variables">“Variables”</h3>
+<p>In the interest of simplicity the project doesn’t use a CSS pre-processor; I
+couldn’t find any that&#39;s simple and lightweight enough to my liking. Instead,
+variables are marked with <code>/*var*/</code> just before the value, without a space. For
+example:</p>
+<pre class="full"><code>margin-left: /*padx*/-4em
+width: calc(100% + /*padx*/8em);</code></pre><p>You can list all variables with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>. Here&#39;s
+a list of the used variables:</p>
+<table class="full">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bodywidth</td>
+<td>54rem</td>
+<td>Width of main body text</td>
+</tr>
+<tr>
+<td>padx</td>
+<td>4rem</td>
+<td>Padding to the side of the body</td>
+</tr>
+<tr>
+<td>pady</td>
+<td>4rem</td>
+<td>Padding to the top and bottom of the body</td>
+</tr>
+<tr>
+<td>bgcolor</td>
+<td>#fff</td>
+<td>Background colour of main body text</td>
+</tr>
+<tr>
+<td>textcolor</td>
+<td>#252525</td>
+<td>Colour of main body text</td>
+</tr>
+</tbody></table>
 <h2 id="license">License</h2>
 <p>The <a href="https://github.com/impallari/Libre-Baskerville">Libre Baskerville font</a> in
 the fonts directory is distributed under the SIL Open Font License 1.1. See
