@@ -263,7 +263,7 @@ caption {
 tr {
 	border-bottom: 1px solid #ddd;       /* Divide rows with a border. */
 }
-table tr:last-child {
+table > tr:last-child, tbody tr:last-child {
 	border-bottom: none;                 /* No border on header or the last row. */
 }
 
