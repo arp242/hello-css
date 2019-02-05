@@ -113,15 +113,18 @@ inline CSS files in to a document with `<style>` tags.
 
 ### “Variables”
 
-In the interest of simplicity the project doesn’t use a CSS pre-processor; I
-couldn’t find any that's simple and lightweight enough to my liking. Instead,
-variables are marked with `/*var*/` just before the value, without a space. For
-example:
+In the interest of simplicity the project doesn’t use a CSS pre-processor (I
+couldn’t find any that’s simple and lightweight enough to my liking) and native
+[CSS variables](https://caniuse.com/#feat=css-variables) do not yet have
+universal browser support.
+
+Instead I opted for a KISS approach: variables are marked with `/*varname*/`
+just before the value, without a space. For example:
 
 	margin-left: /*padx*/-4em
 	width: calc(100% + /*padx*/8em);
 
-You can list all variables with something like `grep '/\*\w\+\*/' *.css`. Here's
+You can list all variables with something like `grep '/\*\w\+\*/' *.css`. Here’s
 a list of the used variables:
 
 | Variable  | Default | Description                               |

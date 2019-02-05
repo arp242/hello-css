@@ -163,12 +163,14 @@ as an <code>all.css</code> which contains all of the above files.</p>
 <p>You can use the <a href="https://github.com/Carpetsmoker/singlepage">singlepage</a> tool to
 inline CSS files in to a document with <code>&lt;style&gt;</code> tags.</p>
 <h3 id="variables">“Variables”</h3>
-<p>In the interest of simplicity the project doesn’t use a CSS pre-processor; I
-couldn’t find any that&#39;s simple and lightweight enough to my liking. Instead,
-variables are marked with <code>/*var*/</code> just before the value, without a space. For
-example:</p>
+<p>In the interest of simplicity the project doesn’t use a CSS pre-processor (I
+couldn’t find any that’s simple and lightweight enough to my liking) and native
+<a href="https://caniuse.com/#feat=css-variables">CSS variables</a> do not yet have
+universal browser support.</p>
+<p>Instead I opted for a KISS approach: variables are marked with <code>/*varname*/</code>
+just before the value, without a space. For example:</p>
 <pre class="full"><code>margin-left: /*padx*/-4em
-width: calc(100% + /*padx*/8em);</code></pre><p>You can list all variables with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>. Here&#39;s
+width: calc(100% + /*padx*/8em);</code></pre><p>You can list all variables with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>. Here’s
 a list of the used variables:</p>
 <table class="full">
 <thead>
