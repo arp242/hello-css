@@ -5,7 +5,7 @@ aside {
 }
 aside {
 	position: absolute;
-	left:-15em;
+	left: -15em;
 	width: 14em;
 	text-align: right;
 	font-size: .9em;
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 html {
 	background-color: #eee;
-	color:#252525;
+	color: #252525;
 	     tab-size: 4;
 	-moz-tab-size: 4;
 }
@@ -82,16 +82,16 @@ html, body {
 	margin: 0;
 }
 .center, .page {
-	max-width:54rem;
+	max-width: 54rem;
 	margin: .5rem auto;
 	position: relative;
 }
 .page {
-	padding:1rem4rem;
-	background-color:#fff;
+	padding: 1rem 4rem;
+	background-color: #fff;
 	box-shadow: 0 0 6px rgba(0,0,0,.2);
 }
-@media (max-width:54rem) {
+@media (max-width: 54rem) {
 	.page, .center {
 		max-width: 100%;
 		padding: 0 1rem;
@@ -141,7 +141,7 @@ h1 {
 	font-size: 1.6em;
 }
 h2 {
-	border-bottom: 1px solid#252525;
+	border-bottom: 1px solid #252525;
 	padding-bottom: .2em;
 	font-size: 1.4em;
 }
@@ -167,8 +167,8 @@ pre {
 	border-bottom: 1px solid #ddd;
 }
 pre.full {
-	margin-left:-4rem;
-	width: calc(100% +8rem);
+	margin-left: -4rem;
+	width: calc(100% + 8rem);
 }
 code, kbd, samp {
 	padding: 1px 2px;
@@ -187,15 +187,15 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
-@media (max-width:54rem) {
+@media (max-width: 54rem) {
 	table {
 		width: 100%;
 		margin-left: 0;
 	}
 }
 table.full {
-	margin-left:-3.5rem;
-	width: calc(100% +7rem);
+	margin-left: -3.5rem;
+	width: calc(100% + 7rem);
 }
 caption {
 	font-weight: bold;
@@ -214,7 +214,7 @@ hr {
 	border: none;
 	text-align: center;
 	font-size: 60px;
-	color:#252525;
+	color: #252525;
 	opacity: .9;
 }
 hr:before {
@@ -226,7 +226,7 @@ blockquote {
 	font-style: italic;
 	position: relative;
 }
-blockquote:before {
+blockquote:before  {
 	position: absolute;
 	color: #dbdbdb;
 	font-size: 5em;
@@ -254,16 +254,16 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
 	border-top: 1px solid #bbb;
 	font-size: .9em;
 	position: relative;
-	margin-left:-4em;
-	width: calc(100% +8em);
-	padding: 04em;
+	margin-left: -4em;
+	width: calc(100% + 8em);
+	padding: 0 4em;
 }
 .postscript > strong {
 	font-style: normal;
 	position: absolute;
 	top: -1em;
-	left:6em;
-	background-color:#fff;
+	left: 6em;
+	background-color: #fff;
 	padding: 0 .5em;
 }
 .postscript p {

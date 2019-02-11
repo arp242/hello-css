@@ -2,7 +2,7 @@ blockquote {
 	font-style: italic;
 	position: relative;
 }
-blockquote:before {
+blockquote:before  {
 	position: absolute;
 	color: #dbdbdb;
 	font-size: 5em;
