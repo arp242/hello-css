@@ -114,23 +114,20 @@ as an `all.css` which contains all of the above files.
 You can use the [singlepage](https://github.com/Carpetsmoker/singlepage) tool to
 inline CSS files in to a document with `<style>` tags.
 
-### “Variables”
+### Related values (“variables”)
 
-In the interest of simplicity the project doesn’t use a CSS pre-processor (I
-couldn’t find any that’s simple and lightweight enough to my liking) and native
-[CSS variables](https://caniuse.com/#feat=css-variables) do not yet have
-universal browser support.
-
-Instead I opted for a KISS approach: variables are marked with `/*varname*/`
-just before the value, without a space. For example:
+In the interest of simplicity the project doesn’t use a CSS preprocessor (see
+[this rationale](https://arp242.net/weblog/css-vars.html)). Instead I opted for
+a KISS approach: related values are marked with `/*varname*/` just before the
+value, without a space. For example:
 
 	margin-left: /*padx*/-4em
 	width: calc(100% + /*padx*/8em);
 
-You can list all variables with something like `grep '/\*\w\+\*/' *.css`. Here’s
-a list of the used variables:
+You can list all related values with something like `grep '/\*\w\+\*/' *.css`.
+Here’s a list of the used value names:
 
-| Variable  | Default | Description                               |
+| Name      | Default | Description                               |
 | --------- | ------- | ----------------------------------------- |
 | bodywidth | 54rem   | Width of main body text                   |
 | padx      | 4rem    | Padding to the side of the body           |

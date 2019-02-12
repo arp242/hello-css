@@ -164,20 +164,18 @@ not interactive ones (note: I might change my mind on this later).</p>
 as an <code>all.css</code> which contains all of the above files.</p>
 <p>You can use the <a href="https://github.com/Carpetsmoker/singlepage">singlepage</a> tool to
 inline CSS files in to a document with <code>&lt;style&gt;</code> tags.</p>
-<h3 id="variables">“Variables”</h3>
-<p>In the interest of simplicity the project doesn’t use a CSS pre-processor (I
-couldn’t find any that’s simple and lightweight enough to my liking) and native
-<a href="https://caniuse.com/#feat=css-variables">CSS variables</a> do not yet have
-universal browser support.</p>
-<p>Instead I opted for a KISS approach: variables are marked with <code>/*varname*/</code>
-just before the value, without a space. For example:</p>
+<h3 id="related-values-variables">Related values (“variables”)</h3>
+<p>In the interest of simplicity the project doesn’t use a CSS preprocessor (see
+<a href="https://arp242.net/weblog/css-vars.html">this rationale</a>). Instead I opted for
+a KISS approach: related values are marked with <code>/*varname*/</code> just before the
+value, without a space. For example:</p>
 <pre><code>margin-left: /*padx*/-4em
-width: calc(100% + /*padx*/8em);</code></pre><p>You can list all variables with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>. Here’s
-a list of the used variables:</p>
+width: calc(100% + /*padx*/8em);</code></pre><p>You can list all related values with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>.
+Here’s a list of the used value names:</p>
 <table>
 <thead>
 <tr>
-<th>Variable</th>
+<th>Name</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
