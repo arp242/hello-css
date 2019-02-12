@@ -5,19 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hello, CSS!</title>
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="canonical" href="https://arp242.net/hellocss/demo.html">
-	<link rel="stylesheet" href="base.css">
-	<link rel="stylesheet" href="aside.css">
-	<link rel="stylesheet" href="blockquote.css">
-	<link rel="stylesheet" href="permalink.css">
-	<link rel="stylesheet" href="postscript.css">
+	<link rel="stylesheet" href="../base.css">
 </head>
 <body>
-	<div class="center">
-		<a href="demo.html">Basic demo</a> |
-		<a href="demo-fancy.html">Fancier demo</a> |
+	<nav class="center">
+		<a href="README.html">README</a> |
+		<a href="README-fancy.html">Fancier README</a> |
+		<a href="index.html">Full demo</a> |
 		<a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
-	</div>
+	</nav>
 
 	<div class="page">
 <h1 id="hello-css">Hello, CSS!</h1>
@@ -39,11 +35,11 @@ distract your reader and undermine your message.</p>
 <li>Works on all browser, screen sizes, assistive technology, and when printed.</li>
 </ol>
 <h3 id="example-pages">Example pages.</h3>
- <aside>Email me if you’re using it and I’ll add your site.</aside> 
+<!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
 
 <ul>
-<li><a href="https://carpetsmoker.github.io/hello-css/demo.html">demo.html</a> (just base.css);
-<a href="https://carpetsmoker.github.io/hello-css/demo-fancy.html">demo-fancy.html</a> (all files).</li>
+<li><a href="https://carpetsmoker.github.io/hello-css/demo/README.html">demo/README.html</a> (just base.css);
+<a href="https://carpetsmoker.github.io/hello-css/demo/README-fancy.html">demo/README-fancy.html</a> (all files).</li>
 <li>My website, <a href="https://arp242.net">arp242.net</a>.</li>
 <li>I reformatted <a href="https://arp242.net/the-art-of-unix-programming">The Art of Unix programming</a> with this template.</li>
 <li><a href="https://arp242.net/cv">My CV</a>.</li>
@@ -54,7 +50,7 @@ distract your reader and undermine your message.</p>
 selectors are used (e.g. <code>blockquote { .. }</code> instead of <code>.blockquote { .. }</code>).</p>
 <p>The files are brief and well annotated, and a number of styles have
 commented-out alternatives. I encourage you to read and modify to your
-preference, rather than blindly copy/paste.<sup><a href="#fn-1">[1]</a></sup> </p>
+preference, rather than blindly copy/paste.<!--<sup><a href="#fn-1">[1]</a></sup> --></p>
 <p>Not every last element is styled. For some things – such as &lt;abbr&gt; – it’s
 fine to rely on the browser defaults, small differences are okay.
 Other things – such as forms – tend to be quite application-specific and is a
@@ -63,13 +59,13 @@ not interactive ones (note: I might change my mind on this later).</p>
 <p>Feel free to open an issue if you’re missing something in particular.</p>
 <h3 id="html-example">HTML example</h3>
 <p>A typical HTML page might look something like:</p>
-<pre class="full"><code class="language-html">&lt;body&gt;
-    &lt;div class=&quot;center&quot;&gt;
+<pre><code class="language-html">&lt;body&gt;
+    &lt;nav class=&quot;center&quot;&gt;
         &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
         &lt;a href=&quot;/weblog&quot;&gt;Weblog&lt;/a&gt;
-    &lt;/div&gt;
+    &lt;/nav&gt;
 
-    &lt;div class=&quot;page&quot;&gt;
+    &lt;article class=&quot;page&quot;&gt;
         &lt;h1&gt;Main content&lt;/h1&gt;
         &lt;p&gt;..&lt;/p&gt;
 
@@ -79,18 +75,19 @@ not interactive ones (note: I might change my mind on this later).</p>
         &lt;div class=&quot;postscript&quot;&gt;&lt;strong&gt;Feedback&lt;/strong&gt;
             ..
         &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;/article&gt;
 
-    &lt;div class=&quot;center&quot; style=&quot;text-align: right&quot;&gt;
+    &lt;footer class=&quot;center&quot; style=&quot;text-align: right&quot;&gt;
         Copyright © 2010–2018 Martin Tournoij &amp;lt;martin@arp242.net&amp;gt;&lt;br&gt;
         This document is licensed under a
         &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;
             cc-by 4.0 license
         &lt;/a&gt;.
-    &lt;/div&gt;
+    &lt;/footer&gt;
 &lt;/body&gt;</code></pre>
+<p>Also see <a href="start.html">start.html</a>.</p>
 <h3 id="classes">Classes</h3>
-<table class="full">
+<table>
 <thead>
 <tr>
 <th>Class</th>
@@ -121,7 +118,12 @@ not interactive ones (note: I might change my mind on this later).</p>
 <tr>
 <td>.full</td>
 <td>base.css</td>
-<td>Put a pre or table element over the full width of a .page, including margins.</td>
+<td>Put a pre, table, or figure element over the full width of a .page, including margins.</td>
+</tr>
+<tr>
+<td>.border</td>
+<td>base.css</td>
+<td>Add a border around figure elements.</td>
 </tr>
 <tr>
 <td>.postscript</td>
@@ -130,7 +132,7 @@ not interactive ones (note: I might change my mind on this later).</p>
 </tr>
 </tbody></table>
 <h3 id="included-files">Included files</h3>
-<table class="full">
+<table>
 <thead>
 <tr>
 <th>File</th>
@@ -169,10 +171,10 @@ couldn’t find any that’s simple and lightweight enough to my liking) and nat
 universal browser support.</p>
 <p>Instead I opted for a KISS approach: variables are marked with <code>/*varname*/</code>
 just before the value, without a space. For example:</p>
-<pre class="full"><code>margin-left: /*padx*/-4em
+<pre><code>margin-left: /*padx*/-4em
 width: calc(100% + /*padx*/8em);</code></pre><p>You can list all variables with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>. Here’s
 a list of the used variables:</p>
-<table class="full">
+<table>
 <thead>
 <tr>
 <th>Variable</th>
@@ -210,17 +212,17 @@ a list of the used variables:</p>
 <p>The <a href="https://github.com/impallari/Libre-Baskerville">Libre Baskerville font</a> in
 the fonts directory is distributed under the SIL Open Font License 1.1. See
 <a href="fonts/LICENSE">fonts/LICENSE</a>.</p>
-
+<!--
 <aside>In my country of The Netherlands it’s not clear if it’s possible to place works in the public domain,
     <a href="https://www.iusmentis.com/auteursrecht/publiekdomein/#plaatsen">see this article</a>.
 </aside>
-
+-->
 <p>Everything else is in the public domain. I renounce all copyright, and don’t
 care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the
 attribution clause with the text “without any restrictions”.</p>
 <hr>
-<pre class="full"><code>Copyright © 2019 Martin Tournoij
+<pre><code>Copyright © 2019 Martin Tournoij
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, without any restrictions.
@@ -231,7 +233,7 @@ FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
 INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
 OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
-THIS SOFTWARE.</code></pre>
+THIS SOFTWARE.</code></pre><!--
 <div class="postscript">
     <strong>Footnotes</strong>
     <ol>
@@ -241,6 +243,6 @@ THIS SOFTWARE.</code></pre>
             <em>less</em> flexible overall.</p></li>
     </ol>
 </div>
-
+-->
 
 </div></body></html>

@@ -211,17 +211,25 @@ a:hover code  {
 h1 {
 	text-align: center;
 	padding: .5em 0;                     /* More than default. */
-	font-size: 1.6em;                    /* Default of 2em is pretty large. */
+	font-size: 1.7em;                    /* Default of 2em is pretty large. */
 }
 
 h2 {
 	border-bottom: 1px solid /*textcolor*/#252525;    /* Underline to stand out more. */
 	padding-bottom: .2em;                /* Border not too close to the text. */
-	font-size: 1.4em;                    /* Default of 1.8em is pretty large. */
+	font-size: 1.5em;                    /* Default of 1.8em is pretty large. */
 }
 
 h3 {
-	font-size: 1.2em;                    /* Default of 1.6em is pretty large. */
+	font-size: 1.3em;                    /* Default of 1.6em is pretty large. */
+}
+
+h4 {
+	font-size: 1.1em;                    /* Slightly larger than default of 1em. */
+}
+
+h5, h6 {
+	font-size: 1em;                      /* Don't make h5 and h6 smaller than base font. */
 }
 
 
@@ -238,6 +246,22 @@ img {
 figure {
 	text-align: center;                  /* Centre images and associated captions (if any). */
 	margin: 1rem 0;                      /* Don't need 40px of margin on either side. */
+}
+
+figure.border {
+	border: 1px solid #bbb;              /* Add border. */
+	padding: 5px;                        /* Slight gap between image and border. */
+	margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
+}
+
+figure.full {                            /* Make sure this is after .border so that adding both works. */
+	margin-left: /*padx*/-4rem;
+	width: calc(100% + /*padx*/8rem);
+}
+
+figure.full.border {
+	border-left: none;                   /* Remove side borders on .full */
+	border-right: none;
 }
 
 

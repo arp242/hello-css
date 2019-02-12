@@ -25,8 +25,8 @@ Design principles
 
 <!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
 
-- [demo.html](https://carpetsmoker.github.io/hello-css/demo.html) (just base.css);
-  [demo-fancy.html](https://carpetsmoker.github.io/hello-css/demo-fancy.html) (all files).
+- [demo/README.html](https://carpetsmoker.github.io/hello-css/demo/README.html) (just base.css);
+  [demo/README-fancy.html](https://carpetsmoker.github.io/hello-css/demo/README-fancy.html) (all files).
 - My website, [arp242.net](https://arp242.net).
 - I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming) with this template.
 - [My CV](https://arp242.net/cv).
@@ -89,12 +89,13 @@ Also see [start.html](start.html).
 ### Classes
 
 | Class        | File           | Purpose                                                                                |
-| ------------ | -------------- | -------                                                                                |
+| ------------ | -------------- | -------------------------------------------------------------------------------------- |
 | .center      | base.css       | Center-align the main content.                                                         |
 | .page        | base.css       | Main page body.                                                                        |
 | .page-a4     | base.css       | A4 page size; useful when producing pages where printing is high priority (e.g. a CV). |
 | .page-letter | base.css       | U.S. letter page size.                                                                 |
-| .full        | base.css       | Put a pre or table element over the full width of a .page, including margins.          |
+| .full        | base.css       | Put a pre, table, or figure element over the full width of a .page, including margins. |
+| .border      | base.css       | Add a border around figure elements.                                                   |
 | .postscript  | postscript.css | Page content; for e.g. footnotes or feedback section.                                  |
 
 ### Included files

@@ -1,0 +1,51 @@
+#!/bin/sh
+
+set -euC
+
+head=$(cat <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hello, CSS!</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="stylesheet" href="../base.css">
+EOF
+)
+
+nav=$(cat <<EOF
+</head>
+<body>
+	<nav class="center">
+		<a href="README.html">README</a> |
+		<a href="README-fancy.html">Fancier README</a> |
+		<a href="index.html">Full demo</a> |
+		<a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
+	</nav>
+
+	<div class="page">
+EOF
+)
+
+
+echo "$head" >| "demo/README.html"
+echo "$head" >| "demo/README-fancy.html"
+cat <<EOF >> "demo/README-fancy.html"
+	<link rel="stylesheet" href="../aside.css">
+	<link rel="stylesheet" href="../blockquote.css">
+	<link rel="stylesheet" href="../permalink.css">
+	<link rel="stylesheet" href="../postscript.css">
+EOF
+
+echo "$nav" >> "demo/README.html"
+echo "$nav" >> "demo/README-fancy.html"
+
+marked < "README.markdown" >> "demo/README.html"
+
+marked < "README.markdown" | sed \
+	's/<pre>/<pre class="full">/; s/<table>/<table class="full">/; s/<!--//; s/-->//' \
+	>> "demo/README-fancy.html"
+
+echo "</div></body></html>" >> "demo/README.html"
+echo "</div></body></html>" >> "demo/README-fancy.html"
