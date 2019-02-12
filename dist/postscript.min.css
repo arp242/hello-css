@@ -15,6 +15,6 @@
 	background-color: #fff;
 	padding: 0 .5em;
 }
-.postscript p {
+.postscript > p {
 	margin: 1em 2em
 }

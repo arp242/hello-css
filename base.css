@@ -125,7 +125,7 @@ html, body {
 		box-shadow: none;
 		padding: 0 1cm;
 		margin: 0;
-		max-width: auto;
+		max-width: none;
 	}
 	.page:first-child, .center:first-child {
 		padding-top: 5mm;
@@ -222,7 +222,7 @@ code, kbd, samp {
 	box-shadow: 0 0 2px #aaa;            /* Stand out a bit more, as the background colour is quite light. */
 }
 pre > code {                             /* Reset the above styling on <pre><code> */
-	padding: none;
+	padding: 0;
 	box-shadow: none;
 }
 

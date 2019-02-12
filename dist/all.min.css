@@ -108,7 +108,7 @@ html, body {
 		box-shadow: none;
 		padding: 0 1cm;
 		margin: 0;
-		max-width: auto;
+		max-width: none;
 	}
 	.page:first-child, .center:first-child {
 		padding-top: 5mm;
@@ -175,7 +175,7 @@ code, kbd, samp {
 	box-shadow: 0 0 2px #aaa;
 }
 pre > code {
-	padding: none;
+	padding: 0;
 	box-shadow: none;
 }
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
@@ -266,6 +266,6 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
 	background-color: #fff;
 	padding: 0 .5em;
 }
-.postscript p {
+.postscript > p {
 	margin: 1em 2em
 }
