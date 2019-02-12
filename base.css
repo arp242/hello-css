@@ -291,8 +291,11 @@ caption {
 tr {
 	border-bottom: 1px solid #ddd;       /* Divide rows with a border. */
 }
-table > tr:last-child, tbody tr:last-child {
-	border-bottom: none;                 /* No border on header or the last row. */
+table > tr:last-child, tbody tr:last-child, tfoot tr:last-child {
+	border-bottom: none;                 /* No border on the last row. */
+}
+tfoot tr:first-child {
+	border-top: 1px solid #ddd;          /* Continue border on first tfoot row; removed with tbody tr:last-child. */
 }
 
 td, th {
