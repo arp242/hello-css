@@ -235,6 +235,10 @@ blockquote {
 img {
 	max-width: 100%;                     /* Make sure it's never larger than the page. */
 }
+figure {
+	text-align: center;                  /* Centre images and associated captions (if any). */
+	margin: 1rem 0;                      /* Don't need 40px of margin on either side. */
+}
 
 
 /* CODE */

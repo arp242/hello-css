@@ -154,6 +154,10 @@ blockquote {
 img {
 	max-width: 100%;
 }
+figure {
+	text-align: center;
+	margin: 1rem 0;
+}
 code, pre, kbd, samp {
 	background-color: #f8f8f8;
 	color: #000;
