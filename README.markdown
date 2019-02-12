@@ -57,12 +57,12 @@ A typical HTML page might look something like:
 
 ```html
 <body>
-	<div class="center">
+	<nav class="center">
 		<a href="/">Home</a>
 		<a href="/weblog">Weblog</a>
-	</div>
+	</nav>
 
-	<div class="page">
+	<article class="page">
 		<h1>Main content</h1>
 		<p>..</p>
 
@@ -72,17 +72,19 @@ A typical HTML page might look something like:
 		<div class="postscript"><strong>Feedback</strong>
 			..
 		</div>
-	</div>
+	</article>
 
-	<div class="center" style="text-align: right">
+	<footer class="center" style="text-align: right">
 		Copyright © 2010–2018 Martin Tournoij &lt;martin@arp242.net&gt;<br>
 		This document is licensed under a
 		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 			cc-by 4.0 license
 		</a>.
-	</div>
+	</footer>
 </body>
 ```
+
+Also see [start.html](start.html).
 
 ### Classes
 
