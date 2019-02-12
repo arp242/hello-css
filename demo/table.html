@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>table demo</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="canonical" href="TODO">
+    <link rel="stylesheet" href="../base.css">
+	<link rel="stylesheet" href="../aside.css">
+	<link rel="stylesheet" href="../blockquote.css">
+	<link rel="stylesheet" href="../permalink.css">
+	<link rel="stylesheet" href="../postscript.css">
+</head>
+
+<body>
+    <nav class="center">
+        <a href="README.html">README</a> |
+        <a href="README-fancy.html">Fancier README</a> |
+        <a href="index.html">Full demo</a> |
+        <a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
+    </nav>
+
+    <article class="page">
+        <h1>table demo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+        
+            <p>Simple table with header</p>
+            <table>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                </tr>
+            </table>
+
+            <p>Table with thead, tfoot, and tbody</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th scope="col">Expenditure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Donuts</th>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stationary</th>
+                        <td>18,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Totals</th>
+                        <td>21,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p>Table with colgroup</p>
+            <table>
+                <colgroup span="4"></colgroup>
+                <tr>
+                    <th>Countries</th>
+                    <th>Capitals</th>
+                    <th>Population</th>
+                    <th>Language</th>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington, D.C.</td>
+                    <td>309 million</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <td>Sweden</td>
+                    <td>Stockholm</td>
+                    <td>9 million</td>
+                    <td>Swedish</td>
+                </tr>
+            </table>
+
+            <p>Table with colgroup and col</p>
+            <table>
+                <colgroup>
+                    <col style="background-color: #0f0">
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>Lime</th>
+                    <th>Lemon</th>
+                    <th>Orange</th>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>Yellow</td>
+                    <td>Orange</td>
+                </tr>
+            </table>
+
+            <p>Simple table with caption</p>
+            <table>
+                <caption>Awesome caption</caption>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+            </table>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+    </article>
+</body>
+</html>

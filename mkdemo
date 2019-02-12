@@ -89,18 +89,56 @@ alltags = {
     },
 
     'Inline text semantics': {
-        # <p>This is <abbr title="abbrevation">abbr</abbr>.</p>
-        # <p>Inline quote with q: <q cite="https://arp242.net/SOURCE">this is a quote</q>.</p>
-        # <p>Mark <mark>this text</mark> with mark element.</p>
-        # <p><kbd>Ctrl</kbd> + <kbd>a</kbd></p>
-        # <p>The <dfn id="def">dfn</dfn> tag.</p>
-        # <p><samp>Sample</samp></p>
-        # <p>Small test: <small>Small test</small></p>
-        # <p>Super<sup>super</sup> and Sub<sub>sub</sub> text.</p>
-        # <p>The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least
-        # <time datetime="PT2H30M">2h 30m</time>.</p>
-        # <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
-        # <var>w</var> the width and <var>h</var> the height of the box.</p>
+        'a': '''
+            <p>You can reach Michael at:</p>
+            <ul>
+                <li><a href="https://example.com">Website</a></li>
+                <li><a href="mailto:m.bluth@example.com">Email</a></li>
+                <li><a href="tel:+123456789">Phone</a></li>
+            </ul>
+        ''',
+        'abbr': '''
+            <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to
+            style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+        ''',
+        'kbd': '''
+            <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+        ''',
+        'mark': '''
+            <p>Search results for "salamander":</p>
+            <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
+            <p>Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+        ''',
+        'q': '''
+            <p>When Dave asks HAL to open the pod bay door, HAL answers: <q
+            cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm
+            sorry, Dave. I'm afraid I can't do that.</q></p>
+        ''',
+        'samp': '''
+            <p>I was trying to boot my computer, but I got this hilarious message:</p>
+            <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+        ''',
+        'small': '''
+            <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
+            <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
+        ''',
+        'sub': '''
+            <p>Almost every developer's favorite molecule is
+            C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+        ''',
+        'sup': '''
+            <p>The <b>Pythagorean theorem</b> is often expressed as the following equation:</p>
+            <p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+        ''',
+        'time': '''
+            <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+            <p>The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.</p>
+        ''',
+        'var': '''
+            <p>The volume of a box is <var>l</var> × <var>w</var> ×
+            <var>h</var>, where <var>l</var> represents the length, <var>w</var>
+            the width and <var>h</var> the height of the box.</p>
+        ''',
     },
 
     'Image and multimedia': {
@@ -109,24 +147,152 @@ alltags = {
     },
 
     'Embedded content':  {
-        # iframe
+        'iframe': '''
+            <iframe id="inlineFrameExample"
+                title="Inline Frame Example"
+                width="300"
+                height="200"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+            </iframe>
+        ''',
     },
     'Scripting': {
         # noscript
     },
 
     'Demarcating edits': {
-        # del, ins
+        'del': '''
+            <p>There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.</p>
+        '''
     },
 
     'Table content': {
+        'table': '''
+            <p>Simple table with header</p>
+            <table>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                </tr>
+            </table>
+
+            <p>Table with thead, tfoot, and tbody</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th scope="col">Expenditure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Donuts</th>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stationary</th>
+                        <td>18,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Totals</th>
+                        <td>21,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p>Table with colgroup</p>
+            <table>
+                <colgroup span="4"></colgroup>
+                <tr>
+                    <th>Countries</th>
+                    <th>Capitals</th>
+                    <th>Population</th>
+                    <th>Language</th>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington, D.C.</td>
+                    <td>309 million</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <td>Sweden</td>
+                    <td>Stockholm</td>
+                    <td>9 million</td>
+                    <td>Swedish</td>
+                </tr>
+            </table>
+
+            <p>Table with colgroup and col</p>
+            <table>
+                <colgroup>
+                    <col style="background-color: #0f0">
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>Lime</th>
+                    <th>Lemon</th>
+                    <th>Orange</th>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>Yellow</td>
+                    <td>Orange</td>
+                </tr>
+            </table>
+
+            <p>Simple table with caption</p>
+            <table>
+                <caption>Awesome caption</caption>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+                <tr>
+                    <td>Awesome data</td>
+                </tr>
+            </table>
+        ''',
     },
 
     'Forms': {
     },
 
     'Interactive elements': {
-        # details, summary
+        'details': '''
+            <!--
+            <style>
+                details[open] {{ border-bottom: 1px solid #b7b7b7; }}
+            </style>
+            -->
+
+            <details>
+                <summary>Expand paragraph</summary>
+                <p>The HTML Details Element (&lt;details>) creates a disclosure
+                widget in which information is visible only when the widget is
+                toggled into an "open" state. A summary or label can be provided
+                using the &lt;summary> element.</p>
+
+                <p>A disclosure widget is typically presented onscreen using a
+                small triangle which rotates (or twists) to indicate open/closed
+                status, with a label next to the triangle. If the first child of
+                the &lt;details> element is a &lt;summary>, the contents of the
+                &lt;summary> element are used as the label for the disclosure
+                widget.</p>
+            </details>
+        '''
     },
 
 }
@@ -200,10 +366,10 @@ index = '''
         styled by Hello, CSS; some are just here to check how they look in
         various browsers.</p>
 
-        <p>This is incomplete and work-in-progress.</p>
-        <ul>
+        <p>List taken from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+
         {}
-        </ul>
     </article>
 </body>
 </html>
@@ -211,12 +377,15 @@ index = '''
 
 l = ''
 for section, tags in alltags.items():
+    if len(tags) > 0:
+        l += '<h2>{}</h2><ul>'.format(section)
     for tag, example in tags.items():
         with open('./demo/{}.html'.format(tag), 'w') as fp:
             fp.write(tpl.format(tag=tag,
                                 example=example.format(lorem=lorem),
                                 lorem=lorem))
             l += '<li><a href="{tag}.html">{tag}</a></li>'.format(tag=tag)
+    l += '</ul>'
 
 
 with open('./demo/index.html', 'w') as fp:
