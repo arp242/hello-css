@@ -1,0 +1,20 @@
+The Libre Baskerville font in the fonts directory is distributed under the SIL
+Open Font License 1.1. See fonts/LICENSE.
+
+Everything else is in the public domain. I renounce all copyright, and don’t
+care what you do with it. Since this is not possible in all legal jurisdictions
+I’ve also attached a modified copy of the ISC license which replaces the
+attribution clause with the text “without any restrictions”.
+
+Copyright © 2019 Martin Tournoij
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, without any restrictions.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
