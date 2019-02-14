@@ -12,20 +12,30 @@
   font-size: .9em;                     /* Slightly smaller text. */
   position: relative;                  /* So we can place the header. */
 
-  margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
-  width: calc(100% + /*padx*/8em);
-  padding: 0 /*padx*/4em;              /* Add page margin. */
 }
 
 .postscript > strong {
   font-style: normal;                  /* Override the italics. */
   position: absolute;                  /* Move to the to align with the border. */
   top: -1em;
-  left: /*padx*/6em;
+  left: 1em;
   background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
   padding: 0 .5em;
 }
 
 .postscript > p {
   margin: 1em 2em                      /* Make margin same as list. */
+}
+
+/* Make the border take up the page padding if the screen is wide enough. */
+@media (min-width: /*bodywidth*/54rem) {
+  .postscript {
+    margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
+    width: calc(100% + /*padx*/8em);
+    padding: 0 /*padx*/4em;              /* Add page margin. */
+  }
+
+  .postscript > strong {
+    left: /*padx*/6em;
+  }
 }
