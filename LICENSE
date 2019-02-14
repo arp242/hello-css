@@ -1,6 +1,9 @@
 The Libre Baskerville font in the fonts directory is distributed under the SIL
 Open Font License 1.1. See fonts/LICENSE.
 
+The fleurons in the <hr> element are exports from the Deja-Vu font, which is in
+the public domain.
+
 Everything else is in the public domain. I renounce all copyright, and don’t
 care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the

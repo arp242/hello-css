@@ -136,12 +136,15 @@ Here’s a list of the used value names:
 | textcolor | #252525 | Colour of main body text                  |
 
 
-License
--------
+Credits and License
+-------------------
 
 The [Libre Baskerville font](https://github.com/impallari/Libre-Baskerville) in
 the fonts directory is distributed under the SIL Open Font License 1.1. See
 [fonts/LICENSE](fonts/LICENSE).
+
+The fleurons in the &lt;hr&gt; element are exports from the Deja-Vu font, which
+is in the public domain.
 
 <!--
 <aside>In my country of The Netherlands it’s not clear if it’s possible to place works in the public domain,
@@ -151,9 +154,7 @@ the fonts directory is distributed under the SIL Open Font License 1.1. See
 Everything else is in the public domain. I renounce all copyright, and don’t
 care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the
-attribution clause with the text “without any restrictions”.
-
----
+attribution clause with the text “without any restrictions”:
 
 	Copyright © 2019 Martin Tournoij
 
@@ -167,6 +168,14 @@ attribution clause with the text “without any restrictions”.
 	OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 	TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 	THIS SOFTWARE.
+
+---
+
+Cross-platform testing made possible by
+[BrowserStack](https://www.browserstack.com/), which provides free access for
+open source projects.
+
+[![](https://carpetsmoker.github.io/hello-css/.browserstack.svg)](https://www.browserstack.com/)
 
 <!--
 <div class="postscript">
