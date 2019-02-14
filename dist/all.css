@@ -254,14 +254,16 @@ figure.border {
 	margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
 }
 
-figure.full {                            /* Make sure this is after .border so that adding both works. */
-	margin-left: /*padx*/-4rem;
-	width: calc(100% + /*padx*/8rem);
-}
+@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
+	figure.full {                        /* Make sure this is after .border so that adding both works. */
+		margin-left: /*padx*/-4rem;
+		width: calc(100% + /*padx*/8rem);
+	}
 
-figure.full.border {
-	border-left: none;                   /* Remove side borders on .full */
-	border-right: none;
+	figure.full.border {
+		border-left: none;                   /* Remove side borders on .full */
+		border-right: none;
+	}
 }
 
 
@@ -280,14 +282,11 @@ pre {
 	border-bottom: 1px solid #ddd;       /* Looks better. */
 }
 
-pre.full {
-	margin-left: /*padx*/-4rem;
-	/* Browser support for calc() is ~90% as of Jan 2019:
-	 * https://caniuse.com/#feat=calc
-	 *
-	 * For other browsers it'll show as width: 100%, which is still okay.
-	 */
-	width: calc(100% + /*padx*/8rem);
+@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
+	pre.full {
+		margin-left: /*padx*/-4rem;
+		width: calc(100% + /*padx*/8rem);
+	}
 }
 
 code, kbd, samp {
@@ -311,22 +310,12 @@ table {
 	border-collapse: collapse;           /* No space between borders. */
 	width: 100%;
 }
-@media (max-width: /*bodywidth*/54rem) {
-	table {
-		width: 100%;                     /* Reset width as we remove the margin at this max-width. */
-		margin-left: 0;                  /* Idem. */
-	}
-}
 
-/* Use the full page width, including the margins. */
-table.full {
-	margin-left: /*padx*/-3.5rem;
-	/* Browser support for calc() is ~90% as of Jan 2019:
-	 * https://caniuse.com/#feat=calc
-	 *
-	 * For other browsers it'll show as width: 100%, which is still okay.
-	 */
-	width: calc(100% + /*padx*/7rem);
+@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
+	table.full {
+		margin-left: /*padx*/-3.5rem;
+		width: calc(100% + /*padx*/7rem);
+	}
 }
 
 caption {

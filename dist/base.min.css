@@ -144,13 +144,15 @@ figure.border {
 	padding: 5px;
 	margin: -5px;
 }
-figure.full {
-	margin-left: -4rem;
-	width: calc(100% + 8rem);
-}
-figure.full.border {
-	border-left: none;
-	border-right: none;
+@media (min-width: 54rem) {
+	figure.full {
+		margin-left: -4rem;
+		width: calc(100% + 8rem);
+	}
+	figure.full.border {
+		border-left: none;
+		border-right: none;
+	}
 }
 code, pre, kbd, samp {
 	background-color: #f8f8f8;
@@ -164,9 +166,11 @@ pre {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
-pre.full {
-	margin-left: -4rem;
-	width: calc(100% + 8rem);
+@media (min-width: 54rem) {
+	pre.full {
+		margin-left: -4rem;
+		width: calc(100% + 8rem);
+	}
 }
 code, kbd, samp {
 	padding: 1px 2px;
@@ -185,15 +189,11 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
-@media (max-width: 54rem) {
-	table {
-		width: 100%;
-		margin-left: 0;
+@media (min-width: 54rem) {
+	table.full {
+		margin-left: -3.5rem;
+		width: calc(100% + 7rem);
 	}
-}
-table.full {
-	margin-left: -3.5rem;
-	width: calc(100% + 7rem);
 }
 caption {
 	font-weight: bold;
