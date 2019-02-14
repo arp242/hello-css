@@ -4,43 +4,42 @@
  */
 
 aside {
-	hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
+  hyphens: auto;                       /* Hyphenate, as this text is quite narrow. */
 }
 
 aside {
-	position: absolute;
-	left: /*padx*/-15em;
-	width: 14em;
-	text-align: right;
-	font-size: .9em;
+  position: absolute;
+  left: /*padx*/-15em;
+  width: 14em;
+  text-align: right;
+  font-size: .9em;
 }
 
 /* Alternative: place on the right.
 aside {
-	position: absolute;
-	right: -15em;
-	width: 14em;
+  position: absolute;
+  right: -15em;
+  width: 14em;
 }
 */
 
-/* Place inline if it won't fit on the screen. */
-@media (max-width: 83em) {
-	aside {
-		position: static;
-		width: auto;
-		text-align: left;
-		background-color: #f7f7f7;
-		padding: .4em 2em;
-		border: 1px solid #b7b7b7;
-		hyphens: none;
-	}
+@media (max-width: 83em) {             /* Place inline if it won't fit on the screen. */
+  aside {
+    position: static;
+    width: auto;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: .4em 2em;
+    border: 1px solid #b7b7b7;
+    hyphens: none;
+  }
 }
 
 /* Optional: place the page further to the right, so that there's more space for
  * the aside.
  * Adjust the media query above to max-width: 63em
 .page {
-	left: 10em;
+  left: 10em;
 }
 */
 /* FONTS */
@@ -57,150 +56,150 @@ aside {
  * A copy is in the "fonts" dir.
  */
 @font-face {
-	font-family: 'Libre Baskerville';
-	font-style: normal;
-	font-weight: 400;
-	font-display: fallback;
-	src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
-		url(/fonts/libre-baskerville.woff2) format('woff2'),
-		url(./fonts/libre-baskerville.woff2) format('woff2');
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
+    url(/fonts/libre-baskerville.woff2) format('woff2'),
+    url(./fonts/libre-baskerville.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Libre Baskerville';
-	font-style: normal;
-	font-weight: 700;
-	font-display: fallback;
-	src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
-		url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
-		url(./fonts/libre-baskerville-bold.woff2) format('woff2');
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
+    url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
+    url(./fonts/libre-baskerville-bold.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Libre Baskerville';
-	font-style: italic;
-	font-weight: 400;
-	font-display: fallback;
-	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
-		url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
-		url(./fonts/libre-baskerville-italic.woff2) format('woff2');
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
+    url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
+    url(./fonts/libre-baskerville-italic.woff2) format('woff2');
 }
 
 html {
-	font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
-	/* Possible sans-serif alternative:
-	 * font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
-	 */
+  font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  /* Possible sans-serif alternative:
+   * font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
+   */
 
-	        text-size-adjust: none; /* Disables text adjustment algorithm on some mobile browsers, this is */
-	-webkit-text-size-adjust: none; /* intended for sites that are not designed for mobile viewing. */
+          text-size-adjust: none;      /* Disables text adjustment algorithm on some mobile browsers, this is */
+  -webkit-text-size-adjust: none;      /* intended for sites that are not designed for mobile viewing. */
 }
 
 pre, code {
-	font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
+  font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
 }
 
 pre {
-	font-size: 14px;                     /* Smaller text to fit more. */
-	line-height: 130%;                   /* Idem. */
+  font-size: 14px;                     /* Smaller text to fit more. */
+  line-height: 130%;                   /* Idem. */
 }
 
 h1, h2, h3, h4, h5, h6 {
-	/* Enable ligatures, works well with Libre Baskerville, which adds
-	 * (old-fashioned but handsome) ligatures on "st", "ct", and "sp".
-	 *
-	 * You'll need to add "&subset=all" if you're using it from Google Fonts:
-	 *   https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=all
-	 */
-	font-variant-ligatures: common-ligatures discretionary-ligatures;
-	font-feature-settings: 'liga' on, 'dlig' on;
+  /* Enable ligatures, works well with Libre Baskerville, which adds
+   * (old-fashioned but handsome) ligatures on "st", "ct", and "sp".
+   *
+   * You'll need to add "&subset=all" if you're using it from Google Fonts:
+   *   https://fonts.googleapis.com/css?family=Libre+Baskerville&subset=all
+   */
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-feature-settings: 'liga' on, 'dlig' on;
 }
 
 
 /* DEFAULTS */
 * {
-	box-sizing: border-box;              /* Element width/height includes the border. */
+  box-sizing: border-box;              /* Element width/height includes the border. */
 }
 
 *:target {
-	background-color: #ff6;              /* Highlight elements in URL fragment, e.g. #some-header, or #footnote-1. */
+  background-color: #ff6;              /* Highlight elements in URL fragment, e.g. #some-header, or #footnote-1. */
 }
 
 html {
-	background-color: #eee;              /* Neutral background to contrast with the page. */
-	color: /*textcolor*/#252525;         /* Slightly less "harsh" black; looks subtly better. */
-	     tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
-	-moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
+  background-color: #eee;              /* Neutral background to contrast with the page. */
+  color: /*textcolor*/#252525;         /* Slightly less "harsh" black; looks subtly better. */
+       tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
+  -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
 }
 
 html, body {
-	margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
+  margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
 }
 
 .center, .page {
-	max-width: /*bodywidth*/54rem;       /* Don't make it too wide, as that makes it harder to read. */
-	margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
-	position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
+  max-width: /*bodywidth*/54rem;       /* Don't make it too wide, as that makes it harder to read. */
+  margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
+  position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
 }
 
 .page {
-	padding: /*pady*/1rem /*padx*/4rem;  /* Small padding on top, larger on sides. */
-	background-color: /*bgcolor*/#fff;   /* White background to override the html one */
-	                                     /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
-	                                      * Some suggestions: #fbfbf7, #fffff7 */
-	                                     /* Remove this and the box-shadow for an even background colour. */
-	box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
+  padding: /*pady*/1rem /*padx*/4rem;  /* Small padding on top, larger on sides. */
+  background-color: /*bgcolor*/#fff;   /* White background to override the html one */
+                                       /* A slightly grey or yellowish tint also works well, and gives a warmer feel.
+                                        * Some suggestions: #fbfbf7, #fffff7 */
+                                       /* Remove this and the box-shadow for an even background colour. */
+  box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
 @media (max-width: /*bodywidth*/54rem) {
-	.page, .center {
-		max-width: 100%;                 /* Full-width page. */
-		padding: 0 1rem;                 /* Modest amount of padding to prevent wasting screen space. */
-	}
+  .page, .center {
+    max-width: 100%;                   /* Full-width page. */
+    padding: 0 1rem;                   /* Modest amount of padding to prevent wasting screen space. */
+  }
 }
 
 
 /* PRINTING */
 @page {
-	margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
-	                                     /* Also hides URL and such that most browsers add. */
+  margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
+                                       /* Also hides URL and such that most browsers add. */
 }
-@media print {                           /* Reset some stuff for printing. */
-	body {
-		background-color: #fff;
-	}
-	.page, .center {
-		box-shadow: none;
-		padding: 0 1cm;
-		margin: 0;
-		max-width: none;
-	}
-	.page:first-child, .center:first-child {
-		padding-top: 5mm;
-	}
-}
-
-.page-a4, .page.page-a4 {                /* A4 paper used in most places */
-	width: 21cm;
-	height: 29.7cm;
+@media print {                         /* Reset some stuff for printing. */
+  body {
+    background-color: #fff;
+  }
+  .page, .center {
+    box-shadow: none;
+    padding: 0 1cm;
+    margin: 0;
+    max-width: none;
+  }
+  .page:first-child, .center:first-child {
+    padding-top: 5mm;
+  }
 }
 
-.page-letter, .page.page-letter {        /* Standard U.S. letter */
-	width: 8.5in;
-	height: 11in;
+.page-a4, .page.page-a4 {              /* A4 paper used in most places */
+  width: 21cm;
+  height: 29.7cm;
+}
+
+.page-letter, .page.page-letter {      /* Standard U.S. letter */
+  width: 8.5in;
+  height: 11in;
 }
 
 
 /* LINKS */
 a,
-a code {                                 /* Otherwise it would just stay black text; common enough to include here. */
-	color: #00f;                         /* Make sure colour is the same in all browsers. */
-	text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
-	transition: all .2s;                 /* Animate the change in colour effect on hover; subtle but noticeable. */
+a code {                               /* Otherwise it would just stay black text; common enough to include here. */
+  color: #00f;                         /* Make sure colour is the same in all browsers. */
+  text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
+  transition: all .2s;                 /* Animate the change in colour effect on hover; subtle but noticeable. */
 }
 a:hover {
-	text-decoration: underline;           /* Provide some feedback by underlining and changing colour. */
-	color: #6491ff;                       /* Light blue */
+  text-decoration: underline;          /* Provide some feedback by underlining and changing colour. */
+  color: #6491ff;                      /* Light blue */
 }
 a:hover code  {
-	color: #6491ff;                       /* Also change colour of code on hover. */
+  color: #6491ff;                      /* Also change colour of code on hover. */
 }
 
 
@@ -209,133 +208,133 @@ a:hover code  {
 /* The intention is that there is only one h1 on a page: at the top. If you use
  * h1 different, then you may want to add a border like in the h2. */
 h1 {
-	text-align: center;
-	padding: .5em 0;                     /* More than default. */
-	font-size: 1.7em;                    /* Default of 2em is pretty large. */
+  text-align: center;
+  padding: .5em 0;                     /* More than default. */
+  font-size: 1.7em;                    /* Default of 2em is pretty large. */
 }
 
 h2 {
-	border-bottom: 1px solid /*textcolor*/#252525;    /* Underline to stand out more. */
-	padding-bottom: .2em;                /* Border not too close to the text. */
-	font-size: 1.5em;                    /* Default of 1.8em is pretty large. */
+  border-bottom: 1px solid /*textcolor*/#252525;  /* Underline to stand out more. */
+  padding-bottom: .2em;                /* Border not too close to the text. */
+  font-size: 1.5em;                    /* Default of 1.8em is pretty large. */
 }
 
 h3 {
-	font-size: 1.3em;                    /* Default of 1.6em is pretty large. */
+  font-size: 1.3em;                    /* Default of 1.6em is pretty large. */
 }
 
 h4 {
-	font-size: 1.1em;                    /* Slightly larger than default of 1em. */
+  font-size: 1.1em;                    /* Slightly larger than default of 1em. */
 }
 
 h5, h6 {
-	font-size: 1em;                      /* Don't make h5 and h6 smaller than base font. */
+  font-size: 1em;                      /* Don't make h5 and h6 smaller than base font. */
 }
 
 
 /* BLOCKQUOTE */
 blockquote {
-	font-style: italic;                  /* Quotations are usually typeset in italics. */
+  font-style: italic;                  /* Quotations are usually typeset in italics. */
 }
 
 
 /* IMAGES */
 img {
-	max-width: 100%;                     /* Make sure it's never larger than the page. */
+  max-width: 100%;                     /* Make sure it's never larger than the page. */
 }
 figure {
-	text-align: center;                  /* Centre images and associated captions (if any). */
-	margin: 1rem 0;                      /* Don't need 40px of margin on either side. */
+  text-align: center;                  /* Centre images and associated captions (if any). */
+  margin: 1rem 0;                      /* Don't need 40px of margin on either side. */
 }
 
 figure.border {
-	border: 1px solid #bbb;              /* Add border. */
-	padding: 5px;                        /* Slight gap between image and border. */
-	margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
+  border: 1px solid #bbb;              /* Add border. */
+  padding: 5px;                        /* Slight gap between image and border. */
+  margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
 }
 
-@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
-	figure.full {                        /* Make sure this is after .border so that adding both works. */
-		margin-left: /*padx*/-4rem;
-		width: calc(100% + /*padx*/8rem);
-	}
+@media (min-width: /*bodywidth*/54rem) {  /* Only if the screen is wide enough. */
+  figure.full {                        /* Make sure this is after .border so that adding both works. */
+    margin-left: /*padx*/-4rem;
+    width: calc(100% + /*padx*/8rem);
+  }
 
-	figure.full.border {
-		border-left: none;                   /* Remove side borders on .full */
-		border-right: none;
-	}
+  figure.full.border {
+    border-left: none;                 /* Remove side borders on .full */
+    border-right: none;
+  }
 }
 
 
 /* CODE */
 code, pre, kbd, samp {
-	background-color: #f8f8f8;           /* Make it stand out a bit more. */
-	color: #000;                         /* Override the softer black, as we're now using a grey background. */
+  background-color: #f8f8f8;           /* Make it stand out a bit more. */
+  color: #000;                         /* Override the softer black, as we're now using a grey background. */
 }
 
 pre {
-	overflow: auto;                      /* Add scrollbars if the content is too high or wide. */
-	max-height: 500px;                   /* Scroll content larger than this. */
-	padding: .5em 1em;                   /* Don't put the text right on the edge. */
-	border-radius: 2px;                  /* Looks better with subtly rounded corner. */
-	border-top: 1px solid #ddd;          /* Looks better. */
-	border-bottom: 1px solid #ddd;       /* Looks better. */
+  overflow: auto;                      /* Add scrollbars if the content is too high or wide. */
+  max-height: 500px;                   /* Scroll content larger than this. */
+  padding: .5em 1em;                   /* Don't put the text right on the edge. */
+  border-radius: 2px;                  /* Looks better with subtly rounded corner. */
+  border-top: 1px solid #ddd;          /* Looks better. */
+  border-bottom: 1px solid #ddd;       /* Looks better. */
 }
 
 @media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
-	pre.full {
-		margin-left: /*padx*/-4rem;
-		width: calc(100% + /*padx*/8rem);
-	}
+  pre.full {
+    margin-left: /*padx*/-4rem;
+    width: calc(100% + /*padx*/8rem);
+  }
 }
 
 code, kbd, samp {
-	padding: 1px 2px;                    /* Make sure the text isn't right on the edge of the background. */
-	box-shadow: 0 0 2px #aaa;            /* Stand out a bit more, as the background colour is quite light. */
+  padding: 1px 2px;                    /* Make sure the text isn't right on the edge of the background. */
+  box-shadow: 0 0 2px #aaa;            /* Stand out a bit more, as the background colour is quite light. */
 }
 pre > code {                             /* Reset the above styling on <pre><code> */
-	padding: 0;
-	box-shadow: none;
+  padding: 0;
+  box-shadow: none;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
-	background-color: transparent;       /* Don't include grey background in headers, looks ugly. */
-	box-shadow: none;
-	color: inherit;
+  background-color: transparent;       /* Don't include grey background in headers, looks ugly. */
+  box-shadow: none;
+  color: inherit;
 }
 
 
 /* TABLES */
 table {
-	border-collapse: collapse;           /* No space between borders. */
-	width: 100%;
+  border-collapse: collapse;           /* No space between borders. */
+  width: 100%;
 }
 
-@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
-	table.full {
-		margin-left: /*padx*/-3.5rem;
-		width: calc(100% + /*padx*/7rem);
-	}
+@media (min-width: /*bodywidth*/54rem) {  /* Only if the screen is wide enough. */
+  table.full {
+    margin-left: /*padx*/-3.5rem;
+    width: calc(100% + /*padx*/7rem);
+  }
 }
 
 caption {
-	font-weight: bold;                   /* Make caption stand out more. */
+  font-weight: bold;                   /* Make caption stand out more. */
 }
 
 tr {
-	border-bottom: 1px solid #ddd;       /* Divide rows with a border. */
+  border-bottom: 1px solid #ddd;       /* Divide rows with a border. */
 }
 table > tr:last-child, tbody tr:last-child, tfoot tr:last-child {
-	border-bottom: none;                 /* No border on the last row. */
+  border-bottom: none;                 /* No border on the last row. */
 }
 tfoot tr:first-child {
-	border-top: 1px solid #ddd;          /* Continue border on first tfoot row; removed with tbody tr:last-child. */
+  border-top: 1px solid #ddd;          /* Continue border on first tfoot row; removed with tbody tr:last-child. */
 }
 
 td, th {
-	padding: .2em .5em;                  /* Whitespace on top/bottom to make it less dense. */
-	                                     /* And to the side to prevent cells from touching. */
-	hyphens: none;                       /* Disable hyphenation by default, as it tends to wreak havoc with cell width calculations. */
+  padding: .2em .5em;                  /* Whitespace on top/bottom to make it less dense. */
+                                       /* And to the side to prevent cells from touching. */
+  hyphens: none;                       /* Disable hyphenation by default, as it tends to wreak havoc with cell width calculations. */
 }
 
 
@@ -344,58 +343,59 @@ td, th {
 /* Make the <hr> element look better by replacing it with some text (usually
  * decorative characters such as fleurons or an asterism. */
 hr {
-	border: none;                        /* Remove default border. */
-	text-align: center;                  /* Centre the characters. */
-	font-size: 60px;                     /* Make it larger; what looks good depends a bit on which characte you choose. */
-	color: /*textcolor*/#252525;         /* Standard text colour; it's grey by default. */
-	opacity: .9;                         /* But make it slightly less dark than regular text. */
+  border: none;                        /* Remove default border. */
+  text-align: center;                  /* Centre the characters. */
+  font-size: 60px;                     /* Make it larger; what looks good depends a bit on which characte you choose. */
+  color: /*textcolor*/#252525;         /* Standard text colour; it's grey by default. */
+  opacity: .9;                         /* But make it slightly less dark than regular text. */
 }
 
 hr:before {
-	/*content: "☙❧";       */                /* Two fleurons. */
-	/*letter-spacing: -4px;*/                /* Make edges touch, looks nice in most fonts. */
+  /* Two fleurons with touching edges.
+  content: "☙❧";
+  letter-spacing: -4px;
+  */
 
-	/* As SVG, because too many browsers suck at rendering fonts well. This is
-	 * the same as the above two rules (as they *should* render). */
-	content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMC4yNDA5OTkgOS4xOTgiIGhlaWdodD0iOS4xOThtbSIgd2lkdGg9IjMwLjI0MDk5OW1tIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0yODcuODAyKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTkuNjIyODEzOSwyMjIuMjg0NzMpIj48cGF0aCBkPSJtIDIyLjgxMDY0Myw2NS41MTY4NjkgcSAxLjE0NzIxNywwLjA1MTY4IDEuMzUzOTIzLDEuMjQwMjM0IDAsMC44OTkxNyAtMC43NjQ4MTIsMS4xNTc1NTIgLTEuODE5MDEsMC4zNzIwNzEgLTIuMDI1NzE2LDAuODI2ODIzIDIuNjQ1ODM0LDAuMjc5MDUzIDMuMjE0Mjc0LDMuMDkwMjUxIGggMC4yNzkwNTMgbCAwLjE5NjM3LDAuNzY0ODExIC0wLjQ3NTQyMywwLjEzNDM1OSBoIC0wLjAzMTAxIHEgLTAuMTc1Njk5LDEuNzk4MzM5IC0xLjc0NjY2MywxLjg5MTM1NyAtMS4wMTI4NTgsMCAtMS4yNzEyNCwtMC45NjExODIgMCwtMC44NjgxNjQgMC4yMDY3MDYsLTAuODY4MTY0IDAuMTY1MzY0LDAuNDY1MDg4IDAuNzU0NDc1LDAuNDY1MDg4IDAuMDIwNjcsMCAwLjAzMTAxLDAgMC43OTU4MTcsMCAwLjkzMDE3NiwtMC43OTU4MTcgLTIuNzA3ODQ1LC0wLjc5NTgxNyAtMi43ODAxOTIsLTMuMjg2NjIxIGggLTAuMDMxMDEgcSAtMS4zNTM5MjIsMCAtMi4wNTY3MjIsMS4xMjY1NDYgMS4zODQ5MjksMC42NjE0NTkgMS4zODQ5MjksMS43MDUzMjMgLTAuMDkzMDIsMi41NDI0OCAtMy41NDUwMDMsMi43MDc4NDUgLTYuMzU2MjAxLC0wLjAzMTAxIC02LjgxMDk1NDEsLTMuNzEwMzY4IDAsLTAuNTk5NDQ3IDAuNjgyMTI5MSwtMC42OTI0NjQgMC41MjcwOTksMC4wMzEwMSAwLjYwOTc4MiwwLjQ4NTc1OCB2IDAuMjM3NzEyIGwgLTAuMTM0MzU5LDAuNDAzMDc2IHEgMCwwLjkzMDE3NiAxLjE2Nzg4NywxLjA1NDE5OSAwLjkxOTg0MSwwIDEuMDU0MiwtMC43OTU4MTcgMC41NDc3NywtNC45NDAyNjcgMy42Mjc2ODUsLTUuMTQ2OTcyIDIuMDI1NzE2LDAuMDYyMDEgMi4wMjU3MTYsMS43MTU2NTcgdiAwLjA4MjY4IHEgMCwwLjQwMzA3NyAtMC40MzQwODIsMS40MjYyNyAwLjk2MTE4MiwtMC43OTU4MTcgMS45OTQ3MSwtMS4wMDI1MjMgMC42MzA0NTMsMCAwLjYzMDQ1MywtMC4zOTI3NDEgMC43NDQxNCwtMC44NjgxNjQgMS41NTAyOTMsLTEuMjkxOTExIDAuNTg5MTExLC0wLjM3MjA3IDAuNTg5MTExLC0wLjc0NDE0IDAsLTAuMTM0MzU5IC0wLjE5NjM3MSwtMC40NDQ0MTcgLTAuMTg2MDM1LC0wLjMxMDA1OSAwLjAyMDY3LC0wLjM4MjQwNiB6IG0gLTEuNjAxOTY5LDMuNjU4NjkxIHEgLTAuMDEwMzQsMC4wODI2OCAtMC4wMTAzNCwwLjE3NTcgMCwxLjM2NDI1OCAyLjM2Njc4MSwyLjExODczNCB2IC0wLjAzMTAxIFEgMjMuMjM0MzksNjkuNTY4MzAxIDIxLjIwODY3NCw2OS4xNzU1NiBaIiAvPjwvZz48ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSwwLDAsMSwzOS44NjM3MzUsMjIyLjI4NDczKSI+PHBhdGggZD0ibSAyMi44MTA2NDMsNjUuNTE2ODY5IHEgMS4xNDcyMTcsMC4wNTE2OCAxLjM1MzkyMywxLjI0MDIzNCAwLDAuODk5MTcgLTAuNzY0ODEyLDEuMTU3NTUyIC0xLjgxOTAxLDAuMzcyMDcxIC0yLjAyNTcxNiwwLjgyNjgyMyAyLjY0NTgzNCwwLjI3OTA1MyAzLjIxNDI3NCwzLjA5MDI1MSBoIDAuMjc5MDUzIGwgMC4xOTYzNywwLjc2NDgxMSAtMC40NzU0MjMsMC4xMzQzNTkgaCAtMC4wMzEwMSBxIC0wLjE3NTY5OSwxLjc5ODMzOSAtMS43NDY2NjMsMS44OTEzNTcgLTEuMDEyODU4LDAgLTEuMjcxMjQsLTAuOTYxMTgyIDAsLTAuODY4MTY0IDAuMjA2NzA2LC0wLjg2ODE2NCAwLjE2NTM2NCwwLjQ2NTA4OCAwLjc1NDQ3NSwwLjQ2NTA4OCAwLjAyMDY3LDAgMC4wMzEwMSwwIDAuNzk1ODE3LDAgMC45MzAxNzYsLTAuNzk1ODE3IC0yLjcwNzg0NSwtMC43OTU4MTcgLTIuNzgwMTkyLC0zLjI4NjYyMSBoIC0wLjAzMTAxIHEgLTEuMzUzOTIyLDAgLTIuMDU2NzIyLDEuMTI2NTQ2IDEuMzg0OTI5LDAuNjYxNDU5IDEuMzg0OTI5LDEuNzA1MzIzIC0wLjA5MzAyLDIuNTQyNDggLTMuNTQ1MDAzLDIuNzA3ODQ1IC02LjM1NjIwMSwtMC4wMzEwMSAtNi44MTA5NTQxLC0zLjcxMDM2OCAwLC0wLjU5OTQ0NyAwLjY4MjEyOTEsLTAuNjkyNDY0IDAuNTI3MDk5LDAuMDMxMDEgMC42MDk3ODIsMC40ODU3NTggdiAwLjIzNzcxMiBsIC0wLjEzNDM1OSwwLjQwMzA3NiBxIDAsMC45MzAxNzYgMS4xNjc4ODcsMS4wNTQxOTkgMC45MTk4NDEsMCAxLjA1NDIsLTAuNzk1ODE3IDAuNTQ3NzcsLTQuOTQwMjY3IDMuNjI3Njg1LC01LjE0Njk3MiAyLjAyNTcxNiwwLjA2MjAxIDIuMDI1NzE2LDEuNzE1NjU3IHYgMC4wODI2OCBxIDAsMC40MDMwNzcgLTAuNDM0MDgyLDEuNDI2MjcgMC45NjExODIsLTAuNzk1ODE3IDEuOTk0NzEsLTEuMDAyNTIzIDAuNjMwNDUzLDAgMC42MzA0NTMsLTAuMzkyNzQxIDAuNzQ0MTQsLTAuODY4MTY0IDEuNTUwMjkzLC0xLjI5MTkxMSAwLjU4OTExMSwtMC4zNzIwNyAwLjU4OTExMSwtMC43NDQxNCAwLC0wLjEzNDM1OSAtMC4xOTYzNzEsLTAuNDQ0NDE3IC0wLjE4NjAzNSwtMC4zMTAwNTkgMC4wMjA2NywtMC4zODI0MDYgeiBtIC0xLjYwMTk2OSwzLjY1ODY5MSBxIC0wLjAxMDM0LDAuMDgyNjggLTAuMDEwMzQsMC4xNzU3IDAsMS4zNjQyNTggMi4zNjY3ODEsMi4xMTg3MzQgdiAtMC4wMzEwMSBRIDIzLjIzNDM5LDY5LjU2ODMwMSAyMS4yMDg2NzQsNjkuMTc1NTYgWiIgLz48L2c+PC9nPjwvc3ZnPgo=);
+  /* As SVG, because too many browsers suck at rendering fonts well. This is
+   * the same as the above two rules (as they *should* render). */
+  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMC4yNDA5OTkgOS4xOTgiIGhlaWdodD0iOS4xOThtbSIgd2lkdGg9IjMwLjI0MDk5OW1tIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0yODcuODAyKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTkuNjIyODEzOSwyMjIuMjg0NzMpIj48cGF0aCBkPSJtIDIyLjgxMDY0Myw2NS41MTY4NjkgcSAxLjE0NzIxNywwLjA1MTY4IDEuMzUzOTIzLDEuMjQwMjM0IDAsMC44OTkxNyAtMC43NjQ4MTIsMS4xNTc1NTIgLTEuODE5MDEsMC4zNzIwNzEgLTIuMDI1NzE2LDAuODI2ODIzIDIuNjQ1ODM0LDAuMjc5MDUzIDMuMjE0Mjc0LDMuMDkwMjUxIGggMC4yNzkwNTMgbCAwLjE5NjM3LDAuNzY0ODExIC0wLjQ3NTQyMywwLjEzNDM1OSBoIC0wLjAzMTAxIHEgLTAuMTc1Njk5LDEuNzk4MzM5IC0xLjc0NjY2MywxLjg5MTM1NyAtMS4wMTI4NTgsMCAtMS4yNzEyNCwtMC45NjExODIgMCwtMC44NjgxNjQgMC4yMDY3MDYsLTAuODY4MTY0IDAuMTY1MzY0LDAuNDY1MDg4IDAuNzU0NDc1LDAuNDY1MDg4IDAuMDIwNjcsMCAwLjAzMTAxLDAgMC43OTU4MTcsMCAwLjkzMDE3NiwtMC43OTU4MTcgLTIuNzA3ODQ1LC0wLjc5NTgxNyAtMi43ODAxOTIsLTMuMjg2NjIxIGggLTAuMDMxMDEgcSAtMS4zNTM5MjIsMCAtMi4wNTY3MjIsMS4xMjY1NDYgMS4zODQ5MjksMC42NjE0NTkgMS4zODQ5MjksMS43MDUzMjMgLTAuMDkzMDIsMi41NDI0OCAtMy41NDUwMDMsMi43MDc4NDUgLTYuMzU2MjAxLC0wLjAzMTAxIC02LjgxMDk1NDEsLTMuNzEwMzY4IDAsLTAuNTk5NDQ3IDAuNjgyMTI5MSwtMC42OTI0NjQgMC41MjcwOTksMC4wMzEwMSAwLjYwOTc4MiwwLjQ4NTc1OCB2IDAuMjM3NzEyIGwgLTAuMTM0MzU5LDAuNDAzMDc2IHEgMCwwLjkzMDE3NiAxLjE2Nzg4NywxLjA1NDE5OSAwLjkxOTg0MSwwIDEuMDU0MiwtMC43OTU4MTcgMC41NDc3NywtNC45NDAyNjcgMy42Mjc2ODUsLTUuMTQ2OTcyIDIuMDI1NzE2LDAuMDYyMDEgMi4wMjU3MTYsMS43MTU2NTcgdiAwLjA4MjY4IHEgMCwwLjQwMzA3NyAtMC40MzQwODIsMS40MjYyNyAwLjk2MTE4MiwtMC43OTU4MTcgMS45OTQ3MSwtMS4wMDI1MjMgMC42MzA0NTMsMCAwLjYzMDQ1MywtMC4zOTI3NDEgMC43NDQxNCwtMC44NjgxNjQgMS41NTAyOTMsLTEuMjkxOTExIDAuNTg5MTExLC0wLjM3MjA3IDAuNTg5MTExLC0wLjc0NDE0IDAsLTAuMTM0MzU5IC0wLjE5NjM3MSwtMC40NDQ0MTcgLTAuMTg2MDM1LC0wLjMxMDA1OSAwLjAyMDY3LC0wLjM4MjQwNiB6IG0gLTEuNjAxOTY5LDMuNjU4NjkxIHEgLTAuMDEwMzQsMC4wODI2OCAtMC4wMTAzNCwwLjE3NTcgMCwxLjM2NDI1OCAyLjM2Njc4MSwyLjExODczNCB2IC0wLjAzMTAxIFEgMjMuMjM0MzksNjkuNTY4MzAxIDIxLjIwODY3NCw2OS4xNzU1NiBaIiAvPjwvZz48ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSwwLDAsMSwzOS44NjM3MzUsMjIyLjI4NDczKSI+PHBhdGggZD0ibSAyMi44MTA2NDMsNjUuNTE2ODY5IHEgMS4xNDcyMTcsMC4wNTE2OCAxLjM1MzkyMywxLjI0MDIzNCAwLDAuODk5MTcgLTAuNzY0ODEyLDEuMTU3NTUyIC0xLjgxOTAxLDAuMzcyMDcxIC0yLjAyNTcxNiwwLjgyNjgyMyAyLjY0NTgzNCwwLjI3OTA1MyAzLjIxNDI3NCwzLjA5MDI1MSBoIDAuMjc5MDUzIGwgMC4xOTYzNywwLjc2NDgxMSAtMC40NzU0MjMsMC4xMzQzNTkgaCAtMC4wMzEwMSBxIC0wLjE3NTY5OSwxLjc5ODMzOSAtMS43NDY2NjMsMS44OTEzNTcgLTEuMDEyODU4LDAgLTEuMjcxMjQsLTAuOTYxMTgyIDAsLTAuODY4MTY0IDAuMjA2NzA2LC0wLjg2ODE2NCAwLjE2NTM2NCwwLjQ2NTA4OCAwLjc1NDQ3NSwwLjQ2NTA4OCAwLjAyMDY3LDAgMC4wMzEwMSwwIDAuNzk1ODE3LDAgMC45MzAxNzYsLTAuNzk1ODE3IC0yLjcwNzg0NSwtMC43OTU4MTcgLTIuNzgwMTkyLC0zLjI4NjYyMSBoIC0wLjAzMTAxIHEgLTEuMzUzOTIyLDAgLTIuMDU2NzIyLDEuMTI2NTQ2IDEuMzg0OTI5LDAuNjYxNDU5IDEuMzg0OTI5LDEuNzA1MzIzIC0wLjA5MzAyLDIuNTQyNDggLTMuNTQ1MDAzLDIuNzA3ODQ1IC02LjM1NjIwMSwtMC4wMzEwMSAtNi44MTA5NTQxLC0zLjcxMDM2OCAwLC0wLjU5OTQ0NyAwLjY4MjEyOTEsLTAuNjkyNDY0IDAuNTI3MDk5LDAuMDMxMDEgMC42MDk3ODIsMC40ODU3NTggdiAwLjIzNzcxMiBsIC0wLjEzNDM1OSwwLjQwMzA3NiBxIDAsMC45MzAxNzYgMS4xNjc4ODcsMS4wNTQxOTkgMC45MTk4NDEsMCAxLjA1NDIsLTAuNzk1ODE3IDAuNTQ3NzcsLTQuOTQwMjY3IDMuNjI3Njg1LC01LjE0Njk3MiAyLjAyNTcxNiwwLjA2MjAxIDIuMDI1NzE2LDEuNzE1NjU3IHYgMC4wODI2OCBxIDAsMC40MDMwNzcgLTAuNDM0MDgyLDEuNDI2MjcgMC45NjExODIsLTAuNzk1ODE3IDEuOTk0NzEsLTEuMDAyNTIzIDAuNjMwNDUzLDAgMC42MzA0NTMsLTAuMzkyNzQxIDAuNzQ0MTQsLTAuODY4MTY0IDEuNTUwMjkzLC0xLjI5MTkxMSAwLjU4OTExMSwtMC4zNzIwNyAwLjU4OTExMSwtMC43NDQxNCAwLC0wLjEzNDM1OSAtMC4xOTYzNzEsLTAuNDQ0NDE3IC0wLjE4NjAzNSwtMC4zMTAwNTkgMC4wMjA2NywtMC4zODI0MDYgeiBtIC0xLjYwMTk2OSwzLjY1ODY5MSBxIC0wLjAxMDM0LDAuMDgyNjggLTAuMDEwMzQsMC4xNzU3IDAsMS4zNjQyNTggMi4zNjY3ODEsMi4xMTg3MzQgdiAtMC4wMzEwMSBRIDIzLjIzNDM5LDY5LjU2ODMwMSAyMS4yMDg2NzQsNjkuMTc1NTYgWiIgLz48L2c+PC9nPjwvc3ZnPgo=);
 
-	/* Alternative: separate with a space:
-	content: "☙ ❧";
-	*/
+  /* Alternative: separate with a space:
+  content: "☙ ❧";
+  */
 
-	/* Or separate with letter-spacing and padding:
-	letter-spacing: 1em;
-	padding-left: 1em;
-	*/
+  /* Or separate with letter-spacing and padding:
+  letter-spacing: 1em;
+  padding-left: 1em;
+  */
 
-	/* Or asterism:
-	content: "⁂";
-	*/
+  /* Or asterism:
+  content: "⁂";
+  */
 
-	/* Many possibilities
-	content: "* * *";
-	content: "· · ·";
-	*/
+  /* Many possibilities
+  content: "* * *";
+  content: "· · ·";
+  */
 }
 /* BLOCKQUOTE */
 
 /* Put decorational quotation marks around blockquote elements. */
 blockquote {
-	font-style: italic;                  /* Quotations are usually typeset in italics. */
-	position: relative;                  /* So that position: absolute is relative to this. */
-
+  font-style: italic;                  /* Quotations are usually typeset in italics. */
+  position: relative;                  /* So that position: absolute is relative to this. */
 }
 
 blockquote:before /*, blockquote:after */ {
-	position: absolute;                  /* Don't interfere with regular layout. */
-	color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
-	font-size: 5em;
+  position: absolute;                  /* Don't interfere with regular layout. */
+  color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
+  font-size: 5em;
 }
-	
+
 blockquote:before {
-	content: "“";
-	left: -.6em;
-	top: .25em;
+  content: "“";
+  left: -.6em;
+  top: .25em;
 }
 
 /* Optional: place a mark after the quote, too. I personally don't like it as
@@ -406,9 +406,9 @@ blockquote:before {
  */
 /*
 blockquote:after {
-	content: "„";                        /* Use the German-style opening quote as it's easier to align, and it should look the same. *
-	right: -.6em;
-	bottom: .25em;
+  content: "„";                        /* Use the German-style opening quote as it's easier to align, and it should look the same. *
+  right: -.6em;
+  bottom: .25em;
 }
 */
 /* PERMALINK MARKERS */
@@ -422,31 +422,31 @@ blockquote:after {
  * in text browsers.
  */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-size: .7em;                     /* Doesn't need to be so large. */
-	line-height: 0;                      /* Don't affect line-height of header. */
-	color: #999;                         /* Use subdued colour, don't need to stand out too much. */
+  font-size: .7em;                     /* Doesn't need to be so large. */
+  line-height: 0;                      /* Don't affect line-height of header. */
+  color: #999;                         /* Use subdued colour, don't need to stand out too much. */
 }
 
 h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
-	content: "¶";                       /* So it won't get copy/pasted. */
-	/* Alternative:
-	content: "🔗";
-	content: "§";
-	content: "[link]";
-	*/
+  content: "¶";                        /* So it won't get copy/pasted. */
+  /* Alternative:
+  content: "🔗";
+  content: "§";
+  content: "[link]";
+  */
 }
 
 /* Alternative: put it before the element, in the page margin. Not done for h1
  * as that's centre-aligned by default, so it looks weird. */
 /*
 h2, h3, h4, h5, h6 {
-	position: relative;
+  position: relative;
 }
 h2 a, h3 a, h4 a, h5 a, h6 a {
-	position: absolute;
-	left: -1em;
-	font-size: .8em;
-	line-height: 1.6em;
+  position: absolute;
+  left: -1em;
+  font-size: .8em;
+  line-height: 1.6em;
 }
 */
 /* POSTSCRIPT */
@@ -457,27 +457,26 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
  * It doesn't need to be at the end of the document, and also fits well at the
  * end of a chapter.
  */
-
 .postscript {
-	margin-top: 3em;                     /* Clear a bit from regular content. */
-	border-top: 1px solid #bbb;          /* Border to separate. */
-	font-size: .9em;                     /* Slightly smaller text. */
-	position: relative;                  /* So we can place the header. */
+  margin-top: 3em;                     /* Clear a bit from regular content. */
+  border-top: 1px solid #bbb;          /* Border to separate. */
+  font-size: .9em;                     /* Slightly smaller text. */
+  position: relative;                  /* So we can place the header. */
 
-	margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
-	width: calc(100% + /*padx*/8em);
-	padding: 0 /*padx*/4em;              /* Add page margin. */
+  margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
+  width: calc(100% + /*padx*/8em);
+  padding: 0 /*padx*/4em;              /* Add page margin. */
 }
 
 .postscript > strong {
-	font-style: normal;                  /* Override the italics. */
-	position: absolute;                  /* Move to the to align with the border. */
-	top: -1em;
-	left: /*padx*/6em;
-	background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
-	padding: 0 .5em;
+  font-style: normal;                  /* Override the italics. */
+  position: absolute;                  /* Move to the to align with the border. */
+  top: -1em;
+  left: /*padx*/6em;
+  background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
+  padding: 0 .5em;
 }
 
 .postscript > p {
-	margin: 1em 2em                      /* Make margin same as list. */
+  margin: 1em 2em                      /* Make margin same as list. */
 }

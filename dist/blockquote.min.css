@@ -1,15 +1,14 @@
 blockquote {
-	font-style: italic;
-	position: relative;
+  font-style: italic;
+  position: relative;
 }
 blockquote:before  {
-	position: absolute;
-	color: #dbdbdb;
-	font-size: 5em;
+  position: absolute;
+  color: #dbdbdb;
+  font-size: 5em;
 }
-	
 blockquote:before {
-	content: "“";
-	left: -.6em;
-	top: .25em;
+  content: "“";
+  left: -.6em;
+  top: .25em;
 }

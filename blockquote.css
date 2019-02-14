@@ -2,21 +2,20 @@
 
 /* Put decorational quotation marks around blockquote elements. */
 blockquote {
-	font-style: italic;                  /* Quotations are usually typeset in italics. */
-	position: relative;                  /* So that position: absolute is relative to this. */
-
+  font-style: italic;                  /* Quotations are usually typeset in italics. */
+  position: relative;                  /* So that position: absolute is relative to this. */
 }
 
 blockquote:before /*, blockquote:after */ {
-	position: absolute;                  /* Don't interfere with regular layout. */
-	color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
-	font-size: 5em;
+  position: absolute;                  /* Don't interfere with regular layout. */
+  color: #dbdbdb;                      /* Just decorational, so don't stand out too much. */
+  font-size: 5em;
 }
-	
+
 blockquote:before {
-	content: "“";
-	left: -.6em;
-	top: .25em;
+  content: "“";
+  left: -.6em;
+  top: .25em;
 }
 
 /* Optional: place a mark after the quote, too. I personally don't like it as
@@ -27,8 +26,8 @@ blockquote:before {
  */
 /*
 blockquote:after {
-	content: "„";                        /* Use the German-style opening quote as it's easier to align, and it should look the same. *
-	right: -.6em;
-	bottom: .25em;
+  content: "„";                        /* Use the German-style opening quote as it's easier to align, and it should look the same. *
+  right: -.6em;
+  bottom: .25em;
 }
 */

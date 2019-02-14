@@ -9,30 +9,30 @@
  * in text browsers.
  */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-size: .7em;                     /* Doesn't need to be so large. */
-	line-height: 0;                      /* Don't affect line-height of header. */
-	color: #999;                         /* Use subdued colour, don't need to stand out too much. */
+  font-size: .7em;                     /* Doesn't need to be so large. */
+  line-height: 0;                      /* Don't affect line-height of header. */
+  color: #999;                         /* Use subdued colour, don't need to stand out too much. */
 }
 
 h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
-	content: "¶";                       /* So it won't get copy/pasted. */
-	/* Alternative:
-	content: "🔗";
-	content: "§";
-	content: "[link]";
-	*/
+  content: "¶";                        /* So it won't get copy/pasted. */
+  /* Alternative:
+  content: "🔗";
+  content: "§";
+  content: "[link]";
+  */
 }
 
 /* Alternative: put it before the element, in the page margin. Not done for h1
  * as that's centre-aligned by default, so it looks weird. */
 /*
 h2, h3, h4, h5, h6 {
-	position: relative;
+  position: relative;
 }
 h2 a, h3 a, h4 a, h5 a, h6 a {
-	position: absolute;
-	left: -1em;
-	font-size: .8em;
-	line-height: 1.6em;
+  position: absolute;
+  left: -1em;
+  font-size: .8em;
+  line-height: 1.6em;
 }
 */
