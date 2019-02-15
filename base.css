@@ -41,12 +41,22 @@
 
 html {
   font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
-  /* Possible sans-serif alternative:
+  /* Possible sans-serif alternative; note you may want to adjust the
+   * line-height and font-size if you want the fonts. Different values work
+   * better for different fonts.
    * font: 18px/160% Calibri, 'DejaVu Sans Serif', sans-serif;
    */
 
           text-size-adjust: none;      /* Disables text adjustment algorithm on some mobile browsers, this is */
   -webkit-text-size-adjust: none;      /* intended for sites that are not designed for mobile viewing. */
+}
+
+/* Use smaller fonts and line-height on smaller screens. */
+@media (max-width: /*bodywidth*/54rem) {
+  html { font-size: 14px; line-height: 160%; }
+}
+@media (max-width: /*bodywidth*/26rem) {
+  html { font-size: 12px; line-height: 150%; }
 }
 
 pre, code {
