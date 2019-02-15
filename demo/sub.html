@@ -23,8 +23,13 @@
     </nav>
 
     <article class="page">
+        <label style="float: right"
+          title="Makes it easier to see how it fits in normal content">Show paragraphs of text
+          <input type="checkbox" checked="checked" id="lorem-toggle">
+        </label>
         <h1>sub demo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -35,7 +40,7 @@
             <p>Almost every developer's favorite molecule is
             C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
         
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -43,5 +48,17 @@
             sunt in culpa qui officia deserunt mollit anim id est
             laborum.</p>
     </article>
+
+    <script>
+      window.addEventListener('load', function() {
+        document.getElementById('lorem-toggle').addEventListener('change', function(e) {
+          var p = document.getElementsByClassName('lorem');
+          for (var i=0; i<p.length; i++) {
+            p[i].style.display = this.checked ? 'block' : 'none';
+          }
+
+        }, false);
+      }, false);
+    </script>
 </body>
 </html>
