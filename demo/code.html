@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>code demo</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="canonical" href="TODO">
+    <link rel="stylesheet" href="../base.css">
+	<link rel="stylesheet" href="../aside.css">
+	<link rel="stylesheet" href="../blockquote.css">
+	<link rel="stylesheet" href="../permalink.css">
+	<link rel="stylesheet" href="../postscript.css">
+</head>
+
+<body>
+    <nav class="center">
+        <a href="README.html">README</a> |
+        <a href="README-fancy.html">Fancier README</a> |
+        <a href="index.html">Full demo</a> |
+        <a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
+    </nav>
+
+    <article class="page">
+        <label style="float: right"
+          title="Makes it easier to see how it fits in normal content">Show paragraphs of text
+          <input type="checkbox" checked="checked" id="lorem-toggle">
+        </label>
+        <h1>code demo</h1>
+
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+        
+          <p>The <a href="#"><code>push()</code></a> method adds one or more elements to the end
+            of an array and returns the new length of the array</p>
+          <p>There are exceptions, of course; if you’ve got a lot of <code>if cond { q
+          += "more sql" }</code> then adding SQL mocks to verify the correctness of
+          that logic might be a good idea.</p>
+          <p>I was trying to boot my computer, but I got this hilarious message:</p>
+          <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+          <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+        
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+    </article>
+
+    <script>
+      window.addEventListener('load', function() {
+        document.getElementById('lorem-toggle').addEventListener('change', function(e) {
+          var p = document.getElementsByClassName('lorem');
+          for (var i=0; i<p.length; i++) {
+            p[i].style.display = this.checked ? 'block' : 'none';
+          }
+
+        }, false);
+      }, false);
+    </script>
+</body>
+</html>

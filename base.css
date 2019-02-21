@@ -234,7 +234,7 @@ figure.border {
 
 /* CODE */
 code, pre, kbd, samp {
-  background-color: #f8f8f8;           /* Make it stand out a bit more. */
+  background-color: #f5f5f5;           /* Make it stand out a bit more. */
   color: #000;                         /* Override the softer black, as we're now using a grey background. */
 }
 
@@ -243,8 +243,8 @@ pre {
   max-height: 500px;                   /* Scroll content larger than this. */
   padding: .5em 1em;                   /* Don't put the text right on the edge. */
   border-radius: 2px;                  /* Looks better with subtly rounded corner. */
-  border-top: 1px solid #ddd;          /* Looks better. */
-  border-bottom: 1px solid #ddd;       /* Looks better. */
+  border-top: 1px solid #d5d5d5;          /* Looks better. */
+  border-bottom: 1px solid #d5d5d5;       /* Looks better. */
 }
 
 @media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
@@ -256,11 +256,11 @@ pre {
 
 code, kbd, samp {
   padding: 1px 2px;                    /* Make sure the text isn't right on the edge of the background. */
-  box-shadow: 0 0 2px #aaa;            /* Stand out a bit more, as the background colour is quite light. */
 }
-pre > code {                             /* Reset the above styling on <pre><code> */
+pre > code {                           /* Reset the above styling on <pre><code> */
   padding: 0;
   box-shadow: none;
+  border: none;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
