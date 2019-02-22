@@ -1,0 +1,143 @@
+/* FORMS */
+
+/* Simple form layouts.
+ *
+ * The default is to use a "vertical" form, where the labels sit above the input
+ * fields like so:
+ *
+ *     Label
+ *     [        ]
+ *
+ *     [x] Checkbox
+ *
+ *     [Submit]
+ *
+ *
+ * Use the <form class="horizontal"> if you want a more "horizontal" layout:
+ *
+ * Label    [       ]
+ *
+ * Another  [       ]
+ *
+ *          [x] Checkbox
+ *
+ *          [Submit]
+ */
+
+/* TODO: optgroup? */
+/* https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.css */
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="range"],
+input[type="number"],
+textarea,
+select {
+  font: 1rem/100% sans-serif;          /* Use  sans-serif font with the default font size. */
+  display: block;                      /* One input per line. */
+  min-width: 20rem;                    /* Roughly half the page. */
+  padding: .3em .2em;                  /* TODO: looks inconsistent on FF/Chrome. */
+}
+
+input[type="number"] {
+  min-width: 10rem;                    /* Numbers don't need to be so wide. */
+  width: 10rem;
+}
+
+label/*[for]*/ {
+  display: block;                      /* One label per line. */
+  margin-top: .5em;                    /* Clear from the previous input. */
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  line-height: 130%;
+}
+
+form > div, fieldset > div {
+  float: left;
+  margin-right: 1em;
+}
+
+
+/*
+input[type="color"],
+input[type="file"],
+input[type="image"],
+*/
+
+/*
+input[type="reset"],
+input[type="button"]
+*/
+
+/* Header. */
+form > strong, fieldset > strong {
+  display: inline-block;
+  margin-top: .5em;
+}
+
+
+/* "Horizontal form" */
+form.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form.horizontal label {
+  width: 25%;
+}
+
+form.horizontal input {
+  width: 75%;
+}
+
+/*
+form.horizontal strong {
+  display: inline-block;
+  margin-left: 15rem;
+  margin-top: .5em;
+}
+
+form.horizontal label[for] {
+  margin-left: 0;
+
+  min-width: 15rem;
+  margin-bottom: .5em;
+}
+
+form.horizontal input[type=submit], form.horizontal button[type=submit] {
+  margin-left: 15rem;
+}
+
+form.horizontal span {
+  margin-left: 15.5rem;
+  color: #666;
+  position: relative;
+  top: -8px;
+}
+
+form.horizontal fieldset {
+  margin:0;
+  padding-left: 0;
+  border: none;
+}
+
+form.horizontal legend {
+  font-weight: bold;
+  border-bottom: 1px solid #d5d5d5;
+  display: block;
+  width: 100%;
+  margin: 3px 0;
+}
+*/

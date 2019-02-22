@@ -52,11 +52,8 @@ selectors are used (e.g. <code>blockquote { .. }</code> instead of <code>.blockq
 commented-out alternatives. I encourage you to read and modify to your
 preference, rather than blindly copy/paste.<!--<sup><a href="#fn-1">[1]</a></sup> --></p>
 <p>Not every last element is styled. For some things – such as &lt;abbr&gt; – it’s
-fine to rely on the browser defaults, small differences are okay.
-Other things – such as forms – tend to be quite application-specific and is a
-bit outside of the scope of this project, as the main goal is for text websites,
-not interactive ones (note: I might change my mind on this later).</p>
-<p>Feel free to open an issue if you’re missing something in particular.</p>
+fine to rely on the browser defaults, small differences are okay. Feel free to
+open an issue if you’re missing something in particular.</p>
 <h3 id="html-example">HTML example</h3>
 <p>A typical HTML page might look something like:</p>
 <pre><code class="language-html">&lt;body&gt;
@@ -156,7 +153,11 @@ not interactive ones (note: I might change my mind on this later).</p>
 </thead>
 <tbody><tr>
 <td>base.css</td>
-<td>Basic defaults.</td>
+<td>Basic defaults; this is the bulk of the project.</td>
+</tr>
+<tr>
+<td>form.css</td>
+<td>Forms, inputs, labels (WIP).</td>
 </tr>
 <tr>
 <td>aside.css</td>

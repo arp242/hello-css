@@ -44,12 +44,8 @@ commented-out alternatives. I encourage you to read and modify to your
 preference, rather than blindly copy/paste.<!--<sup><a href="#fn-1">[1]</a></sup> -->
 
 Not every last element is styled. For some things – such as &lt;abbr&gt; – it’s
-fine to rely on the browser defaults, small differences are okay.
-Other things – such as forms – tend to be quite application-specific and is a
-bit outside of the scope of this project, as the main goal is for text websites,
-not interactive ones (note: I might change my mind on this later).
-
-Feel free to open an issue if you’re missing something in particular.
+fine to rely on the browser defaults, small differences are okay. Feel free to
+open an issue if you’re missing something in particular.
 
 ### HTML example
 
@@ -103,13 +99,14 @@ Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/star
 
 ### Included files
 
-| File           | Description                                   |
-| -------------- | --------------------------------------------- |
-| base.css       | Basic defaults.                               |
-| aside.css      | Content in margin.                            |
-| blockquote.css | Decorative quotation marks around blockquote. |
-| postscript.css | P.S. content, such as footnotes.              |
-| permalink.css  | Permalink markers in headers.                 |
+| File           | Description                                      |
+| -------------- | ------------------------------------------------ |
+| base.css       | Basic defaults; this is the bulk of the project. |
+| form.css       | Forms, inputs, labels (WIP).                     |
+| aside.css      | Content in margin.                               |
+| blockquote.css | Decorative quotation marks around blockquote.    |
+| postscript.css | P.S. content, such as footnotes.                 |
+| permalink.css  | Permalink markers in headers.                    |
 
 The `dist/` directory contains versions without extensive annotations, as well
 as an `all.css` which contains all of the above files.
