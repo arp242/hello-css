@@ -84,7 +84,7 @@ A typical HTML page might look something like:
 </body>
 ```
 
-Also see [start.html](start.html).
+Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/start.html).
 
 ### Classes
 
