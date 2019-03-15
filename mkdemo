@@ -278,6 +278,13 @@ alltags = {
     },
 
     'Forms': {
+        'button links': '''
+          Hello, <a href="#">world</a>!
+          Hello, <button class="link">world</button>!
+          Hello, <span class="link">world</span>!
+          Hello, <div class="link">world</div>!
+          Hello, <form><button class="link">world</button></form>!
+        ''',
         'form': '''
           <style>
           label {{

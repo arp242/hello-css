@@ -96,6 +96,7 @@ Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/star
 | .page-letter | base.css       | U.S. letter page size.                                                                 |
 | .full        | base.css       | Put a pre, table, or figure element over the full width of a .page, including margins. |
 | .border      | base.css       | Add a border around figure elements.                                                   |
+| .link        | base.css       | Format as a link; mainly for buttons, since regular links can't do POST requests.      |
 | .postscript  | postscript.css | Page content; for e.g. footnotes or feedback section.                                  |
 
 ### Included files

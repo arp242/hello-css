@@ -199,17 +199,39 @@ html, body {
 
 /* LINKS */
 a,
-a code {                               /* Otherwise it would just stay black text; common enough to include here. */
+a code,                                /* Otherwise it would just stay black text; common enough to include here. */
+.link {
   color: #00f;                         /* Make sure colour is the same in all browsers. */
   text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
   transition: all .2s;                 /* Animate the change in colour effect on hover; subtle but noticeable. */
 }
-a:hover {
+a:hover, .link:hover {
   text-decoration: underline;          /* Provide some feedback by underlining and changing colour. */
   color: #6491ff;                      /* Light blue */
 }
 a:hover code  {
   color: #6491ff;                      /* Also change colour of code on hover. */
+}
+
+form {                                 /* Make sure forms don't affect visual layout. */
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  background-color: transparent;       /* Reset basic appearance. */
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1rem;
+  display: inline;
+
+  -moz-user-select: inherit;           /* Otherwise text isn't selectable. */
+  -webkit-appearance: none;
 }
 
 
