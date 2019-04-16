@@ -159,7 +159,7 @@ a code,                                /* Otherwise it would just stay black tex
 .link {
   color: #00f;                         /* Make sure colour is the same in all browsers. */
   text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
-  transition: all .2s;                 /* Animate the change in colour effect on hover; subtle but noticeable. */
+  transition: color .2s;               /* Animate the change in colour effect on hover; subtle but noticeable. */
 }
 a:hover, .link:hover {
   text-decoration: underline;          /* Provide some feedback by underlining and changing colour. */
