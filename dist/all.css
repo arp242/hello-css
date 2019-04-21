@@ -338,6 +338,9 @@ table {
   border-collapse: collapse;           /* No space between borders. */
   width: 100%;
 }
+table + table {
+  margin-top: 2em;                     /* Add margin for subsequent tables. */
+}
 
 @media (min-width: /*bodywidth*/54rem) {  /* Only if the screen is wide enough. */
   table.full {
