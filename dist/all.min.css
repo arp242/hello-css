@@ -261,6 +261,17 @@ td, th {
   padding: .2em .5em;
   hyphens: none;
 }
+td.left, th.left  {
+  text-align: left;
+}
+td.right, th.right {
+  text-align: right;
+}
+table td.right {
+    font-feature-settings: 'tnum' on;
+    font-variant-numeric: tabular-nums;
+    font-family: sans-serif;
+}
 hr {
   border: none;
   text-align: center;

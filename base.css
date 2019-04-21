@@ -1,8 +1,5 @@
 /* FONTS */
 
-/* TODO: mark variables for easy search/replace. */
-/* TODO: comment-less version? */
-
 /* I like the Libre Baskerville typeface, which is a nice Serif font.
  *
  * https://github.com/impallari/Libre-Baskerville
@@ -325,6 +322,17 @@ td, th {
   hyphens: none;                       /* Disable hyphenation by default, as it tends to wreak havoc with cell width calculations. */
 }
 
+td.left, th.left  {                    /* Left aligned table cells (mainly for <th>). */
+  text-align: left;
+}
+td.right, th.right {                   /* Right aligned table cells. */
+  text-align: right;
+}
+table td.right {
+    font-feature-settings: 'tnum' on;  /* Use tabular numbers for alignment. */
+    font-variant-numeric: tabular-nums;
+    font-family: sans-serif;           /* Libre Baskerville has no aligned numbers :-( */
+}
 
 /* HORIZONTAL RULER */
 
@@ -333,7 +341,7 @@ td, th {
 hr {
   border: none;                        /* Remove default border. */
   text-align: center;                  /* Centre the characters. */
-  font-size: 60px;                     /* Make it larger; what looks good depends a bit on which characte you choose. */
+  font-size: 60px;                     /* Make it larger; what looks good depends a bit on which character you choose. */
   color: /*textcolor*/#252525;         /* Standard text colour; it's grey by default. */
   opacity: .9;                         /* But make it slightly less dark than regular text. */
 }

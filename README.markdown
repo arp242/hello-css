@@ -97,6 +97,8 @@ Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/star
 | .full        | base.css       | Put a pre, table, or figure element over the full width of a .page, including margins. |
 | .border      | base.css       | Add a border around figure elements.                                                   |
 | .link        | base.css       | Format as a link; mainly for buttons, since regular links can't do POST requests.      |
+| .left        | base.css       | Left-align a table cell.                                                               |
+| .right       | base.css       | Right-align a table cell; the cell will also use tabular numbers for alignment.        |
 | .postscript  | postscript.css | Page content; for e.g. footnotes or feedback section.                                  |
 
 ### Included files

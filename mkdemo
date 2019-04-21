@@ -274,6 +274,26 @@ alltags = {
                     <td>Awesome data</td>
                 </tr>
             </table>
+
+            <p>Aligned table</p>
+            <table>
+                <tr>
+                    <th class="left">First name</th>
+                    <th class="left">Last name</th>
+                    <th class="right">Amount</th>
+                </tr>
+                <tr>
+                    <td class="left">John</td>
+                    <td class="left">Doe</td>
+                    <td class="right">€531.34</td>
+                </tr>
+                <tr>
+                    <td class="left">Jane</td>
+                    <td class="left">Doe</td>
+                    <td class="right">€111.08</td>
+                </tr>
+            </table>
+
         ''',
     },
 
