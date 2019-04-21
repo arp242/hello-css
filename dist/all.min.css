@@ -305,6 +305,9 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
   font-size: .9em;
   position: relative;
 }
+.postscript + .postscript {
+  margin-top: 2em;
+}
 .postscript > strong {
   font-style: normal;
   position: absolute;

@@ -13,6 +13,9 @@
   position: relative;                  /* So we can place the header. */
 
 }
+.postscript + .postscript {
+  margin-top: 2em;                     /* Less margin for subsequent footnotes. */
+}
 
 .postscript > strong {
   font-style: normal;                  /* Override the italics. */

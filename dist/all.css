@@ -496,6 +496,9 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
   position: relative;                  /* So we can place the header. */
 
 }
+.postscript + .postscript {
+  margin-top: 2em;                     /* Less margin for subsequent footnotes. */
+}
 
 .postscript > strong {
   font-style: normal;                  /* Override the italics. */

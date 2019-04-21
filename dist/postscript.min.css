@@ -4,6 +4,9 @@
   font-size: .9em;
   position: relative;
 }
+.postscript + .postscript {
+  margin-top: 2em;
+}
 .postscript > strong {
   font-style: normal;
   position: absolute;
