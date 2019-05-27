@@ -21,7 +21,7 @@ nav=$(cat <<EOF
 		<a href="README.html">README</a> |
 		<a href="README-fancy.html">Fancier README</a> |
 		<a href="index.html">Full demo</a> |
-		<a href="http://github.com/Carpetsmoker/hello-css">GitHub</a>
+		<a href="http://github.com/arp242/hello-css">GitHub</a>
 	</nav>
 
 	<div class="page">
