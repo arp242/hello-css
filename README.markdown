@@ -25,8 +25,8 @@ Design principles
 
 <!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
 
-- [demo/README.html](https://carpetsmoker.github.io/hello-css/demo/README.html) (just base.css);
-  [demo/README-fancy.html](https://carpetsmoker.github.io/hello-css/demo/README-fancy.html) (all files).
+- [demo/README.html](https://arp242.github.io/hello-css/demo/README.html) (just base.css);
+  [demo/README-fancy.html](https://arp242.github.io/hello-css/demo/README-fancy.html) (all files).
 - My website, [arp242.net](https://arp242.net).
 - I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming) with this template.
 - [My CV](https://arp242.net/cv).
@@ -80,7 +80,7 @@ A typical HTML page might look something like:
 </body>
 ```
 
-Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/start.html).
+Also see [start.html](https://github.com/arp242/hello-css/blob/master/start.html).
 
 ### Classes
 
@@ -111,7 +111,7 @@ Also see [start.html](https://github.com/Carpetsmoker/hello-css/blob/master/star
 The `dist/` directory contains versions without extensive annotations, as well
 as an `all.css` which contains all of the above files.
 
-You can use the [singlepage](https://github.com/Carpetsmoker/singlepage) tool to
+You can use the [singlepage](https://github.com/arp242/singlepage) tool to
 inline CSS files in to a document with `<style>` tags.
 
 ### Related values (“variables”)
@@ -175,7 +175,7 @@ Cross-platform testing made possible by
 [BrowserStack](https://www.browserstack.com/), which provides free access for
 open source projects.
 
-[![](https://carpetsmoker.github.io/hello-css/.browserstack.svg)](https://www.browserstack.com/)
+[![](https://arp242.github.io/hello-css/.browserstack.svg)](https://www.browserstack.com/)
 
 <!--
 <div class="postscript">
