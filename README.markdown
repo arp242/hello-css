@@ -136,7 +136,13 @@ Here’s a list of the used value names:
 | textcolor | #252525 | Colour of main body text                  |
 
 
-Credits and License
+See also
+--------
+
+- [hello-theme](https://bitbucket.org/jboy1/hello-theme/src/master/), a Pelican
+  theme based on this (with a few changes).
+
+Credits and license
 -------------------
 
 The [Libre Baskerville font](https://github.com/impallari/Libre-Baskerville) in
