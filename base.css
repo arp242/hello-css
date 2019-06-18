@@ -337,6 +337,21 @@ table td.right {
     font-family: sans-serif;           /* Libre Baskerville has no aligned numbers :-( */
 }
 
+/* SUPER- AND SUBSCRIPT */
+
+sup, sub {                             /* Make sure the line height isn't affected. */
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+
 /* HORIZONTAL RULER */
 
 /* Make the <hr> element look better by replacing it with some text (usually

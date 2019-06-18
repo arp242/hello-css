@@ -275,6 +275,18 @@ table td.right {
     font-variant-numeric: tabular-nums;
     font-family: sans-serif;
 }
+sup, sub {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
 hr {
   border: none;
   text-align: center;
