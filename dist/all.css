@@ -92,11 +92,10 @@ html {
   -webkit-text-size-adjust: none;      /* intended for sites that are not designed for mobile viewing. */
 }
 
-/* Use smaller fonts and line-height on smaller screens. */
-@media (max-width: /*bodywidth*/54rem) {
+@media (max-width: /*bodywidth*/54em) { /* Use smaller fonts and line-height on smaller screens. */
   html { font-size: 14px; line-height: 160%; }
 }
-@media (max-width: /*bodywidth*/26rem) {
+@media (max-width: /*bodywidth*/26em) {
   html { font-size: 12px; line-height: 150%; }
 }
 
@@ -155,7 +154,7 @@ html, body {
                                        /* Remove this and the box-shadow for an even background colour. */
   box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
-@media (max-width: /*bodywidth*/54rem) {
+@media (max-width: /*bodywidth*/54em) {
   .page, .center {
     max-width: 100%;                   /* Full-width page. */
     padding: 0 1rem;                   /* Modest amount of padding to prevent wasting screen space. */
@@ -282,7 +281,7 @@ figure.border {
   margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
 }
 
-@media (min-width: /*bodywidth*/54rem) {  /* Only if the screen is wide enough. */
+@media (min-width: /*bodywidth*/54em) { /* Only if the screen is wide enough. */
   figure.full {                        /* Make sure this is after .border so that adding both works. */
     margin-left: /*padx*/-4rem;
     width: calc(100% + /*padx*/8rem);
@@ -310,7 +309,7 @@ pre {
   border-bottom: 1px solid #d5d5d5;       /* Looks better. */
 }
 
-@media (min-width: /*bodywidth*/54rem) { /* Only if the screen is wide enough. */
+@media (min-width: /*bodywidth*/54em) { /* Only if the screen is wide enough. */
   pre.full {
     margin-left: /*padx*/-4rem;
     width: calc(100% + /*padx*/8rem);
@@ -342,7 +341,7 @@ table + table {
   margin-top: 2em;                     /* Add margin for subsequent tables. */
 }
 
-@media (min-width: /*bodywidth*/54rem) {  /* Only if the screen is wide enough. */
+@media (min-width: /*bodywidth*/54em) {  /* Only if the screen is wide enough. */
   table.full {
     margin-left: /*padx*/-3.5rem;
     width: calc(100% + /*padx*/7rem);
