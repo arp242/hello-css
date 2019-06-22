@@ -472,8 +472,7 @@ blockquote:after {
 
 /* Simple form layouts.
  *
- * The default is to use a "vertical" form, where the labels sit above the input
- * fields like so:
+ * Use the "vertical" class to make the labels sit above the input fields:
  *
  *     Label
  *     [        ]
@@ -483,19 +482,22 @@ blockquote:after {
  *     [Submit]
  *
  *
- * Use the <form class="horizontal"> if you want a more "horizontal" layout:
+ * Use the "horizontal" class if you want a more "horizontal" layout:
  *
- * Label    [       ]
+ *     Label    [       ]
  *
- * Another  [       ]
+ *     Another  [       ]
  *
- *          [x] Checkbox
+ *              [x] Checkbox
  *
- *          [Submit]
+ *              [Submit]
+ *
+ * You need to explicitly add one of the layout classes to make it easier to use
+ * forms as simple UI elements.
  */
 
-/* TODO: optgroup? */
-/* https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.css */
+
+/* GENERIC STYLES */
 input[type="text"],
 input[type="search"],
 input[type="tel"],
@@ -512,32 +514,59 @@ input[type="number"],
 textarea,
 select {
   font: 1rem/100% sans-serif;          /* Use  sans-serif font with the default font size. */
-  display: block;                      /* One input per line. */
-  min-width: 20rem;                    /* Roughly half the page. */
   padding: .3em .2em;                  /* TODO: looks inconsistent on FF/Chrome. */
 }
 
-input[type="number"] {
-  min-width: 10rem;                    /* Numbers don't need to be so wide. */
-  width: 10rem;
-}
-
-label/*[for]*/ {
-  display: block;                      /* One label per line. */
-  margin-top: .5em;                    /* Clear from the previous input. */
-}
-
 textarea {
-  width: 100%;
-  height: 10rem;
-  line-height: 130%;
+  width: 100%;                         /* Use entire width of container. */
+  height: 10rem;                       /* A reasonable default height for most purposes. */
+  line-height: 130%;                   /* Reduce line-height since we set a sans-serif font. */
 }
 
-form > div, fieldset > div {
+form > strong, fieldset > strong {     /* Header. */
+  display: inline-block;
+  margin-top: .5em;
+}
+
+form > div, fieldset > div {           /* TODO: what is this and why did I add it?! */
   float: left;
   margin-right: 1em;
 }
 
+
+
+/* VERTICAL FORM */
+
+/* TODO: optgroup? */
+/* https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.css */
+.vertical input[type="text"],
+.vertical input[type="search"],
+.vertical input[type="tel"],
+.vertical input[type="url"],
+.vertical input[type="email"],
+.vertical input[type="password"],
+.vertical input[type="date"],
+.vertical input[type="month"],
+.vertical input[type="week"],
+.vertical input[type="time"],
+.vertical input[type="datetime-local"],
+.vertical input[type="range"],
+.vertical input[type="number"],
+.vertical textarea,
+.vertical select {
+  display: block;                      /* One input per line. */
+  min-width: 20rem;                    /* Roughly half the page. */
+}
+
+.vertical input[type="number"] {
+  min-width: 10rem;                    /* Numbers don't need to be so wide. */
+  width: 10rem;
+}
+
+.vertical label/*[for]*/ {
+  display: block;                      /* One label per line. */
+  margin-top: .5em;                    /* Clear from the previous input. */
+}
 
 /*
 input[type="color"],
@@ -550,14 +579,8 @@ input[type="reset"],
 input[type="button"]
 */
 
-/* Header. */
-form > strong, fieldset > strong {
-  display: inline-block;
-  margin-top: .5em;
-}
 
-
-/* "Horizontal form" */
+/* HORIZONTAL FORM */
 form.horizontal {
   display: flex;
   flex-wrap: wrap;

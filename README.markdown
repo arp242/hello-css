@@ -96,6 +96,8 @@ Also see [start.html](https://github.com/arp242/hello-css/blob/master/start.html
 | .left        | base.css       | Left-align a table cell.                                                               |
 | .right       | base.css       | Right-align a table cell; the cell will also use tabular numbers for alignment.        |
 | .postscript  | postscript.css | Page content; for e.g. footnotes or feedback section.                                  |
+| .vertical    | form.css       | Layout the form vertically (labels above inputs).                                      |
+| .horizontal  | form.css       | Layout the form horizontally (labels next to inputs).                                  |
 
 ### Included files
 
