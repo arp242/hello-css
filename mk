@@ -1,5 +1,6 @@
 #!/bin/sh
 
-./mkdemo
-./mkdist
-./mkreadme
+./mkreadme &
+./mkdemo &
+./mkdist &
+wait

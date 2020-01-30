@@ -8,7 +8,8 @@ for f in ./*.css; do
 	cp "$f" "$mf"
 	# Note: "Minification" beyond removing comments shaves off very little, and
 	# isn't really worth the effort for the vast majority of use cases.
-	vim -c ':%s!\s*/\*\(.\|\n\)\{-}\*/! !' -c ':%s/ *$//' -c ':g/^$/d' -c ':wq' "$mf"
+	vim -u NONE --noplugins -NnEs \
+      -c ':%s!\s*/\*\(.\|\n\)\{-}\*/! !g' -c ':%s/ *$//' -c ':g/^$/d' -c ':wq' "$mf"
 
 	printf '\n/* FILE: %s */\n' "$f" >> 'dist/all.min.css'
 	cat "$mf" >> 'dist/all.min.css'
