@@ -41,9 +41,9 @@ EOF
 echo "$nav" >> "demo/README.html"
 echo "$nav" >> "demo/README-fancy.html"
 
-marked < "README.markdown" >> "demo/README.html"
+kramdown < "README.markdown" >> "demo/README.html"
 
-marked < "README.markdown" | sed \
+kramdown < "README.markdown" | sed \
 	's/<pre>/<pre class="full">/; s/<table>/<table class="full">/; s/<!--//; s/-->//' \
 	>> "demo/README-fancy.html"
 

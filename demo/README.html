@@ -17,267 +17,317 @@
 
 	<div class="page">
 <h1 id="hello-css">Hello, CSS!</h1>
+
 <p>Hello, CSS! is a CSS template which styles most elements to neutral and
 aesthetically pleasing defaults. I copy/pasted variants of this so often I
 figured I might as well put a cleaned up and annotated version somewhere.</p>
+
 <p>I encourage you to pick ’n choose what you need, rather than insert everything.</p>
+
 <h2 id="design-principles">Design principles</h2>
+
 <blockquote>
-<p>Good typography can help your reader devote less attention to the mechanics of
+  <p>Good typography can help your reader devote less attention to the mechanics of
 reading and more attention to your message. Conversely, bad typography can
 distract your reader and undermine your message.</p>
-<p>—Matthew Butterick, <a href="https://practicaltypography.com/"><em>Practical Typography</em></a></p>
+
+  <p>—Matthew Butterick, <a href="https://practicaltypography.com/"><em>Practical Typography</em></a></p>
 </blockquote>
+
 <ol>
-<li>Pleasant defaults that should work well for most websites.</li>
-<li>Main focus is text and good typography.</li>
-<li>Simplicity matters: easy to extend or modify.</li>
-<li>Works on all browser, screen sizes, assistive technology, and when printed.</li>
+  <li>Pleasant defaults that should work well for most websites.</li>
+  <li>Main focus is text and good typography.</li>
+  <li>Simplicity matters: easy to extend or modify.</li>
+  <li>Works on all browser, screen sizes, assistive technology, and when printed.</li>
 </ol>
+
 <h3 id="example-pages">Example pages.</h3>
+
 <!-- <aside>Email me if you’re using it and I’ll add your site.</aside> -->
 
 <ul>
-<li><a href="https://arp242.github.io/hello-css/demo/README.html">demo/README.html</a> (just base.css);
+  <li><a href="https://arp242.github.io/hello-css/demo/README.html">demo/README.html</a> (just base.css);
 <a href="https://arp242.github.io/hello-css/demo/README-fancy.html">demo/README-fancy.html</a> (all files).</li>
-<li>My website, <a href="https://arp242.net">arp242.net</a>.</li>
-<li>I reformatted <a href="https://arp242.net/the-art-of-unix-programming">The Art of Unix programming</a> with this template.</li>
-<li><a href="https://arp242.net/cv">My CV</a>.</li>
+  <li>My website, <a href="https://arp242.net">arp242.net</a>.</li>
+  <li>I reformatted <a href="https://arp242.net/the-art-of-unix-programming">The Art of Unix programming</a> with this template.</li>
+  <li><a href="https://arp242.net/cv">My CV</a>.</li>
 </ul>
+
 <h2 id="usage">Usage</h2>
+
 <p>There are several files, mix-and-match as you want.</p>
+
 <p>There are only a few classes (see the table below); for the most part element
 selectors are used (e.g. <code>blockquote { .. }</code> instead of <code>.blockquote { .. }</code>).</p>
+
 <p>The files are brief and well annotated, and a number of styles have
 commented-out alternatives. I encourage you to read and modify to your
 preference, rather than blindly copy/paste.<!--<sup><a href="#fn-1">[1]</a></sup> --></p>
+
 <p>Not every last element is styled. For some things – such as &lt;abbr&gt; – it’s
 fine to rely on the browser defaults, small differences are okay. Feel free to
 open an issue if you’re missing something in particular.</p>
+
 <h3 id="html-example">HTML example</h3>
+
 <p>A typical HTML page might look something like:</p>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;nav class=&quot;center&quot;&gt;
-        &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
-        &lt;a href=&quot;/weblog&quot;&gt;Weblog&lt;/a&gt;
-    &lt;/nav&gt;
 
-    &lt;article class=&quot;page&quot;&gt;
-        &lt;h1&gt;Main content&lt;/h1&gt;
-        &lt;p&gt;..&lt;/p&gt;
+<p>```html</p>
+<body>
+	<nav class="center">
+		<a href="/">Home</a>
+		<a href="/weblog">Weblog</a>
+	</nav>
 
-        &lt;div class=&quot;postscript&quot;&gt;&lt;strong&gt;Footnotes&lt;/strong&gt;
-            ..
-        &lt;/div&gt;
-        &lt;div class=&quot;postscript&quot;&gt;&lt;strong&gt;Feedback&lt;/strong&gt;
-            ..
-        &lt;/div&gt;
-    &lt;/article&gt;
+	<article class="page">
+		<h1>Main content</h1>
+		<p>..</p>
 
-    &lt;footer class=&quot;center&quot; style=&quot;text-align: right&quot;&gt;
-        Copyright © 2010–2018 Martin Tournoij &amp;lt;martin@arp242.net&amp;gt;&lt;br&gt;
-        This document is licensed under a
-        &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;
-            cc-by 4.0 license
-        &lt;/a&gt;.
-    &lt;/footer&gt;
-&lt;/body&gt;</code></pre>
+		<div class="postscript"><strong>Footnotes</strong>
+			..
+		</div>
+		<div class="postscript"><strong>Feedback</strong>
+			..
+		</div>
+	</article>
+
+	<footer class="center" style="text-align: right">
+		Copyright © 2010–2018 Martin Tournoij &lt;martin@arp242.net&gt;<br />
+		This document is licensed under a
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+			cc-by 4.0 license
+		</a>.
+	</footer>
+</body>
+<p>```</p>
+
 <p>Also see <a href="https://github.com/arp242/hello-css/blob/master/start.html">start.html</a>.</p>
+
 <h3 id="classes">Classes</h3>
+
 <table>
-<thead>
-<tr>
-<th>Class</th>
-<th>File</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.center</td>
-<td>base.css</td>
-<td>Center-align the main content.</td>
-</tr>
-<tr>
-<td>.page</td>
-<td>base.css</td>
-<td>Main page body.</td>
-</tr>
-<tr>
-<td>.page-a4</td>
-<td>base.css</td>
-<td>A4 page size; useful when producing pages where printing is high priority (e.g. a CV).</td>
-</tr>
-<tr>
-<td>.page-letter</td>
-<td>base.css</td>
-<td>U.S. letter page size.</td>
-</tr>
-<tr>
-<td>.full</td>
-<td>base.css</td>
-<td>Put a pre, table, or figure element over the full width of a .page, including margins.</td>
-</tr>
-<tr>
-<td>.border</td>
-<td>base.css</td>
-<td>Add a border around figure elements.</td>
-</tr>
-<tr>
-<td>.link</td>
-<td>base.css</td>
-<td>Format as a link; mainly for buttons, since regular links can&#39;t do POST requests.</td>
-</tr>
-<tr>
-<td>.left</td>
-<td>base.css</td>
-<td>Left-align a table cell.</td>
-</tr>
-<tr>
-<td>.right</td>
-<td>base.css</td>
-<td>Right-align a table cell; the cell will also use tabular numbers for alignment.</td>
-</tr>
-<tr>
-<td>.postscript</td>
-<td>postscript.css</td>
-<td>Page content; for e.g. footnotes or feedback section.</td>
-</tr>
-<tr>
-<td>.vertical</td>
-<td>form.css</td>
-<td>Layout the form vertically (labels above inputs).</td>
-</tr>
-<tr>
-<td>.horizontal</td>
-<td>form.css</td>
-<td>Layout the form horizontally (labels next to inputs).</td>
-</tr>
-</tbody></table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>File</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.center</td>
+      <td>base.css</td>
+      <td>Center-align the main content.</td>
+    </tr>
+    <tr>
+      <td>.page</td>
+      <td>base.css</td>
+      <td>Main page body.</td>
+    </tr>
+    <tr>
+      <td>.page-a4</td>
+      <td>base.css</td>
+      <td>A4 page size; useful when producing pages where printing is high priority (e.g. a CV).</td>
+    </tr>
+    <tr>
+      <td>.page-letter</td>
+      <td>base.css</td>
+      <td>U.S. letter page size.</td>
+    </tr>
+    <tr>
+      <td>.full</td>
+      <td>base.css</td>
+      <td>Put a pre, table, or figure element over the full width of a .page, including margins.</td>
+    </tr>
+    <tr>
+      <td>.border</td>
+      <td>base.css</td>
+      <td>Add a border around figure elements.</td>
+    </tr>
+    <tr>
+      <td>.link</td>
+      <td>base.css</td>
+      <td>Format as a link; mainly for buttons, since regular links can’t do POST requests.</td>
+    </tr>
+    <tr>
+      <td>.left</td>
+      <td>base.css</td>
+      <td>Left-align a table cell.</td>
+    </tr>
+    <tr>
+      <td>.right</td>
+      <td>base.css</td>
+      <td>Right-align a table cell; the cell will also use tabular numbers for alignment.</td>
+    </tr>
+    <tr>
+      <td>.postscript</td>
+      <td>postscript.css</td>
+      <td>Page content; for e.g. footnotes or feedback section.</td>
+    </tr>
+    <tr>
+      <td>.vertical</td>
+      <td>form.css</td>
+      <td>Layout the form vertically (labels above inputs).</td>
+    </tr>
+    <tr>
+      <td>.horizontal</td>
+      <td>form.css</td>
+      <td>Layout the form horizontally (labels next to inputs).</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="included-files">Included files</h3>
+
 <table>
-<thead>
-<tr>
-<th>File</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>base.css</td>
-<td>Basic defaults; this is the bulk of the project.</td>
-</tr>
-<tr>
-<td>form.css</td>
-<td>Forms, inputs, labels (WIP).</td>
-</tr>
-<tr>
-<td>aside.css</td>
-<td>Content in margin.</td>
-</tr>
-<tr>
-<td>blockquote.css</td>
-<td>Decorative quotation marks around blockquote.</td>
-</tr>
-<tr>
-<td>postscript.css</td>
-<td>P.S. content, such as footnotes.</td>
-</tr>
-<tr>
-<td>permalink.css</td>
-<td>Permalink markers in headers.</td>
-</tr>
-</tbody></table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>base.css</td>
+      <td>Basic defaults; this is the bulk of the project.</td>
+    </tr>
+    <tr>
+      <td>form.css</td>
+      <td>Forms, inputs, labels (WIP).</td>
+    </tr>
+    <tr>
+      <td>aside.css</td>
+      <td>Content in margin.</td>
+    </tr>
+    <tr>
+      <td>blockquote.css</td>
+      <td>Decorative quotation marks around blockquote.</td>
+    </tr>
+    <tr>
+      <td>postscript.css</td>
+      <td>P.S. content, such as footnotes.</td>
+    </tr>
+    <tr>
+      <td>permalink.css</td>
+      <td>Permalink markers in headers.</td>
+    </tr>
+  </tbody>
+</table>
+
 <p>The <code>dist/</code> directory contains versions without extensive annotations, as well
 as an <code>all.css</code> which contains all of the above files.</p>
+
 <p>You can use the <a href="https://github.com/arp242/singlepage">singlepage</a> tool to
 inline CSS files in to a document with <code>&lt;style&gt;</code> tags.</p>
+
 <h3 id="related-values-variables">Related values (“variables”)</h3>
+
 <p>In the interest of simplicity the project doesn’t use a CSS preprocessor (see
 <a href="https://arp242.net/weblog/css-vars.html">this rationale</a>). Instead I opted for
 a KISS approach: related values are marked with <code>/*varname*/</code> just before the
 value, without a space. For example:</p>
+
 <pre><code>margin-left: /*padx*/-4em
-width: calc(100% + /*padx*/8em);</code></pre><p>You can list all related values with something like <code>grep &#39;/\*\w\+\*/&#39; *.css</code>.
+width: calc(100% + /*padx*/8em);
+</code></pre>
+
+<p>You can list all related values with something like <code>grep '/\*\w\+\*/' *.css</code>.
 Here’s a list of the used value names:</p>
+
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>bodywidth</td>
-<td>54rem</td>
-<td>Width of main body text</td>
-</tr>
-<tr>
-<td>padx</td>
-<td>4rem</td>
-<td>Padding to the side of the body</td>
-</tr>
-<tr>
-<td>pady</td>
-<td>4rem</td>
-<td>Padding to the top and bottom of the body</td>
-</tr>
-<tr>
-<td>bgcolor</td>
-<td>#fff</td>
-<td>Background colour of main body text</td>
-</tr>
-<tr>
-<td>textcolor</td>
-<td>#252525</td>
-<td>Colour of main body text</td>
-</tr>
-</tbody></table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bodywidth</td>
+      <td>54rem</td>
+      <td>Width of main body text</td>
+    </tr>
+    <tr>
+      <td>padx</td>
+      <td>4rem</td>
+      <td>Padding to the side of the body</td>
+    </tr>
+    <tr>
+      <td>pady</td>
+      <td>4rem</td>
+      <td>Padding to the top and bottom of the body</td>
+    </tr>
+    <tr>
+      <td>bgcolor</td>
+      <td>#fff</td>
+      <td>Background colour of main body text</td>
+    </tr>
+    <tr>
+      <td>textcolor</td>
+      <td>#252525</td>
+      <td>Colour of main body text</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="see-also">See also</h2>
+
 <ul>
-<li><a href="https://bitbucket.org/jboy1/hello-theme/src/master/">hello-theme</a>, a Pelican
+  <li><a href="https://bitbucket.org/jboy1/hello-theme/src/master/">hello-theme</a>, a Pelican
 theme based on this (with a few changes).</li>
 </ul>
+
 <h2 id="credits-and-license">Credits and license</h2>
+
 <p>The <a href="https://github.com/impallari/Libre-Baskerville">Libre Baskerville font</a> in
 the fonts directory is distributed under the SIL Open Font License 1.1. See
 <a href="fonts/LICENSE">fonts/LICENSE</a>.</p>
+
 <p>The fleurons in the &lt;hr&gt; element are exports from the Deja-Vu font, which
 is in the public domain.</p>
+
 <!--
 <aside>In my country of The Netherlands it’s not clear if it’s possible to place works in the public domain,
-    <a href="https://www.iusmentis.com/auteursrecht/publiekdomein/#plaatsen">see this article</a>.
+	<a href="https://www.iusmentis.com/auteursrecht/publiekdomein/#plaatsen">see this article</a>.
 </aside>
 -->
 <p>Everything else is in the public domain. I renounce all copyright, and don’t
 care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the
 attribution clause with the text “without any restrictions”:</p>
+
 <pre><code>Copyright © 2019 Martin Tournoij
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, without any restrictions.
 
-THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
 REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
 FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
 INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
 OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
-THIS SOFTWARE.</code></pre><hr>
+THIS SOFTWARE.
+</code></pre>
+
+<hr />
+
 <p>Cross-platform testing made possible by
 <a href="https://www.browserstack.com/">BrowserStack</a>, which provides free access for
 open source projects.</p>
-<p><a href="https://www.browserstack.com/"><img src="https://arp242.github.io/hello-css/.browserstack.svg" alt=""></a></p>
+
+<p><a href="https://www.browserstack.com/"><img src="https://arp242.github.io/hello-css/.browserstack.svg" alt="" /></a></p>
+
 <!--
 <div class="postscript">
-    <strong>Footnotes</strong>
-    <ol>
-        <li id="fn-1"><p>In my view it’s often better to just copy/paste and modify things, especially when it’s not
-            inherently complex (like CSS), rather than spending a lot of effort on making it generic, as making software
-            more generic often comes at the price of increased complexity, maintains burden, and tend to make things
-            <em>less</em> flexible overall.</p></li>
-    </ol>
+	<strong>Footnotes</strong>
+	<ol>
+		<li id="fn-1"><p>In my view it’s often better to just copy/paste and modify things, especially when it’s not
+			inherently complex (like CSS), rather than spending a lot of effort on making it generic, as making software
+			more generic often comes at the price of increased complexity, maintains burden, and tend to make things
+			<em>less</em> flexible overall.</p></li>
+	</ol>
 </div>
 -->
-
 </div></body></html>
