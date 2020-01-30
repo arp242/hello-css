@@ -43,8 +43,24 @@ input[type="range"],
 input[type="number"],
 textarea,
 select {
-  font: 1rem/100% sans-serif;          /* Use  sans-serif font with the default font size. */
-  padding: .3em .2em;                  /* TODO: looks inconsistent on FF/Chrome. */
+  font: 1em/100% sans-serif;          /* Use  sans-serif font with the default font size. */
+}
+
+textarea,
+button,
+select,
+input:not([type="checkbox"]):not([type="file"]):not([type="image"]):not([type="radio"]):not([type="range"]) {
+  padding: .6em;                       /* Chrome adds almost no padding. */
+  border: 1px solid  #bbb;
+  border-radius: 3px;
+}
+
+textarea:focus,
+input:focus,
+select:focus,
+button:focus {                         /* Firefox removes this once you start styling */
+  outline: 1px solid #00f;
+  box-shadow: 0 0 .2em #00f;
 }
 
 textarea {
@@ -53,17 +69,33 @@ textarea {
   line-height: 130%;                   /* Reduce line-height since we set a sans-serif font. */
 }
 
+button, input[type="submit"] {
+  margin-left: .5em;                   /* Bit of margin generally looks better. */
+  padding: .6em 1.5em;                 /* More padding for left/right. */
+  background-color: #f6f5f4;           /* Background gets reset when border is set; defaults from Firefox. */
+  background: linear-gradient(#f6f5f4, #edebe9);
+  border: .5px outset #e9e9e9;         /* More or less the same as the Firefox border. */
+  border-top-color: #ccc;
+  border-left-color: #ccc;
+}
+
+select {
+  background-color: inherit;           /* No need for just selects to be grey. */
+}
+
+
 form > strong, fieldset > strong {     /* Header. */
   display: inline-block;
   margin-top: .5em;
 }
 
-form > div, fieldset > div {           /* TODO: what is this and why did I add it?! */
-  float: left;
-  margin-right: 1em;
+form span {
+  margin-left: .2em;                   /* Help text or error; so it doesn't sit flush with the input. */
 }
 
-
+fieldset {
+  border: 1px solid /*bordercolor*/#aaa; /* More modern-looking border instead of inset or 2px. */
+}
 
 /* VERTICAL FORM */
 
@@ -93,22 +125,10 @@ form > div, fieldset > div {           /* TODO: what is this and why did I add i
   width: 10rem;
 }
 
-.vertical label/*[for]*/ {
+.vertical label {
   display: block;                      /* One label per line. */
   margin-top: .5em;                    /* Clear from the previous input. */
 }
-
-/*
-input[type="color"],
-input[type="file"],
-input[type="image"],
-*/
-
-/*
-input[type="reset"],
-input[type="button"]
-*/
-
 
 /* HORIZONTAL FORM */
 form.horizontal {
@@ -118,49 +138,20 @@ form.horizontal {
 }
 
 form.horizontal label {
-  width: 25%;
+  width: 30%;
 }
 
-form.horizontal input {
-  width: 75%;
+form.horizontal > div {
+  width: 65%;
+  margin-bottom: 1em;
 }
 
-/*
-form.horizontal strong {
-  display: inline-block;
-  margin-left: 15rem;
-  margin-top: .5em;
+form.horizontal input[type=submit],
+form.horizontal button[type=submit] {
+  margin-left: 35%;                    /* Align submit buttons with inputs. */
 }
 
-form.horizontal label[for] {
-  margin-left: 0;
-
-  min-width: 15rem;
-  margin-bottom: .5em;
-}
-
-form.horizontal input[type=submit], form.horizontal button[type=submit] {
-  margin-left: 15rem;
-}
-
-form.horizontal span {
-  margin-left: 15.5rem;
-  color: #666;
-  position: relative;
-  top: -8px;
-}
-
-form.horizontal fieldset {
-  margin:0;
-  padding-left: 0;
-  border: none;
-}
-
-form.horizontal legend {
-  font-weight: bold;
-  border-bottom: 1px solid #d5d5d5;
+form.horizontal span {                 /* Help text, put below the input. */
   display: block;
-  width: 100%;
-  margin: 3px 0;
+  margin-left: .2em;
 }
-*/

@@ -8,7 +8,7 @@
  */
 .postscript {
   margin-top: 3em;                     /* Clear a bit from regular content. */
-  border-top: 1px solid #bbb;          /* Border to separate. */
+  border-top: 1px solid /*bordercolor*/#aaa; /* Border to separate. */
   font-size: .9em;                     /* Slightly smaller text. */
   position: relative;                  /* So we can place the header. */
 

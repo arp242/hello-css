@@ -51,34 +51,32 @@ open an issue if you’re missing something in particular.
 
 A typical HTML page might look something like:
 
-```html
-<body>
-	<nav class="center">
-		<a href="/">Home</a>
-		<a href="/weblog">Weblog</a>
-	</nav>
+    <body>
+        <nav class="center">
+            <a href="/">Home</a>
+            <a href="/weblog">Weblog</a>
+        </nav>
 
-	<article class="page">
-		<h1>Main content</h1>
-		<p>..</p>
+        <article class="page">
+            <h1>Main content</h1>
+            <p>..</p>
 
-		<div class="postscript"><strong>Footnotes</strong>
-			..
-		</div>
-		<div class="postscript"><strong>Feedback</strong>
-			..
-		</div>
-	</article>
+            <div class="postscript"><strong>Footnotes</strong>
+                ..
+            </div>
+            <div class="postscript"><strong>Feedback</strong>
+                ..
+            </div>
+        </article>
 
-	<footer class="center" style="text-align: right">
-		Copyright © 2010–2018 Martin Tournoij &lt;martin@arp242.net&gt;<br>
-		This document is licensed under a
-		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-			cc-by 4.0 license
-		</a>.
-	</footer>
-</body>
-```
+        <footer class="center" style="text-align: right">
+            Copyright © 2010–2018 Martin Tournoij &lt;martin@arp242.net&gt;<br>
+            This document is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                cc-by 4.0 license
+            </a>.
+        </footer>
+    </body>
 
 Also see [start.html](https://github.com/arp242/hello-css/blob/master/start.html).
 
@@ -129,13 +127,14 @@ value, without a space. For example:
 You can list all related values with something like `grep '/\*\w\+\*/' *.css`.
 Here’s a list of the used value names:
 
-| Name      | Default | Description                               |
-| --------- | ------- | ----------------------------------------- |
-| bodywidth | 54rem   | Width of main body text                   |
-| padx      | 4rem    | Padding to the side of the body           |
-| pady      | 4rem    | Padding to the top and bottom of the body |
-| bgcolor   | #fff    | Background colour of main body text       |
-| textcolor | #252525 | Colour of main body text                  |
+| Name        | Default | Description                               |
+| ---------   | ------- | ----------------------------------------- |
+| bodywidth   | 54rem   | Width of main body text                   |
+| padx        | 4rem    | Padding to the side of the body           |
+| pady        | 4rem    | Padding to the top and bottom of the body |
+| bgcolor     | #fff    | Background colour of main body text       |
+| textcolor   | #252525 | Colour of main body text                  |
+| bordercolor | #aaa    | Border colour for table, fieldset, input  |
 
 
 See also

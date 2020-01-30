@@ -89,7 +89,7 @@ html {
   background-color: #eee;              /* Neutral background to contrast with the page. */
   color: /*textcolor*/#252525;         /* Slightly less "harsh" black; looks subtly better. */
        tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
-  -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( */
+  -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( https://bugzil.la/737785 */
 }
 
 html, body {
@@ -232,7 +232,7 @@ figure {
 }
 
 figure.border {
-  border: 1px solid #bbb;              /* Add border. */
+  border: 1px solid /*bordercolor*/#aaa; /* Add border. */
   padding: 5px;                        /* Slight gap between image and border. */
   margin: -5px;                        /* Put the border in the margin, so the padding doesn't shrink the image. */
 }

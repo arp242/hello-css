@@ -76,34 +76,33 @@ open an issue if you’re missing something in particular.</p>
 
 <p>A typical HTML page might look something like:</p>
 
-<p>```html</p>
-<body>
-	<nav class="center">
-		<a href="/">Home</a>
-		<a href="/weblog">Weblog</a>
-	</nav>
+<pre class="full"><code>&lt;body&gt;
+    &lt;nav class="center"&gt;
+        &lt;a href="/"&gt;Home&lt;/a&gt;
+        &lt;a href="/weblog"&gt;Weblog&lt;/a&gt;
+    &lt;/nav&gt;
 
-	<article class="page">
-		<h1>Main content</h1>
-		<p>..</p>
+    &lt;article class="page"&gt;
+        &lt;h1&gt;Main content&lt;/h1&gt;
+        &lt;p&gt;..&lt;/p&gt;
 
-		<div class="postscript"><strong>Footnotes</strong>
-			..
-		</div>
-		<div class="postscript"><strong>Feedback</strong>
-			..
-		</div>
-	</article>
+        &lt;div class="postscript"&gt;&lt;strong&gt;Footnotes&lt;/strong&gt;
+            ..
+        &lt;/div&gt;
+        &lt;div class="postscript"&gt;&lt;strong&gt;Feedback&lt;/strong&gt;
+            ..
+        &lt;/div&gt;
+    &lt;/article&gt;
 
-	<footer class="center" style="text-align: right">
-		Copyright © 2010–2018 Martin Tournoij &lt;martin@arp242.net&gt;<br />
-		This document is licensed under a
-		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-			cc-by 4.0 license
-		</a>.
-	</footer>
-</body>
-<p>```</p>
+    &lt;footer class="center" style="text-align: right"&gt;
+        Copyright © 2010–2018 Martin Tournoij &amp;lt;martin@arp242.net&amp;gt;&lt;br&gt;
+        This document is licensed under a
+        &lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;
+            cc-by 4.0 license
+        &lt;/a&gt;.
+    &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
 
 <p>Also see <a href="https://github.com/arp242/hello-css/blob/master/start.html">start.html</a>.</p>
 
@@ -271,6 +270,11 @@ Here’s a list of the used value names:</p>
       <td>textcolor</td>
       <td>#252525</td>
       <td>Colour of main body text</td>
+    </tr>
+    <tr>
+      <td>bordercolor</td>
+      <td>#aaa</td>
+      <td>Border colour for table, fieldset, input</td>
     </tr>
   </tbody>
 </table>
