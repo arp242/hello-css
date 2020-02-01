@@ -61,6 +61,8 @@ select:focus,
 button:focus {                         /* Firefox removes this once you start styling */
   outline: 1px solid #00f;
   box-shadow: 0 0 .2em #00f;
+  color: #000;                         /* Increase contrast a bit. */
+  cursor: pointer;                     /* Clearer that you can click this. */
 }
 
 textarea {
