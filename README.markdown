@@ -28,8 +28,11 @@ Design principles
 - [demo/README.html](https://arp242.github.io/hello-css/demo/README.html) (just base.css);
   [demo/README-fancy.html](https://arp242.github.io/hello-css/demo/README-fancy.html) (all files).
 - My website, [arp242.net](https://arp242.net).
+- [GoatCounter](https://www.goatcounter.com) for both the public facing website
+  as well as the backend (with quite a few additions, but Hello, CSS! as the
+  base template).
 - I reformatted [The Art of Unix programming](https://arp242.net/the-art-of-unix-programming) with this template.
-- [My CV](https://arp242.net/cv).
+- [My CV](https://arp242.net/cv/CV-MartinTournoij.pdf).
 
 Usage
 -----
