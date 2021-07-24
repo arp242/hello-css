@@ -1,28 +1,5 @@
 
-/* FILE: ./aside.css */
-aside {
-  hyphens: auto;
-}
-aside {
-  position: absolute;
-  left: -15em;
-  width: 14em;
-  text-align: right;
-  font-size: .9em;
-}
-@media (max-width: 83em) {
-  aside {
-    position: static;
-    width: auto;
-    text-align: left;
-    background-color: #f7f7f7;
-    padding: .4em 2em;
-    border: 1px solid var(--color-border);
-    hyphens: none;
-  }
-}
-
-/* FILE: ./base.css */
+/* FILE: base.css */
 :root {
   --width-body:   54rem;
   --pad-x:        4rem;
@@ -297,7 +274,7 @@ hr:before {
   content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMC4yIDkuMiIgaGVpZ2h0PSIzNC44IiB3aWR0aD0iMTE0LjMiPjxwYXRoIGQ9Ik0xMy4yIDBxMS4xIDAgMS4zIDEuMiAwIDEtLjcgMS4yLTEuOC40LTIgLjggMi42LjMgMy4yIDMuMWguMmwuMi44LS40LjFxLS4yIDEuOC0xLjggMS45LTEgMC0xLjMtMSAwLS44LjItLjguMi40LjguNC44IDAgMS0uOFExMSA2LjEgMTEgMy43cS0xLjQgMC0yLjEgMSAxLjQuNyAxLjQgMS44LS4xIDIuNS0zLjYgMi43US41IDkuMiAwIDUuNXEwLS42LjctLjcuNSAwIC42LjV2LjJsLS4xLjRxMCAxIDEuMSAxIDEgMCAxLS43UTQgMS4yIDcgMXEyIC4xIDIgMS43di4xcTAgLjQtLjQgMS41IDEtLjggMi0xIC42IDAgLjYtLjQuOC0xIDEuNi0xLjMuNi0uNC42LS44bC0uMi0uNHEtLjItLjMgMC0uNHptLTEuNiAzLjd2LjFxMCAxLjQgMi4zIDIuMi0uMy0yLTIuMy0yLjN6Ii8+PHBhdGggZD0iTTE3IDBxLTEgMC0xLjMgMS4yIDAgMSAuOCAxLjIgMS44LjQgMiAuOC0yLjcuMy0zLjIgMy4xSDE1bC0uMi44LjUuMXEuMiAxLjggMS44IDEuOSAxIDAgMS4yLTEgMC0uOC0uMi0uOC0uMS40LS43LjQtLjkgMC0xLS44IDIuNy0uOCAyLjgtMy4yIDEuNCAwIDIgMS0xLjMuNy0xLjMgMS44IDAgMi41IDMuNSAyLjcgNi40IDAgNi44LTMuNyAwLS42LS42LS43LS42IDAtLjcuNXYuMmwuMi40cTAgMS0xLjIgMS0uOSAwLTEtLjctLjYtNS0zLjctNS4yLTIgLjEtMiAxLjd2LjFxMCAuNC40IDEuNS0xLS44LTItMS0uNiAwLS42LS40LS43LTEtMS41LTEuMy0uNi0uNC0uNi0uOGwuMi0uNHEuMi0uMyAwLS40em0xLjcgMy43di4xcTAgMS40LTIuNCAyLjIuMy0yIDIuNC0yLjN6Ii8+PC9zdmc+);
 }
 
-/* FILE: ./blockquote.css */
+/* FILE: blockquote.css */
 blockquote {
   font-style: italic;
   position: relative;
@@ -313,7 +290,7 @@ blockquote:before {
   top: .25em;
 }
 
-/* FILE: ./form.css */
+/* FILE: form.css */
 input[type="text"],
 input[type="search"],
 input[type="tel"],
@@ -436,7 +413,7 @@ form.horizontal span {
   margin-left: .2em;
 }
 
-/* FILE: ./permalink.css */
+/* FILE: permalink.css */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-size: .7em;
   line-height: 0;
@@ -446,7 +423,7 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
   content: "¶";
 }
 
-/* FILE: ./postscript.css */
+/* FILE: postscript.css */
 .postscript {
   margin-top: 3em;
   border-top: 1px solid var(--color-border);
@@ -475,5 +452,28 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
   }
   .postscript > strong {
     left: calc(var(--pad-x) * 1.5);
+  }
+}
+
+/* FILE: aside.css */
+aside {
+  hyphens: auto;
+}
+aside {
+  position: absolute;
+  left: -15em;
+  width: 14em;
+  text-align: right;
+  font-size: .9em;
+}
+@media (max-width: 83em) {
+  aside {
+    position: static;
+    width: auto;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: .4em 2em;
+    border: 1px solid var(--color-border);
+    hyphens: none;
   }
 }

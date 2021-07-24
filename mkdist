@@ -1,9 +1,19 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+
+# Keep base.css first.
+files=(
+  base.css
+  blockquote.css
+  form.css
+  permalink.css
+  postscript.css
+  aside.css
+)
 
 : > 'dist/all.min.css'
 : > 'dist/all.css'
 
-for f in ./*.css; do
+for f in $files; do
 	mf="./dist/$(basename "${f%.css}").min.css"
 	cp "$f" "$mf"
 	# Note: "Minification" beyond removing comments shaves off very little, and
