@@ -79,8 +79,14 @@ html {
 html, body {
   margin: 0;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .center, .page {
   max-width: var(--width-body);
+  width: 100%;
   margin: .5rem auto;
   position: relative;
 }

@@ -128,8 +128,15 @@ html, body {
   margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .center, .page {
   max-width: var(--width-body);        /* Don't make it too wide, as that makes it harder to read. */
+  width: 100%;                         /* Make sure it takes up the full width if the content is smaller. */
   margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
   position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
 }

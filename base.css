@@ -31,14 +31,14 @@
     --font: 14px/160% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
 
     --pad-x: 1rem;    /* Modest amount of padding to prevent wasting screen space. */
-    --pad-y: 0;
+    --pad-y: .5rem;
   }
 }
 
 /* Even smaller screens, mostly mobile phones. */
 @media (max-width: 26rem) {
   :root {
-    --font: 12px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+    --font: 14px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
   }
 }
 
@@ -128,9 +128,17 @@ html, body {
   margin: 0;                           /* No extra margin; shows up in some cases (e.g. when printing). */
 }
 
+body {
+    display: flex;                     /* Display as flex. */
+    flex-direction: column;            /* Put things underneath eachother, rather than next to each other. */
+    align-items: center;               /* Put items in the centre. */
+}
+
 .center, .page {
   max-width: var(--width-body);        /* Don't make it too wide, as that makes it harder to read. */
-  margin: .5rem auto;                  /* Add some extra space at top/bottom, and centre it. */
+  width: 100%;                         /* Make sure it takes up the full width if the content is smaller. */
+  padding: 0 .5rem;                    /* Always a bit from the edge. */
+  margin: .5rem 0;                     /* Add some extra space at top/bottom. */
   position: relative;                  /* So that absolute/relative positioning is relative to the page, which is almost always what's desired. */
 }
 
