@@ -119,25 +119,20 @@ inline CSS files in to a document with `<style>` tags.
 
 ### Related values (“variables”)
 
-In the interest of simplicity the project doesn’t use a CSS preprocessor (see
-[this rationale](https://arp242.net/weblog/css-vars.html)). Instead I opted for
-a KISS approach: related values are marked with `/*varname*/` just before the
-value, without a space. For example:
+There are a number of variables you can define, they are included at the top of
+`base.css`.
 
-	margin-left: /*padx*/-4em
-	width: calc(100% + /*padx*/8em);
+TODO:
 
-You can list all related values with something like `grep '/\*\w\+\*/' *.css`.
-Here’s a list of the used value names:
-
-| Name        | Default | Description                               |
-| ---------   | ------- | ----------------------------------------- |
-| bodywidth   | 54rem   | Width of main body text                   |
-| padx        | 4rem    | Padding to the side of the body           |
-| pady        | 4rem    | Padding to the top and bottom of the body |
-| bgcolor     | #fff    | Background colour of main body text       |
-| textcolor   | #252525 | Colour of main body text                  |
-| bordercolor | #aaa    | Border colour for table, fieldset, input  |
+| Name           | Description                               | Default                            |
+| -------------- | ----------------------------------------- | ---------------------------------- |
+| --font         | The main font.                            | 16px/180% 'Libre Baskerville' [..] |
+| --width-body   | Width of main body text                   | 54rem                              |
+| --pad-x        | Padding to the side of the body           | 4rem                               |
+| --pad-y        | Padding to the top and bottom of the body | 4rem                               |
+| --color-bg     | Background colour of main body text       | #fff                               |
+| --color-text   | Colour of main body text                  | #252525                            |
+| --color-border | Border colour for table, fieldset, input  | #aaa                               |
 
 
 See also
@@ -166,7 +161,7 @@ care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the
 attribution clause with the text “without any restrictions”:
 
-	Copyright © 2019 Martin Tournoij
+	Copyright © Martin Tournoij
 
 	Permission to use, copy, modify, and/or distribute this software for any purpose
 	with or without fee is hereby granted, without any restrictions.

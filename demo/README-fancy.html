@@ -53,8 +53,11 @@ distract your reader and undermine your message.</p>
   <li><a href="https://arp242.github.io/hello-css/demo/README.html">demo/README.html</a> (just base.css);
 <a href="https://arp242.github.io/hello-css/demo/README-fancy.html">demo/README-fancy.html</a> (all files).</li>
   <li>My website, <a href="https://arp242.net">arp242.net</a>.</li>
+  <li><a href="https://www.goatcounter.com">GoatCounter</a> for both the public facing website
+as well as the backend (with quite a few additions, but Hello, CSS! as the
+base template).</li>
   <li>I reformatted <a href="https://arp242.net/the-art-of-unix-programming">The Art of Unix programming</a> with this template.</li>
-  <li><a href="https://arp242.net/cv">My CV</a>.</li>
+  <li><a href="https://arp242.net/cv/CV-MartinTournoij.pdf">My CV</a>.</li>
 </ul>
 
 <h2 id="usage">Usage</h2>
@@ -225,17 +228,10 @@ inline CSS files in to a document with <code>&lt;style&gt;</code> tags.</p>
 
 <h3 id="related-values-variables">Related values (“variables”)</h3>
 
-<p>In the interest of simplicity the project doesn’t use a CSS preprocessor (see
-<a href="https://arp242.net/weblog/css-vars.html">this rationale</a>). Instead I opted for
-a KISS approach: related values are marked with <code>/*varname*/</code> just before the
-value, without a space. For example:</p>
+<p>There are a number of variables you can define, they are included at the top of
+<code>base.css</code>.</p>
 
-<pre class="full"><code>margin-left: /*padx*/-4em
-width: calc(100% + /*padx*/8em);
-</code></pre>
-
-<p>You can list all related values with something like <code>grep '/\*\w\+\*/' *.css</code>.
-Here’s a list of the used value names:</p>
+<p>TODO:</p>
 
 <table class="full">
   <thead>
@@ -305,7 +301,7 @@ care what you do with it. Since this is not possible in all legal jurisdictions
 I’ve also attached a modified copy of the ISC license which replaces the
 attribution clause with the text “without any restrictions”:</p>
 
-<pre class="full"><code>Copyright © 2019 Martin Tournoij
+<pre class="full"><code>Copyright © Martin Tournoij
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, without any restrictions.

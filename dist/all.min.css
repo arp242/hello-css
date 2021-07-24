@@ -17,20 +17,43 @@ aside {
     text-align: left;
     background-color: #f7f7f7;
     padding: .4em 2em;
-    border: 1px solid #aaa;
+    border: 1px solid var(--color-border);
     hyphens: none;
   }
 }
 
 /* FILE: ./base.css */
+:root {
+  --width-body:   54rem;
+  --pad-x:        4rem;
+  --pad-y:        4rem;
+  --color-bg:     #fff;
+  --color-text:   #252525;
+  --color-border: #aaa;
+  --font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  --full-margin-left: calc(-1 * var(--pad-x));
+  --full-width: calc(100% + calc(var(--pad-x) * 2));
+}
+@media (max-width: 54rem) {
+  :root {
+    --font: 14px/160% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+    --pad-x: 1rem;
+    --pad-y: 0;
+  }
+}
+@media (max-width: 26rem) {
+  :root {
+    --font: 12px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  }
+}
 @font-face {
   font-family: 'Libre Baskerville';
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
   src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
-    url(/fonts/libre-baskerville.woff2) format('woff2'),
-    url(./fonts/libre-baskerville.woff2) format('woff2');
+       url(/fonts/libre-baskerville.woff2) format('woff2'),
+       url(./fonts/libre-baskerville.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -38,8 +61,8 @@ aside {
   font-weight: 700;
   font-display: fallback;
   src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'),
-    url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
-    url(./fonts/libre-baskerville-bold.woff2) format('woff2');
+       url(/fonts/libre-baskerville-bold.woff2) format('woff2'),
+       url(./fonts/libre-baskerville-bold.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -47,19 +70,13 @@ aside {
   font-weight: 400;
   font-display: fallback;
   src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'),
-    url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
-    url(./fonts/libre-baskerville-italic.woff2) format('woff2');
+       url(/fonts/libre-baskerville-italic.woff2) format('woff2'),
+       url(./fonts/libre-baskerville-italic.woff2) format('woff2');
 }
 html {
-  font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+  font: var(--font);
           text-size-adjust: none;
   -webkit-text-size-adjust: none;
-}
-@media (max-width: 54em) {
-  html { font-size: 14px; line-height: 160%; }
-}
-@media (max-width: 26em) {
-  html { font-size: 12px; line-height: 150%; }
 }
 pre, code {
   font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', monospace;
@@ -80,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 html {
   background-color: #eee;
-  color: #252525;
+  color: var(--color-text);
        tab-size: 4;
   -moz-tab-size: 4;
 }
@@ -88,20 +105,14 @@ html, body {
   margin: 0;
 }
 .center, .page {
-  max-width: 54rem;
+  max-width: var(--width-body);
   margin: .5rem auto;
   position: relative;
 }
 .page {
-  padding: 1rem 4rem;
-  background-color: #fff;
+  padding: var(--pad-y) var(--pad-x);
+  background-color: var(--color-bg);
   box-shadow: 0 0 6px rgba(0,0,0,.2);
-}
-@media (max-width: 54em) {
-  .page, .center {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
 }
 @page {
   margin: 0;
@@ -142,6 +153,8 @@ a:hover, .link:hover {
 a:hover code  {
   color: #6491ff;
 }
+button.link[disabled]       { color: #666; }
+button.link[disabled]:hover { text-decoration: none; cursor: not-allowed; }
 form {
   display: inline;
   margin: 0;
@@ -166,7 +179,7 @@ h1 {
   font-size: 1.7em;
 }
 h2 {
-  border-bottom: 1px solid #252525;
+  border-bottom: 1px solid var(--color-text);
   padding-bottom: .2em;
   font-size: 1.5em;
 }
@@ -189,20 +202,14 @@ figure {
   text-align: center;
   margin: 1rem 0;
 }
-figure.border {
-  border: 1px solid #aaa;
+figure.border:not(.full) {
+  border: 1px solid var(--color-border);
   padding: 5px;
   margin: -5px;
 }
-@media (min-width: 54em) {
-  figure.full {
-    margin-left: -4rem;
-    width: calc(100% + 8rem);
-  }
-  figure.full.border {
-    border-left: none;
-    border-right: none;
-  }
+figure.full {
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
 }
 code, pre, kbd, samp {
   background-color: #f5f5f5;
@@ -216,11 +223,9 @@ pre {
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5;
 }
-@media (min-width: 54em) {
-  pre.full {
-    margin-left: -4rem;
-    width: calc(100% + 8rem);
-  }
+pre.full {
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
 }
 code, kbd, samp {
   padding: 1px 2px;
@@ -242,11 +247,9 @@ table {
 table + table {
   margin-top: 2em;
 }
-@media (min-width: 54em) {
-  table.full {
-    margin-left: -3.5rem;
-    width: calc(100% + 7rem);
-  }
+table.full {
+  margin-left: calc(var(--full-margin-left) + .5rem);
+  width: calc(var(--full-width) - 1em);
 }
 caption {
   font-weight: bold;
@@ -281,17 +284,13 @@ sup, sub {
   vertical-align: baseline;
   position: relative;
 }
-sup {
-  bottom: 1ex;
-}
-sub {
-  top: .5ex;
-}
+sup { bottom: 1ex; }
+sub { top: .5ex; }
 hr {
   border: none;
   text-align: center;
   font-size: 60px;
-  color: #252525;
+  color: var(--color-text);
   opacity: .9;
 }
 hr:before {
@@ -352,7 +351,7 @@ button:not(.link), input[type="submit"]:not(.link) {
   padding: .6em 1.5em;
   background-color: #f6f5f4;
   background: linear-gradient(#f6f5f4, #edebe9);
-  border: .5px outset #e9e9e9;
+  border: 1px outset #e9e9e9;
   border-radius: 3px;
   border-top-color: #ccc;
   border-left-color: #ccc;
@@ -450,7 +449,7 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
 /* FILE: ./postscript.css */
 .postscript {
   margin-top: 3em;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid var(--color-border);
   font-size: .9em;
   position: relative;
 }
@@ -462,7 +461,7 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
   position: absolute;
   top: -1em;
   left: 1em;
-  background-color: #fff;
+  background-color: var(--color-bg);
   padding: 0 .5em;
 }
 .postscript > p {
@@ -470,11 +469,11 @@ h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after {
 }
 @media (min-width: 54rem) {
   .postscript {
-    margin-left: -4em;
-    width: calc(100% + 8em);
-    padding: 0 4em;
+    margin-left: calc(-1 * var(--pad-x));
+    width: calc(100% + var(--pad-x) * 2);
+    padding: 0 var(--pad-x);
   }
   .postscript > strong {
-    left: 6em;
+    left: calc(var(--pad-x) * 1.5);
   }
 }

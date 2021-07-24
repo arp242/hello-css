@@ -1,6 +1,6 @@
 .postscript {
   margin-top: 3em;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid var(--color-border);
   font-size: .9em;
   position: relative;
 }
@@ -12,7 +12,7 @@
   position: absolute;
   top: -1em;
   left: 1em;
-  background-color: #fff;
+  background-color: var(--color-bg);
   padding: 0 .5em;
 }
 .postscript > p {
@@ -20,11 +20,11 @@
 }
 @media (min-width: 54rem) {
   .postscript {
-    margin-left: -4em;
-    width: calc(100% + 8em);
-    padding: 0 4em;
+    margin-left: calc(-1 * var(--pad-x));
+    width: calc(100% + var(--pad-x) * 2);
+    padding: 0 var(--pad-x);
   }
   .postscript > strong {
-    left: 6em;
+    left: calc(var(--pad-x) * 1.5);
   }
 }

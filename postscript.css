@@ -8,7 +8,7 @@
  */
 .postscript {
   margin-top: 3em;                     /* Clear a bit from regular content. */
-  border-top: 1px solid /*bordercolor*/#aaa; /* Border to separate. */
+  border-top: 1px solid var(--color-border); /* Border to separate. */
   font-size: .9em;                     /* Slightly smaller text. */
   position: relative;                  /* So we can place the header. */
 
@@ -22,7 +22,7 @@
   position: absolute;                  /* Move to the to align with the border. */
   top: -1em;
   left: 1em;
-  background-color: /*bgcolor*/#fff;   /* Add background colour and padding to hide the border. */
+  background-color: var(--color-bg);   /* Add background colour and padding to hide the border. */
   padding: 0 .5em;
 }
 
@@ -31,14 +31,14 @@
 }
 
 /* Make the border take up the page padding if the screen is wide enough. */
-@media (min-width: /*bodywidth*/54rem) {
+@media (min-width: 54rem) {
   .postscript {
-    margin-left: /*padx*/-4em;           /* Put the div in the margin too, so the border is wider. */
-    width: calc(100% + /*padx*/8em);
-    padding: 0 /*padx*/4em;              /* Add page margin. */
+    margin-left: calc(-1 * var(--pad-x));           /* Put the div in the margin too, so the border is wider. */
+    width: calc(100% + var(--pad-x) * 2);
+    padding: 0 var(--pad-x);              /* Add page margin. */
   }
 
   .postscript > strong {
-    left: /*padx*/6em;
+    left: calc(var(--pad-x) * 1.5);
   }
 }

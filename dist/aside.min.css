@@ -15,7 +15,7 @@ aside {
     text-align: left;
     background-color: #f7f7f7;
     padding: .4em 2em;
-    border: 1px solid #aaa;
+    border: 1px solid var(--color-border);
     hyphens: none;
   }
 }
