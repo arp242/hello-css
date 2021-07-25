@@ -15,12 +15,12 @@
   :root {
     --font: 14px/160% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
     --pad-x: 1rem;
-    --pad-y: 0;
+    --pad-y: .5rem;
   }
 }
 @media (max-width: 26rem) {
   :root {
-    --font: 12px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
+    --font: 14px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
   }
 }
 @font-face {
@@ -89,7 +89,8 @@ body {
 .center, .page {
   max-width: var(--width-body);
   width: 100%;
-  margin: .5rem auto;
+  padding: 0 .5rem;
+  margin: .5rem 0;
   position: relative;
 }
 .page {
