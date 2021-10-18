@@ -151,6 +151,10 @@ body {
   box-shadow: 0 0 6px rgba(0,0,0,.2);  /* Box-shadow effect looks quite handsome here. */
 }
 
+.page + .page {
+  margin-top: var(--pad-y);            /* Put some space between two adjacent pages. */
+}
+
 /* PRINTING */
 @page {
   margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
