@@ -129,7 +129,7 @@ TODO:
 | --font         | The main font.                            | 16px/180% 'Libre Baskerville' (..) |
 | --width-body   | Width of main body text                   | 54rem                              |
 | --pad-x        | Padding to the side of the body           | 4rem                               |
-| --pad-y        | Padding to the top and bottom of the body | 4rem                               |
+| --pad-y        | Padding to the top and bottom of the body | 1rem                               |
 | --color-bg     | Background colour of main body text       | #fff                               |
 | --color-text   | Colour of main body text                  | #252525                            |
 | --color-border | Border colour for table, fieldset, input  | #aaa                               |

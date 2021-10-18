@@ -2,7 +2,7 @@
 :root {
   --width-body:   54rem;   /* Width of main body text. */
   --pad-x:        4rem;    /* Padding to the side of the body. */
-  --pad-y:        4rem;    /* Padding to the top and bottom of the body. */
+  --pad-y:        1rem;    /* Padding to the top and bottom of the body. */
   --color-bg:     #fff;    /* Background colour of main body text. */
   --color-text:   #252525; /* Colour of main body text. */
   --color-border: #aaa;    /* Border colour for table, fieldset, input. */

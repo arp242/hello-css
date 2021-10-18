@@ -3,7 +3,7 @@
 :root {
   --width-body:   54rem;
   --pad-x:        4rem;
-  --pad-y:        4rem;
+  --pad-y:        1rem;
   --color-bg:     #fff;
   --color-text:   #252525;
   --color-border: #aaa;
