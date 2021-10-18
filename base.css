@@ -235,8 +235,9 @@ form {                                 /* Make sure forms don't affect visual la
  * h1 different, then you may want to add a border like in the h2. */
 h1 {
   text-align: center;
-  padding: .5em 0;                     /* More than default. */
+  padding: .4em 0;                     /* More than default. */
   font-size: 1.7em;                    /* Default of 2em is pretty large. */
+  line-height: 1.3;                    /* Otherwise looks funky if it overflows. */
 }
 
 h2 {

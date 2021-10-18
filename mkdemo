@@ -4,6 +4,12 @@
 alltags = {
     'Content sectioning': {
         'headers': '''
+            <h1>A long h1 that will overflow to the next line.</h1>
+            {lorem}
+
+            <h2>And a h2 header that will overflow too on smaller screens.</h2>
+            {lorem}
+
             <h2>Header level 2</h2>
             {lorem}
 
