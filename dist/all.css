@@ -155,6 +155,11 @@ body {
   margin-top: var(--pad-y);            /* Put some space between two adjacent pages. */
 }
 
+.full {                                /* Take up all the space in the .page padding. */
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
+}
+
 /* PRINTING */
 @page {
   margin: 0;                           /* Don't add extra margin to pages, .page already has it. */
@@ -288,13 +293,8 @@ pre {
   max-height: 500px;                   /* Scroll content larger than this. */
   padding: .5em 1em;                   /* Don't put the text right on the edge. */
   border-radius: 2px;                  /* Looks better with subtly rounded corner. */
-  border-top: 1px solid #d5d5d5;          /* Looks better. */
-  border-bottom: 1px solid #d5d5d5;       /* Looks better. */
-}
-
-pre.full {
-  margin-left: var(--full-margin-left);
-  width: var(--full-width);
+  border-top: 1px solid #d5d5d5;       /* Looks better. */
+  border-bottom: 1px solid #d5d5d5;    /* Looks better. */
 }
 
 code, kbd, samp {

@@ -99,6 +99,10 @@ body {
 .page + .page {
   margin-top: var(--pad-y);
 }
+.full {
+  margin-left: var(--full-margin-left);
+  width: var(--full-width);
+}
 @page {
   margin: 0;
 }
@@ -207,10 +211,6 @@ pre {
   border-radius: 2px;
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5;
-}
-pre.full {
-  margin-left: var(--full-margin-left);
-  width: var(--full-width);
 }
 code, kbd, samp {
   padding: 1px 2px;
