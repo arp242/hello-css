@@ -8,8 +8,6 @@
   --color-text:   #252525;
   --color-border: #aaa;
   --font: 16px/180% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
-  --full-margin-left: calc(-1 * var(--pad-x));
-  --full-width: calc(100% + calc(var(--pad-x) * 2));
 }
 @media (max-width: 54rem) {
   :root {
@@ -22,6 +20,10 @@
   :root {
     --font: 14px/140% 'Libre Baskerville', 'DejaVu Serif', 'Bitstream Vera Serif', 'Georgia', serif;
   }
+}
+:root {
+  --full-margin-left: calc(-1 * var(--pad-x));
+  --full-width:       calc(100% + calc(var(--pad-x) * 2));
 }
 @font-face {
   font-family: 'Libre Baskerville';
@@ -132,12 +134,13 @@ body {
 }
 a,
 a code,
+summary,
 .link {
   color: #00f;
   text-decoration: none;
   transition: color .2s;
 }
-a:hover, .link:hover {
+a:hover, .link:hover, summary:hover {
   text-decoration: underline;
   color: #6491ff;
 }
@@ -146,6 +149,7 @@ a:hover code  {
 }
 button.link[disabled]       { color: #666; }
 button.link[disabled]:hover { text-decoration: none; cursor: not-allowed; }
+summary                     { cursor: pointer; }
 form {
   display: inline;
   margin: 0;

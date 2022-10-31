@@ -122,8 +122,6 @@ inline CSS files in to a document with `<style>` tags.
 There are a number of variables you can define, they are included at the top of
 `base.css`.
 
-TODO:
-
 | Name           | Description                               | Default                            |
 | -------------- | ----------------------------------------- | ---------------------------------- |
 | --font         | The main font.                            | 16px/180% 'Libre Baskerville' (..) |
