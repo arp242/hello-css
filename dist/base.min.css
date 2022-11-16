@@ -75,8 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
   background-color: #eee;
   color: var(--color-text);
-       tab-size: 4;
-  -moz-tab-size: 4;
+  tab-size: 4;
 }
 html, body {
   margin: 0;

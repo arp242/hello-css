@@ -123,8 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
   background-color: #eee;              /* Neutral background to contrast with the page. */
   color: var(--color-text);            /* Slightly less "harsh" black; looks subtly better. */
-       tab-size: 4;                    /* Tab size of 4 is probably more common in editors etc. */
-  -moz-tab-size: 4;                    /* Still needed as of Jan 2019 :-( https://bugzil.la/737785 */
+  tab-size: 4;                         /* Tab size of 4 is probably more common in editors etc. */
 }
 
 html, body {
