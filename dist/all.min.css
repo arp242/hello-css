@@ -138,6 +138,7 @@ summary,
   color: #00f;
   text-decoration: none;
   transition: color .2s;
+  cursor: pointer;
 }
 a:hover, .link:hover, summary:hover {
   text-decoration: underline;

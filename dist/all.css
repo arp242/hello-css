@@ -200,6 +200,7 @@ summary,                               /* <summary> doesn't look very clickable 
   color: #00f;                         /* Make sure colour is the same in all browsers. */
   text-decoration: none;               /* Underlining can look "busy"; the colour on its own should be enough. */
   transition: color .2s;               /* Animate the change in colour effect on hover; subtle but noticeable. */
+  cursor: pointer;                     /* Always use pointer; otherwise <a> w/o href shows as text selection. */
 }
 a:hover, .link:hover, summary:hover {
   text-decoration: underline;          /* Provide some feedback by underlining and changing colour. */
